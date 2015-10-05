@@ -16,8 +16,8 @@ sonata_block:
         sonata.admin.block.search_result:
             contexts:   [admin]
 
-        #sonata.admin_doctrine_orm.block.audit:
-        #    contexts:   [admin]
+        sonata.admin_doctrine_orm.block.audit:
+            contexts:   [admin]
 
         # Builtin Block
         sonata.block.service.text:
@@ -45,23 +45,21 @@ sonata_block:
         sonata.news.block.recent_posts:
 
         # Ecommerce's Blocks
-        sonata.order.block.recent_orders:
-        sonata.product.block.recent_products:
-        sonata.product.block.similar_products:
-        sonata.product.block.categories_menu:
-        sonata.product.block.filters_menu:
-        sonata.product.block.variations_form:
-        sonata.customer.block.recent_customers:
-        sonata.basket.block.nb_items:
-            cache: sonata.page.cache.js_async
-            contexts: [user]
-        sonata.basket.block.nb_items:
-            cache: sonata.page.cache.js_async
-            contexts: [user]
+        #sonata.order.block.recent_orders:
+        #sonata.product.block.recent_products:
+        #sonata.product.block.similar_products:
+        #sonata.product.block.categories_menu:
+        #sonata.product.block.filters_menu:
+        #sonata.product.block.variations_form:
+        #sonata.customer.block.recent_customers:
+        #sonata.basket.block.nb_items:
+            #cache: sonata.page.cache.js_async
+            #contexts: [user]
+        #sonata.basket.block.nb_items:
+            #cache: sonata.page.cache.js_async
+            #contexts: [user]
 
         # TimelineBundle's Blocks
-
-        sonata.timeline.block.timeline:
         sonata.timeline.block.timeline:
             contexts:   [admin]
 

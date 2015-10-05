@@ -64,14 +64,14 @@ class AppKernel extends Kernel
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
             // SONATA E-COMMERCE
-            new Sonata\BasketBundle\SonataBasketBundle(),
-            new Sonata\CustomerBundle\SonataCustomerBundle(),
-            new Sonata\DeliveryBundle\SonataDeliveryBundle(),
-            new Sonata\InvoiceBundle\SonataInvoiceBundle(),
-            new Sonata\OrderBundle\SonataOrderBundle(),
-            new Sonata\PaymentBundle\SonataPaymentBundle(),
-            new Sonata\ProductBundle\SonataProductBundle(),
-            new Sonata\PriceBundle\SonataPriceBundle(),
+//            new Sonata\BasketBundle\SonataBasketBundle(),
+//            new Sonata\CustomerBundle\SonataCustomerBundle(),
+//            new Sonata\DeliveryBundle\SonataDeliveryBundle(),
+//            new Sonata\InvoiceBundle\SonataInvoiceBundle(),
+//            new Sonata\OrderBundle\SonataOrderBundle(),
+//            new Sonata\PaymentBundle\SonataPaymentBundle(),
+//            new Sonata\ProductBundle\SonataProductBundle(),
+//            new Sonata\PriceBundle\SonataPriceBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\CommentBundle\FOSCommentBundle(),
             new Sonata\CommentBundle\SonataCommentBundle(),
@@ -102,7 +102,9 @@ class AppKernel extends Kernel
             new Spy\TimelineBundle\SpyTimelineBundle(),
             new Sonata\TimelineBundle\SonataTimelineBundle(),
 
-            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle()
+            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
+            new Rz\AdminBundle\RzAdminBundle(),
+            new Rz\CoreBundle\RzCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

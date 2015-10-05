@@ -62,9 +62,9 @@ sonata_payment:
         basket: sonata.payment.transformer.basket
 
 # Enable Doctrine to map the provided entities
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    SonataPaymentBundle: ~
+#doctrine:
+#    orm:
+#        entity_managers:
+#            default:
+#                mappings:
+#                    SonataPaymentBundle: ~

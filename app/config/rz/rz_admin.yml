@@ -1,0 +1,5 @@
+rz_admin:
+  options:
+    use_footable: true
+  pool:
+    base_admin_class: Rz\AdminBundle\Admin\Pool

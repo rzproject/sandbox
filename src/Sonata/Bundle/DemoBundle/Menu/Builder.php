@@ -44,28 +44,28 @@ class Builder extends ContainerAware
 
         $menu = $factory->createItem('main', $menuOptions);
 
-        $shopMenuParams = array('route' => 'sonata_catalog_index');
-
-        if (count($shopCategories->hasChildren()) > 0 && !$isFooter) {
-            $shopMenuParams = array_merge($shopMenuParams, array(
-                'attributes' => array('class' => 'dropdown'),
-                'childrenAttributes' => array('class' => 'dropdown-menu'),
-                'linkAttributes' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'data-target' => '#'),
-                'label' => 'Products <b class="caret caret-menu"></b>',
-                'extras' => array(
-                    'safe_label' => true,
-                )
-            ));
-        }
-
-        if ($isFooter) {
-            $shopMenuParams = array_merge($shopMenuParams, array(
-                'attributes' => array('class' => 'span2'),
-                "childrenAttributes" => array('class' => 'nav')
-            ));
-        }
-
-        $shop = $menu->addChild('Shop', $shopMenuParams);
+//        $shopMenuParams = array('route' => 'sonata_catalog_index');
+//
+//        if (count($shopCategories->hasChildren()) > 0 && !$isFooter) {
+//            $shopMenuParams = array_merge($shopMenuParams, array(
+//                'attributes' => array('class' => 'dropdown'),
+//                'childrenAttributes' => array('class' => 'dropdown-menu'),
+//                'linkAttributes' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'data-target' => '#'),
+//                'label' => 'Products <b class="caret caret-menu"></b>',
+//                'extras' => array(
+//                    'safe_label' => true,
+//                )
+//            ));
+//        }
+//
+//        if ($isFooter) {
+//            $shopMenuParams = array_merge($shopMenuParams, array(
+//                'attributes' => array('class' => 'span2'),
+//                "childrenAttributes" => array('class' => 'nav')
+//            ));
+//        }
+//
+//        $shop = $menu->addChild('Shop', $shopMenuParams);
 
         $menu->addChild('News', array('route' => 'sonata_news_home'));
 

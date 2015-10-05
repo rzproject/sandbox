@@ -44,34 +44,6 @@ sonata_media_media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
 
-sonata_customer:
-    resource: @SonataCustomerBundle/Resources/config/routing/customer.xml
-    prefix: /shop/user
-
-sonata_basket:
-    resource: @SonataBasketBundle/Resources/config/routing/basket.xml
-    prefix: /shop/basket
-
-sonata_order:
-    resource: @SonataOrderBundle/Resources/config/routing/order.xml
-    prefix: /shop/user/order
-
-sonata_product_catalog:
-    resource: @SonataProductBundle/Resources/config/routing/catalog.xml
-    prefix: /shop/catalog
-
-sonata_product:
-    resource: @SonataProductBundle/Resources/config/routing/product.xml
-    prefix: /shop/product
-
-sonata_payment:
-    resource: @SonataPaymentBundle/Resources/config/routing/payment.xml
-    prefix: /shop/payment
-
-sonata_invoice:
-    resource: @SonataInvoiceBundle/Resources/config/routing/invoice.xml
-    prefix: /shop/user/invoice
-
 blog:
     resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
     prefix: /blog

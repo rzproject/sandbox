@@ -21,27 +21,17 @@ sonata_admin:
     title_logo: %sonata_admin.logo_title%
     options:
         html5_validate: false # does not use html5 validation
-        pager_links: 5        # pager max links to display
-        use_bootlint: %kernel.debug%
-
-    templates:
-        # default global templates
-        # the layout template include javascript/stylesheet to the formatter bundle,
-        # if you don't need it use the default one: SonataAdminBundle::standard_layout.html.twig
-        layout:  SonataAdminBundle::standard_layout.html.twig
-        ajax:    SonataAdminBundle::ajax_layout.html.twig
-
-        # default value if done set, actions templates, should extends a global templates
-        list:    SonataAdminBundle:CRUD:list.html.twig
-        show:    SonataAdminBundle:CRUD:show.html.twig
-        edit:    SonataAdminBundle:CRUD:edit.html.twig
+        pager_links:    5        # pager max links to display
+        use_bootlint:   %kernel.debug%
+        use_select2:    true
+        use_icheck:     true
 
     dashboard:
         blocks:
-#            - { position: left, type: sonata.admin.block.admin_list }
-#            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
+            #- { position: left, type: sonata.admin.block.admin_list }
+            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
             -
-                class:    col-lg-3 col-xs-6
+                class:    col-lg-6 col-xs-6
                 position: top
                 type:     sonata.admin.block.stats
                 settings:
@@ -50,31 +40,8 @@ sonata_admin:
                     text: Open Comment
                     filters:
                         status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
-
             -
-                class:    col-lg-3 col-xs-6
-                position: top
-                type:     sonata.admin.block.stats
-                settings:
-                    code:  sonata.order.admin.order
-                    icon:  fa-shopping-cart
-                    text:  New Orders
-                    color: bg-red
-                    filters:
-                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
-
-            -
-                class:    col-lg-3 col-xs-6
-                position: top
-                type:     sonata.admin.block.stats
-                settings:
-                    code:  sonata.customer.admin.customer
-                    icon:  fa-users
-                    text:  Customers
-                    color: bg-green
-
-            -
-                class:    col-lg-3 col-xs-6
+                class:    col-lg-6 col-xs-6
                 position: top
                 type:     sonata.admin.block.stats
                 settings:
@@ -85,13 +52,10 @@ sonata_admin:
                     filters:
                         edited: { value: 1 }
 
-            - { roles: [ROLE_SUPER_ADMIN], position: left, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Welcome!</h3></div><div class='panel-body'>You can customize this dashboard by editing the <code>sonata_admin.yml</code> file. The current dashboard presents the recent items from the NewsBundle and a non-statistical e-commerce information.</div></div>"} }
-#            - { position: left, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 25 }}
+            - { class:    col-lg-12 col-xs-12 , roles: [ROLE_SUPER_ADMIN], position: top, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Welcome!</h3></div><div class='panel-body'>You can customize this dashboard by editing the <code>sonata_admin.yml</code> file. The current dashboard presents the recent items from the NewsBundle and a non-statistical e-commerce information.</div></div>"} }
+            - { position: left, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 25 }}
             - { position: left, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 7, mode: admin }}
-            - { position: left, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 7, mode: admin }}
-            - { position: right, type: sonata.order.block.recent_orders, settings: { title: Recent Orders, number: 5, mode: admin }}
-            - { position: right, type: sonata.customer.block.recent_customers, settings: { title: Recent Customers, number: 5, mode: admin }}
-#            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: https://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
+            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: https://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
 
 
 
@@ -106,16 +70,6 @@ sonata_admin:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
                     - sonata.comment.admin.thread
-
-            sonata.admin.group.ecommerce:
-                label:           sonata_ecommerce
-                label_catalogue: SonataAdminBundle
-                icon:            '<i class="fa fa-dollar"></i>'
-                items:
-                    - sonata.customer.admin.customer
-                    - sonata.invoice.admin.invoice
-                    - sonata.order.admin.order
-                    - sonata.product.admin.product
 
             sonata.admin.group.classification:
                 label:           sonata_classification
@@ -154,6 +108,40 @@ sonata_admin:
                     - sonata.demo.admin.color
                     - sonata.demo.admin.material
 
+    templates:
+        user_block:                   'SonataAdminBundle:Core:user_block.html.twig'
+        add_block:                    'SonataAdminBundle:Core:add_block.html.twig'
+        layout:                       'RzAdminBundle::standard_layout.html.twig'
+        ajax:                         'SonataAdminBundle::ajax_layout.html.twig'
+        dashboard:                    'SonataAdminBundle:Core:dashboard.html.twig'
+        search:                       'SonataAdminBundle:Core:search.html.twig'
+        list:                         'RzAdminBundle:CRUD:list.html.twig'
+        filter:                       'SonataAdminBundle:Form:filter_admin_fields.html.twig'
+        show:                         'SonataAdminBundle:CRUD:show.html.twig'
+        show_compare:                 'SonataAdminBundle:CRUD:show_compare.html.twig'
+        edit:                         'SonataAdminBundle:CRUD:edit.html.twig'
+        preview:                      'SonataAdminBundle:CRUD:preview.html.twig'
+        history:                      'SonataAdminBundle:CRUD:history.html.twig'
+        acl:                          'SonataAdminBundle:CRUD:acl.html.twig'
+        history_revision_timestamp:   'SonataAdminBundle:CRUD:history_revision_timestamp.html.twig'
+        action:                       'SonataAdminBundle:CRUD:action.html.twig'
+        select:                       'SonataAdminBundle:CRUD:list__select.html.twig'
+        list_block:                   'SonataAdminBundle:Block:block_admin_list.html.twig'
+        search_result_block:          'SonataAdminBundle:Block:block_search_result.html.twig'
+        short_object_description:     'SonataAdminBundle:Helper:short-object-description.html.twig'
+        delete:                       'SonataAdminBundle:CRUD:delete.html.twig'
+        batch:                        'SonataAdminBundle:CRUD:list__batch.html.twig'
+        batch_confirmation:           'SonataAdminBundle:CRUD:batch_confirmation.html.twig'
+        inner_list_row:               'SonataAdminBundle:CRUD:list_inner_row.html.twig'
+        outer_list_rows_mosaic:       'RzAdminBundle:CRUD:list_outer_rows_mosaic.html.twig'
+        outer_list_rows_list:         'SonataAdminBundle:CRUD:list_outer_rows_list.html.twig'
+        outer_list_rows_tree:         'SonataAdminBundle:CRUD:list_outer_rows_tree.html.twig'
+        base_list_field:              'RzAdminBundle:CRUD:base_list_field.html.twig'
+        pager_links:                  'RzAdminBundle:Pager:links.html.twig'
+        pager_results:                'RzAdminBundle:Pager:results.html.twig'
+        tab_menu_template:            'SonataAdminBundle:Core:tab_menu_template.html.twig'
+        knp_menu_template:            'SonataAdminBundle:Menu:sonata_menu.html.twig'
+
     assets:
         stylesheets:
             # The sandbox includes default pre-optimized version of some css and js
@@ -165,63 +153,17 @@ sonata_admin:
             - assetic/sonata_jqueryui_css.css
             - bundles/sonataadmin/vendor/admin-lte/dist/css/skins/skin-black.min.css
 
-            # Default admin assets
-#            - bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap.min.css
-#            - bundles/sonatacore/vendor/components-font-awesome/css/font-awesome.min.css
-#            - bundles/sonatacore/vendor/ionicons/css/ionicons.min.css
-#            - bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.min.css
-#            - bundles/sonataadmin/vendor/iCheck/skins/flat/blue.css
-#            - bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css
-#            - bundles/sonataadmin/vendor/jqueryui/themes/base/jquery-ui.css
-#            - bundles/sonatacore/vendor/select2/select2.css
-#            - bundles/sonatacore/vendor/select2-bootstrap-css/select2-bootstrap.min.css
-#            - bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css
-#            - bundles/sonataadmin/css/styles.css
-#            - bundles/sonataadmin/css/layout.css
-#            - bundles/sonataadmin/css/tree.css
-
-            # Formatter assets
-#            - bundles/sonataformatter/markitup/skins/sonata/style.css
-#            - bundles/sonataformatter/markitup/sets/markdown/style.css
-#            - bundles/sonataformatter/markitup/sets/html/style.css
-#            - bundles/sonataformatter/markitup/sets/textile/style.css
-
-            # Page assets
-#            - bundles/sonatapage/sonata-page.back.min.css
-
 
         javascripts:
             - assetic/sonata_admin_js.js
-#            - bundles/sonataadmin/Admin.js
-#            - bundles/sonataadmin/treeview.js
             - assetic/sonata_jqueryui_js.js
             - assetic/sonata_formatter_js.js
             - bundles/sonataformatter/vendor/ckeditor/ckeditor.js
 
-            # Default admin assets
-#            - bundles/sonatacore/vendor/jquery/dist/jquery.min.js
-#            - bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js
-#            - bundles/sonatacore/vendor/moment/min/moment.min.js
-#            - bundles/sonatacore/vendor/bootstrap/dist/js/bootstrap.min.js
-#            - bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js
-#            - bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js
-#            - bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js
-#            - bundles/sonataadmin/jquery/jquery.form.js
-#            - bundles/sonataadmin/jquery/jquery.confirmExit.js
-#            - bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js
-#            - bundles/sonatacore/vendor/select2/select2.min.js
-#            - bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js
-#            - bundles/sonataadmin/vendor/iCheck/icheck.min.js
-#            - bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js
-#            - bundles/sonataadmin/Admin.js
-#            - bundles/sonataadmin/treeview.js
 
-            # Formatter assets
-#            - bundles/sonataformatter/vendor/markitup-markitup/markitup/jquery.markitup.js
-#            - bundles/sonataformatter/markitup/sets/markdown/set.js
-#            - bundles/sonataformatter/markitup/sets/html/set.js
-#            - bundles/sonataformatter/markitup/sets/textile/set.js
 
-            # Page assets
-#            - bundles/sonatapage/sonata-page.back.js
-
+sonata_doctrine_orm_admin:
+    templates:
+      types:
+        list:
+          string:   'RzAdminBundle:CRUD:list_string.html.twig'

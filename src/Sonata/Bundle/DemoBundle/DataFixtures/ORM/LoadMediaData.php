@@ -57,7 +57,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
             $media->setDescription('Canada');
             $media->setAuthorName('Gilles Rosenbaum');
             $media->setCopyright('CC BY-NC-SA 4.0');
-            $media->setCategory($this->getReference('travels_quebec_category'));
+//            $media->setCategory($this->getReference('travels_quebec_category'));
 
             $this->addReference('sonata-media-'.($i++), $media);
 
@@ -74,7 +74,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
             $media->setDescription('Paris');
             $media->setAuthorName('Hugo Briand');
             $media->setCopyright("CC BY-NC-SA 4.0");
-            $media->setCategory($this->getReference('travels_paris_category'));
+//            $media->setCategory($this->getReference('travels_paris_category'));
 
             $this->addReference('sonata-media-'.($i++), $media);
 
@@ -91,7 +91,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
             $media->setDescription('Switzerland');
             $media->setAuthorName('Sylvain Deloux');
             $media->setCopyright('CC BY-NC-SA 4.0');
-            $media->setCategory($this->getReference('travels_switzerland_category'));
+//            $media->setCategory($this->getReference('travels_switzerland_category'));
 
             $this->addReference('sonata-media-'.($i++), $media);
 

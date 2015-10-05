@@ -19,20 +19,20 @@ monolog:
 #            type:  firephp
 #            level: info
 
-sonata_payment:
-    methods:
-        debug: ~
-    services:
-        debug:
-            name:    Debug Payment
-            code:    debug
-            browser: sonata.payment.browser.curl
-
-            transformers:
-                basket: sonata.payment.transformer.basket
-                order:  sonata.payment.transformer.order
-
-            options:
-                url_callback:  sonata_payment_callback
-                url_return_ko: sonata_payment_error
-                url_return_ok: sonata_payment_confirmation
+#sonata_payment:
+#    methods:
+#        debug: ~
+#    services:
+#        debug:
+#            name:    Debug Payment
+#            code:    debug
+#            browser: sonata.payment.browser.curl
+#
+#            transformers:
+#                basket: sonata.payment.transformer.basket
+#                order:  sonata.payment.transformer.order
+#
+#            options:
+#                url_callback:  sonata_payment_callback
+#                url_return_ko: sonata_payment_error
+#                url_return_ok: sonata_payment_confirmation

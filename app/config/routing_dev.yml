@@ -13,6 +13,6 @@ _profiler:
     resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
     prefix:   /_profiler
 
-sonata_payment_debug:
-    resource: @SonataPaymentBundle/Resources/config/routing/payment_debug.xml
-    prefix:   /shop/payment/debug
+#sonata_payment_debug:
+#    resource: @SonataPaymentBundle/Resources/config/routing/payment_debug.xml
+#    prefix:   /shop/payment/debug
