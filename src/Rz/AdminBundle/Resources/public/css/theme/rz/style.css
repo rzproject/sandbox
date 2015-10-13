@@ -22,6 +22,16 @@
     box-shadow: none;
 }
 
+.popover {
+    border-radius: 0px;
+}
+
+.popover-title {
+    border-radius: 0px;
+    background-color: #3c8dbc;
+    color: #ffffff;
+}
+
 /*
  * Select2 Flat
  * ------------
@@ -281,6 +291,15 @@
     text-overflow: ellipsis;
 }
 
+.editable-input .input-sm {
+    padding: 0px;
+    height: 33px
+}
+
+.editable-buttons .btn {
+    height: 33px;
+}
+
 /*
  * Rz Components
  * --------------
@@ -330,6 +349,18 @@
         padding-top: 10px;
         text-align: center;
     }
+
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+
+    .form-horizontal .rz-action-filter-field {
+        text-align: right;
+    }
+
+    .form-horizontal .advanced-filter {
+        padding-bottom: 10px;
+    }
 }
 
 
@@ -341,6 +372,18 @@
         padding-top: 10px;
         text-align: center;
     }
+
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+
+    .form-horizontal .rz-action-filter-field {
+        text-align: right;
+    }
+
+    .form-horizontal .advanced-filter {
+        padding-bottom: 10px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -350,6 +393,18 @@
     .rz-table-footer {
         text-align: right;
     }
+
+    .form-horizontal .control-label {
+        text-align: right;
+    }
+
+    .form-horizontal .rz-action-filter-field {
+        text-align: center;
+    }
+
+    .form-horizontal .advanced-filter {
+        padding-bottom: 0px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -358,5 +413,17 @@
     }
     .rz-table-footer {
         text-align: right;
+    }
+
+    .form-horizontal .control-label {
+        text-align: right;
+    }
+
+    .form-horizontal .rz-action-filter-field {
+        text-align: center;
+    }
+
+    .form-horizontal .advanced-filter {
+        padding-bottom: 0px;
     }
 }

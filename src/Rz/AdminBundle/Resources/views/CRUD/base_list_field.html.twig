@@ -18,7 +18,7 @@
 
         {% if isEditable and xEditableType %}
             {% set url = path('sonata_admin_set_object_field_value', { 'context': 'list', 'field': field_description.name, 'objectId': admin.id(object), 'code': admin.code(object) }|merge(admin.getPersistentParameters|default([])) )  %}
-            <span {% block field_span_attributes %}class="x-editable" data-type="{{ xEditableType }}" data-value="{{ field_description.type == 'date' and value is not empty ? value.format('Y-m-d') : value }}" data-title="{{ field_description.label|trans({}, field_description.translationDomain) }}" data-pk="{{ admin.id(object) }}" data-url="{{ url }}" {% endblock %}>
+            <span {% block field_span_attributes %}class="x-editable" data-type="{{ xEditableType }}" data-value="{% if field_description.type == 'date' and value is not empty %}{{  value.format('Y-m-d') }}{% elseif field_description.type == 'datetime' and value is not empty %}{{  value.format('Y-m-d H:i') }}{% else %}{{ value }}{% endif %}"{% if field_description.type == 'datetime' and value is not empty %} data-format="YYYY-MM-DD HH:mm" data-template="D MMM YYYY HH:mm" data-viewformat="MMM D, YYYY, HH:mm" {% endif %}data-title="{{ field_description.label|trans({}, field_description.translationDomain) }}" data-pk="{{ admin.id(object) }}" data-url="{{ url }}" {% endblock %}>
                 {{ block('field') }}
             </span>
         {% else %}

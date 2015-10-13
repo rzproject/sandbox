@@ -141,12 +141,14 @@ var Admin = {
                     .replaceWith(html)
                 ;
             }
+        })
+        .on('shown', function(e, editable) {
+                Admin.setup_select2(editable.container.$form);
         });
     },
 
     setup_footable: function(subject) {
         if(window.SONATA_CONFIG.USE_FOOTABLE && jQuery('.footable').length > 0) {
-            console.log('footable');
             jQuery('.footable').footable();
         }
     },
@@ -256,7 +258,9 @@ var Admin = {
                 filterToggler = jQuery('i', '.sonata-toggle-filter[filter-target="' + targetSelector + '"]')
             ;
 
+
             if (jQuery(target).is(":visible")) {
+
                 filterToggler
                     .removeClass('fa-check-square-o')
                     .addClass('fa-square-o')
@@ -265,6 +269,8 @@ var Admin = {
                 target.hide();
 
             } else {
+
+                console.log(jQuery(filterToggler));
                 filterToggler
                     .removeClass('fa-square-o')
                     .addClass('fa-check-square-o')
@@ -272,6 +278,7 @@ var Admin = {
 
                 target.show();
             }
+
 
             if (jQuery('div[sonata-filter="true"]:visible', filters_container).length > 0) {
                 jQuery(filters_container).slideDown();
@@ -553,5 +560,5 @@ var Admin = {
             console.log('pagination');
             jQuery('.pagination').rPage();
         }
-    },
+    }
 };

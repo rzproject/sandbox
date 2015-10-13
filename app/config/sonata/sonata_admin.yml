@@ -52,7 +52,7 @@ sonata_admin:
                     filters:
                         edited: { value: 1 }
 
-            - { class:    col-lg-12 col-xs-12 , roles: [ROLE_SUPER_ADMIN], position: top, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Welcome!</h3></div><div class='panel-body'>You can customize this dashboard by editing the <code>sonata_admin.yml</code> file. The current dashboard presents the recent items from the NewsBundle and a non-statistical e-commerce information.</div></div>"} }
+            - { class:    col-lg-12 col-xs-12 , roles: [ROLE_SUPER_ADMIN], position: top, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Montage</h3></div><div class='panel-body'>Welcome to Montage Admin! Montage is an open source content management platform based on Sonata Project!</div></div>"} }
             - { position: left, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 25 }}
             - { position: left, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 7, mode: admin }}
             - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: https://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
@@ -109,7 +109,7 @@ sonata_admin:
                     - sonata.demo.admin.material
 
     templates:
-        user_block:                   'SonataAdminBundle:Core:user_block.html.twig'
+        user_block:                   'SonataUserBundle:Admin\Core:user_block.html.twig'
         add_block:                    'SonataAdminBundle:Core:add_block.html.twig'
         layout:                       'RzAdminBundle::standard_layout.html.twig'
         ajax:                         'SonataAdminBundle::ajax_layout.html.twig'

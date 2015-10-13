@@ -77,6 +77,8 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/auxiliary-rpage/responsive-paginate.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/iCheck/icheck.min.js
+                - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/waypoints/lib/jquery.waypoints.js
+                - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/waypoints/lib/shortcuts/sticky.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js
                 - %kernel.root_dir%/../web/bundles/sonatapage/sonata-page.back.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/Admin.js
