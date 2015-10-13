@@ -91,8 +91,14 @@
                                     </tr>
                                 {% elseif admin.getListMode == 'mosaic' %}
                                     <tr class="sonata-ba-list-field-header">
-                                        <th class="sonata-ba-list-field-header">
-											  <ul class="nav nav-pills nav-justified">
+                                        <th class="sonata-ba-list-field-header rz-ba-list-field-header-mosaic">
+											<div class="btn-group">
+											   <button type="button" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Action</button>
+											   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											     <span class="caret"></span>
+											     <span class="sr-only">Toggle Dropdown</span>
+											   </button>
+											   <ul class="dropdown-menu dropdown-menu-right">
 											   {% for field_description in admin.list.elements %}
 			                                        {% if admin.hasRoute('batch') and field_description.getOption('code') == '_batch' and batchactions|length > 0 %}
 			                                            <li class="sonata-ba-list-field-header sonata-ba-list-field-header-batch"><a id="list_batch_button" href="#" data-checked="false" style="white-space: nowrap; text-overflow: ellipsis;"><i class="fa fa-fw fa-check"></i> Select All</a></li>
@@ -112,6 +118,7 @@
 		                                                    {% set sort_by              = current ? admin.datagrid.values._sort_order : field_description.options._sort_order %}
 		                                                {% endif %}
 
+		                                                {% if sortable %}
 		                                                {% spaceless %}
 		                                                    <li class="sonata-ba-list-field-header-{{ field_description.type}} {% if sortable %} sonata-ba-list-field-header-order-{{ sort_by|lower }}{% if sort_active_class %}{{ sort_active_class }}{% endif %}{% endif %}{% if field_description.options.header_class is defined %} {{ field_description.options.header_class }}{% endif %}"{% if field_description.options.header_style is defined %} style="{{ field_description.options.header_style }}"{% endif %}>
 		                                                        <a href="{% if sortable %}{{ admin.generateUrl('list', sort_parameters) }}{% else %}#{% endif %}">
@@ -119,9 +126,11 @@
 		                                                        </a>
 		                                                    </li>
 		                                                {% endspaceless %}
+		                                                {% endif %}
 			                                        {% endif %}
 		                                        {% endfor %}
-	                                          </ul>
+											    </ul>
+											</div>
                                         </th>
                                     </tr>
                                 {% endif %}
