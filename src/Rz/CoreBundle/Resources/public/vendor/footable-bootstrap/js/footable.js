@@ -2466,7 +2466,7 @@
 		 */
 		getViewportWidth: function(){
 			var ratio = F.is.defined(window.devicePixelRatio) ? window.devicePixelRatio : 1;
-			return (window.innerWidth || (document.body ? document.body.offsetWidth : 0)) / ratio;
+			return (window.innerWidth || (document.body ? document.body.offsetWidth : 0));
 		}
 	});
 

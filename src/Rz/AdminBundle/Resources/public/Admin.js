@@ -51,8 +51,16 @@ var Admin = {
         Admin.setup_tree_view(subject);
         Admin.setup_collection_counter(subject);
         Admin.setup_rpage(subject);
-//        Admin.setup_tablesaw(subject);
-//        Admin.setup_list_modal(subject);
+        Admin.setup_list_modal(subject);
+        Admin.setup_tabdrop(subject);
+    },
+    setup_tabdrop: function(subject) {
+        Admin.log('[core|setup_tabdrop] configure tabdrop', subject);
+        // this will force relation modal to open list of entity in a wider modal
+        // to improve readability
+        if (jQuery('.nav-tabs, .nav-pills', subject).length > 0) {
+            jQuery('.nav-tabs, .nav-pills', subject).tabdrop({'text': '<i class="fa fa-fw fa-bars"></i>'});
+        }
     },
     setup_list_modal: function(modal) {
         Admin.log('[core|setup_list_modal] configure modal on', modal);
@@ -60,19 +68,23 @@ var Admin = {
         // to improve readability
         jQuery('div.modal-dialog', modal).css({
             width:  '90%', //choose your width
-            height: '85%',
+            height: 'auto',
             padding: 0
         });
         jQuery('div.modal-content', modal).css({
             'border-radius':'0',
-            height:   '100%',
+            height:   'auto',
             padding: 0
         });
         jQuery('.modal-body', modal).css({
             width:    'auto',
-            height:   '90%',
+            height:   'auto',
             padding: 5,
             overflow: 'scroll'
+        });
+
+        jQuery(document).on('hidden.bs.modal', '.modal', function () {
+            jQuery('.modal:visible').length && jQuery(document.body).addClass('modal-open');
         });
     },
     setup_select2: function(subject) {
@@ -148,17 +160,11 @@ var Admin = {
     },
 
     setup_footable: function(subject) {
+        Admin.log('[core|setup_footable] configure footable on', subject);
         if(window.SONATA_CONFIG.USE_FOOTABLE && jQuery('.footable').length > 0) {
             jQuery('.footable').footable();
         }
     },
-
-    //setup_tablesaw: function(subject) {
-    //    //if(window.SONATA_CONFIG.USE_FOOTABLE && jQuery('.footable').length > 0) {
-    //        console.log('tablesaw');
-    //        jQuery('.footable').footable();
-    //    //}
-    //},
 
     /**
      * render log message

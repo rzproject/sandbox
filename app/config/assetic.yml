@@ -83,6 +83,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/sonatapage/sonata-page.back.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/Admin.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/treeview.js
+                - %kernel.root_dir%/../web/bundles/rzcore/vendor/tabdrop/js/bootstrap-tabdrop.js
             filters:
                 - yui_js
 
@@ -93,7 +94,8 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/sonatacore/vendor/ionicons/css/ionicons.min.css
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.css
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/iCheck/skins/square/blue.css
-                - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/jqueryui/themes/flick/jquery-ui.min.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/vendor/jqueryui/themes/bootstrap/jquery-ui-1.10.3.custom.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/vendor/jqueryui/themes/bootstrap/jquery-ui-1.10.3.theme.css
                 - %kernel.root_dir%/../web/bundles/sonatacore/vendor/select2/select2.css
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css
                 - %kernel.root_dir%/../web/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css
@@ -103,6 +105,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/sonatapage/sonata-page.back.css
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/footable-bootstrap/css/footable.bootstrap.css
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/responsive-mobilemenu/rmm-css/responsivemobilemenu.css
+                - %kernel.root_dir%/../web/bundles/rzcore/vendor/tabdrop/css/tabdrop.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/style.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/themes.css
 

@@ -1,3 +1,6 @@
+{% if app.request.xmlHttpRequest and field_description.getOption('code') == '_batch' %}
+	{# do not render batch if ajax request #}
+{% else %}
 <td class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }}" objectId="{{ admin.id(object) }}"{% if field_description.options.row_align is defined %} style="text-align:{{ field_description.options.row_align }}"{% endif %}>
     {% set route = field_description.options.route.name|default(null) %}
     {% set action = route == 'show' ? 'VIEW' : route|upper %}
@@ -26,3 +29,4 @@
         {% endif %}
     {% endif %}
 </td>
+{% endif %}

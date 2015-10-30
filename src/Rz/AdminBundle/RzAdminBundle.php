@@ -11,10 +11,10 @@ class RzAdminBundle extends Bundle
     /**
      * {@inheritdoc}
      */
-    public function getParent()
-    {
-        return 'SonataAdminBundle';
-    }
+//    public function getParent()
+//    {
+//        return 'SonataAdminBundle';
+//    }
 
 
     /**

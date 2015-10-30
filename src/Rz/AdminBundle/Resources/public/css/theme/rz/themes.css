@@ -1,3 +1,62 @@
+/*jQuery UI */
+
+body .ui-tooltip {
+    -webkit-box-shadow: none !important;
+    box-shadow: none;
+    border-radius: 0px;
+    border-width: 1px !important;
+    font-size: 12px;
+}
+
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active:hover.disabled,
+.datepicker table tr td span.active.disabled.disabled,
+.datepicker table tr td span.active.disabled:hover.disabled,
+.datepicker table tr td span.active[disabled],
+.datepicker table tr td span.active:hover[disabled],
+.datepicker table tr td span.active.disabled[disabled],
+.datepicker table tr td span.active.disabled:hover[disabled]{
+    background: #3c8dbc none !important;
+    border-color: #3c8dbc;
+    color: #fff;
+    text-shadow: none;
+}
+
+.datepicker table tr td.today {
+    background: #f39c12 none !important;
+    border-color: #f39c12;
+    color: #fff;
+}
+
+.datepicker table tr td.today:hover:hover {
+    color: #fff;
+    background: #e08e0b none !important;
+    border-color: #e08e0b;
+}
+
+/* bootstrap */
+
+.bootstrap-datetimepicker-widget td.today:before {
+    border-bottom: 7px solid #fff;
+}
+
+/* AdminLTE */
 .panel-widget .panel.blue {
     border: 2px solid #368ee0;
 }

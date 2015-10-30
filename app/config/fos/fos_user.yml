@@ -7,7 +7,7 @@ fos_user:
 
     group:
         group_class:   AppBundle\Entity\User\Group
-        group_manager: sonata.user.orm.group_manager
+        group_manager: rz.user.orm.group_manager
 
     service:
-        user_manager: sonata.user.orm.user_manager
+        user_manager: rz.user.orm.user_manager

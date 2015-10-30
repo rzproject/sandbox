@@ -11,14 +11,73 @@ web_profiler:
 
 monolog:
     handlers:
+#        main:
+#            type:  stream
+#            path:  %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
+#            level: debug
         main:
-            type:  stream
+            type:  rotating_file
             path:  %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
             level: debug
+            # max number of log files to keep
+            # defaults to zero, which means infinite files
+            max_files: 10
 #        firephp:
 #            type:  firephp
 #            level: info
 
+#
+#doctrine:
+#    orm:
+#        auto_generate_proxy_classes: %kernel.debug%
+#        default_entity_manager: default
+#        entity_managers:
+#            default:
+#                metadata_cache_driver: redis
+#                query_cache_driver:    redis
+#                result_cache_driver:   redis
+#                second_level_cache:
+#                    region_cache_driver:
+#                        type: redis
+#                    enabled:              true
+#                    region_lock_lifetime: 60
+#                    log_enabled:          true
+#                    region_lifetime:      3600
+#                    regions:
+#                       fos_user_user_region:
+#                            cache_driver:
+#                                type: redis
+#                metadata_cache_driver:
+#                   type: memcached
+#                   host: %memcache_host%
+#                   port: %memcache_port%
+#                   instance_class: Memcached
+#                 query_cache_driver:
+#                   type: memcached
+#                   host: %memcache_host%
+#                   port: %memcache_port%
+#                   instance_class: Memcached
+#                 result_cache_driver:
+#                   type: memcached
+#                   host: %memcache_host%
+#                   port: %memcache_port%
+#                   instance_class: Memcached
+#                 second_level_cache:
+#                     region_cache_driver:
+#                         type: memcached
+#                         host: %memcache_host%
+#                         port: %memcache_port%
+#                         instance_class: Memcached
+#                     enabled:              true
+#                     regions:
+#                         region_name:
+#                             cache_driver:
+#                               type: memcached
+#                               host: %memcache_host%
+#                               port: %memcache_port%
+#                               instance_class: Memcached
+#                auto_mapping: true
+#                mappings: ~
 #sonata_payment:
 #    methods:
 #        debug: ~

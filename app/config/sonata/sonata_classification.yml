@@ -1,3 +1,6 @@
+##########################
+# Sonata Classification
+##########################
 sonata_classification:
     class:
         tag:            AppBundle\Entity\Classification\Tag
@@ -6,6 +9,33 @@ sonata_classification:
         collection:     AppBundle\Entity\Classification\Collection
         media:          AppBundle\Entity\Media\Media
 
+    admin:
+        tag:
+            class:      AppBundle\Admin\Classification\TagAdmin
+            controller: RzClassificationBundle:TagAdmin
+        category:
+            class:      AppBundle\Admin\Classification\CategoryAdmin
+            controller: RzClassificationBundle:CategoryAdmin
+        context:
+            class:      AppBundle\Admin\Classification\ContextAdmin
+        collection:
+            class:      AppBundle\Admin\Classification\CollectionAdmin
+            controller: RzClassificationBundle:CollectionAdmin
+
+##########################
+# Sonata Classification
+##########################
+rz_classification:
+  manager_class:
+    orm:
+      tag:        'Rz\ClassificationBundle\Entity\TagManager'
+      category:   'Rz\ClassificationBundle\Entity\CategoryManager'
+      collection: 'Rz\ClassificationBundle\Entity\CollectionManager'
+      context:    'Rz\ClassificationBundle\Entity\ContextManager'
+
+##########################
+# Classification Doctrine
+##########################
 doctrine:
     orm:
         entity_managers:

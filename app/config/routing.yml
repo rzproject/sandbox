@@ -4,9 +4,8 @@
 #   prefix:   /_internal
 #
 # Support for LiipImagineBundle
-#_imagine:
-#    resource: .
-#    type:     imagine
+#_liip_imagine:
+#    resource: "@LiipImagineBundle/Resources/config/routing.xml"
 
 _front:
     resource: routing_front.yml

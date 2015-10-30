@@ -1,0 +1,5 @@
+{% if admin.hasRoute('create') and admin.isGranted('CREATE')%}
+    <a class="sonata-action-element" href="{{ admin.generateUrl('createBaseCategory', {'context': null}) }}">
+        <i class="fa fa-plus-circle"></i>
+        {{ 'link_action_create_from_context'|trans({}, 'SonataClassificationBundle') }}</a>
+{% endif %}

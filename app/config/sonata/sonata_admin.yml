@@ -1,6 +1,8 @@
-#
+##########################
+# Sonata Admin
+##########################
+
 # more information can be found here https://sonata-project.org/bundles/admin
-#
 sonata_admin:
     # default value, change it to sonata.admin.security.handler.acl to use ACL
     security:
@@ -125,12 +127,12 @@ sonata_admin:
         acl:                          'SonataAdminBundle:CRUD:acl.html.twig'
         history_revision_timestamp:   'SonataAdminBundle:CRUD:history_revision_timestamp.html.twig'
         action:                       'SonataAdminBundle:CRUD:action.html.twig'
-        select:                       'SonataAdminBundle:CRUD:list__select.html.twig'
+        select:                       'RzAdminBundle:CRUD:list__select.html.twig'
         list_block:                   'SonataAdminBundle:Block:block_admin_list.html.twig'
         search_result_block:          'SonataAdminBundle:Block:block_search_result.html.twig'
         short_object_description:     'SonataAdminBundle:Helper:short-object-description.html.twig'
         delete:                       'SonataAdminBundle:CRUD:delete.html.twig'
-        batch:                        'SonataAdminBundle:CRUD:list__batch.html.twig'
+        batch:                        'RzAdminBundle:CRUD:list__batch.html.twig'
         batch_confirmation:           'SonataAdminBundle:CRUD:batch_confirmation.html.twig'
         inner_list_row:               'SonataAdminBundle:CRUD:list_inner_row.html.twig'
         outer_list_rows_mosaic:       'RzAdminBundle:CRUD:list_outer_rows_mosaic.html.twig'
@@ -160,10 +162,83 @@ sonata_admin:
             - assetic/sonata_formatter_js.js
             - bundles/sonataformatter/vendor/ckeditor/ckeditor.js
 
+#    extensions:
+#        app.admin.extension.user:
+#            admins:
+#                - sonata.user.admin.user
 
+    admin_services:
+        #override admin templates
+        sonata.user.admin.user:
+            pager_type:  simple
+            templates:
+                view:
+                    list:                     'RzUserBundle:CRUD:list.html.twig'
+                    outer_list_rows_mosaic:   'RzUserBundle:CRUD:list_outer_rows_mosaic_user.html.twig'
 
+        sonata.user.admin.group:
+            templates:
+                view:
+                    outer_list_rows_mosaic:   'RzUserBundle:CRUD:list_outer_rows_mosaic_group.html.twig'
+
+        sonata.classification.admin.category:
+            templates:
+                view:
+                    list:                     'RzClassificationBundle:CategoryAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzClassificationBundle:CategoryAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.classification.admin.collection:
+            templates:
+                view:
+                    list:                     'RzClassificationBundle:CollectionAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzClassificationBundle:CollectionAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.classification.admin.tag:
+            templates:
+                view:
+                    list:                     'RzClassificationBundle:TagAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzClassificationBundle:TagAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.classification.admin.context:
+            templates:
+                view:
+                    outer_list_rows_mosaic:   'RzClassificationBundle:ContextAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.news.admin.post:
+            pager_type:  simple
+            templates:
+                view:
+                    outer_list_rows_mosaic:   'RzNewsBundle:PostAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.media.admin.media:
+            pager_type:  simple
+            templates:
+                view:
+                    list:                     'RzMediaBundle:MediaAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzMediaBundle:MediaAdmin:list_outer_rows_mosaic.html.twig'
+
+##########################
+# Sonata Doctrine ORM
+##########################
+#
+# sonata doctrine ORM bundle configuration
+#
 sonata_doctrine_orm_admin:
     templates:
+      form:
+        - RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig
+      filter:
+        - RzDoctrineORMAdminBundle:Form:filter_admin_fields.html.twig
       types:
         list:
           string:   'RzAdminBundle:CRUD:list_string.html.twig'
+
+##########################
+# RZ Admin
+##########################
+rz_admin:
+  options:
+    use_footable: true
+  pool:
+    base_admin_class: Rz\AdminBundle\Admin\Pool
+

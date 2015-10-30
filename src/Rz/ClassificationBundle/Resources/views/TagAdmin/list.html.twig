@@ -1,0 +1,15 @@
+{% extends 'RzAdminBundle:CRUD:list.html.twig' %}
+
+{% block preview %}
+	{% if not app.request.get('hide_context') %}
+		<ul class="nav nav-pills">
+			{% for context in contexts %}
+				{% if current_context and context.id == current_context.id %}
+					<li class="active"><a class="text-uppercase" href="{{ admin.generateUrl('list', { 'context': context.id }) }}">{{ context.name }}</a></li>
+				{% else %}
+					<li><a class="text-uppercase" href="{{ admin.generateUrl('list', { 'context': context.id }) }}">{{ context.name }}</a></li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}

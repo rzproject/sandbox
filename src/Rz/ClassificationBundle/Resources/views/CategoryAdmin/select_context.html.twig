@@ -1,0 +1,32 @@
+{% extends 'SonataAdminBundle:CRUD:action.html.twig' %}
+
+{% block title %}{{ 'title_select_context'|trans({}, 'SonataClassificationBundle') }}{% endblock %}
+
+{% block content %}
+    <div class="box box-success">
+        <div class="box-header">
+            <h3 class="box-title">
+                {{ block('title') }}
+            </h3>
+        </div>
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-bordered table-striped sonata-ba-list footable" data-toggle-column="last">
+                <thead>
+                <tr class="sonata-ba-list-field-header footable-header">
+                    <th class="sonata-ba-list-field-header-text">Code</th>
+                    <th class="sonata-ba-list-field-header-text" data-breakpoints="xs sm">Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for context in defunct_contexts %}
+                <tr>
+                    <td> <a class="sonata-action-element" href="{{ admin.generateUrl('createBaseCategory', {'context': context.id}) }}">{{ context.id }}</a></td>
+	                <td>{{ context.name }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+{% endblock %}

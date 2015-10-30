@@ -2,6 +2,9 @@
 # more information can be found here https://sonata-project.org/bundles/user
 #
 # Enable Doctrine to map the provided entities
+##########################
+# User Doctrine
+##########################
 doctrine:
     orm:
         entity_managers:
@@ -9,6 +12,10 @@ doctrine:
                 mappings:
                     FOSUserBundle: ~
                     SonataUserBundle: ~
+
+##########################
+# Sonata User
+##########################
 
 # if you change the class configuration, please also alter the fos_user.yml file
 sonata_user:
@@ -30,19 +37,22 @@ sonata_user:
 
     manager_type:             orm
 
+    admin:
+        user:
+            class: AppBundle\Admin\User\Entity\UserAdmin
+        group:
+            class: AppBundle\Admin\User\Entity\GroupAdmin
+
     profile:
         dashboard:
             blocks:
                 - { position: left, type: sonata.block.service.text, settings: { content: "<h2>Welcome!</h2> <p>This is a sample user profile dashboard, feel free to override it in the configuration! Want to make this text dynamic? For instance display the user's name? Create a dedicated block and edit the configuration!</p>"} }
-#                - { position: left, type: sonata.order.block.recent_orders, settings: { title: Recent Orders, number: 5, mode: public }}
                 - { position: right, type: sonata.timeline.block.timeline, settings: { max_per_page: 15 }}
                 - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: public }}
                 - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: public }}
         menu:
             - { route: 'sonata_user_profile_show', label: 'sonata_profile_title', domain: 'SonataUserBundle'}
             - { route: 'sonata_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
-#            - { route: 'sonata_customer_addresses', label: 'link_list_addresses', domain: 'SonataCustomerBundle'}
-#            - { route: 'sonata_order_index', label: 'order_list', domain: 'SonataOrderBundle'}
         form:
             type:                 sonata_user_profile
             handler:              sonata.user.profile.form.handler.default
@@ -51,3 +61,10 @@ sonata_user:
                 # Defaults:
                 - Profile
                 - Default
+
+##########################
+# RZ User
+##########################
+rz_user:
+    manager_type: orm
+

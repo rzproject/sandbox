@@ -1,0 +1,19 @@
+{% extends 'RzAdminBundle:CRUD:list_outer_rows_mosaic.html.twig' %}
+
+{% block sonata_mosaic_background %}
+	{% if object.image and admin.isGranted('VIEW', object.image) %}
+		{% if admin.isGranted('EDIT', object) and admin.hasRoute('edit') %}
+			<a href="{{ admin.generateUrl('edit', {'id' : object|sonata_urlsafeid }) }}">{% thumbnail object.image, 'admin' %}</a>
+		{% else %}
+			{% thumbnail object.image, 'admin' with {'width': 90} %}
+		{% endif %}
+	{% else %}
+		<img src="{{ asset('bundles/rzadmin/images/mosaic-placeholder.png') }}" alt="" />
+	{% endif %}
+{% endblock %}
+
+
+{% block sonata_mosaic_hover_view %}
+    <span class="mosaic-box-label label label-primary pull-right">#{{ admin.id(object) }}</span>
+    {{ object.abstract }}
+{% endblock %}

@@ -49,7 +49,7 @@ class AppKernel extends Kernel
             new Sonata\PageBundle\SonataPageBundle(),
             new Sonata\NewsBundle\SonataNewsBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
-            // new Liip\ImagineBundle\LiipImagineBundle(),
+//            new Liip\ImagineBundle\LiipImagineBundle(),
 
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 
@@ -105,6 +105,12 @@ class AppKernel extends Kernel
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\CoreBundle\RzCoreBundle(),
+            new Rz\UserBundle\RzUserBundle(),
+            new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
+            new Rz\DemoBundle\RzDemoBundle(),
+            new Rz\ClassificationBundle\RzClassificationBundle(),
+            new Rz\NewsBundle\RzNewsBundle(),
+            new Rz\MediaBundle\RzMediaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -112,6 +118,7 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Bazinga\Bundle\FakerBundle\BazingaFakerBundle();
             $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
         }
 
         return $bundles;

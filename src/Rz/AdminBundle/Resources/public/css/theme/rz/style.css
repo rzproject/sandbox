@@ -32,6 +32,53 @@
     color: #ffffff;
 }
 
+.modal-body .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.modal-body .well {
+    margin-bottom: 0px;
+}
+
+.modal-body .rz-table-footer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.box-footer {
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.box-body {
+    border-radius: 0px;
+}
+
+.bootstrap-datetimepicker-widget, .bootstrap-datetimepicker-widget td span,
+.bootstrap-datetimepicker-widget td, .bootstrap-datetimepicker-widget th{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.bootstrap-datetimepicker-widget.timepicker-sbs {
+    padding: 10px;
+}
+
+.bootstrap-datetimepicker-widget .timepicker {
+    padding-left: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input {
+    border-radius: 0px;
+}
+
+.input-group.date > .input-group-addon {
+    width: 1%;
+}
+
 /*
  * Select2 Flat
  * ------------
@@ -204,6 +251,81 @@
     color: #34495e;
 }
 
+/* jquery-ui */
+
+.datepicker table tr td span {
+    border-radius: 0px;
+}
+
+/* sonata admin */
+.field-short-description {
+    margin: 0px;
+    min-height: 34px;
+    border-radius: 0px;
+}
+
+.sonata-ba-field-list-natural .field-actions {
+    display: block;
+}
+
+.sonata-ba-field-list-natural .field-actions .btn-group {
+    margin-top: 10px;
+}
+
+.select2-container-multi.form-control {
+    padding: 0px;
+    border: 0px;
+}
+
+.select2-container-multi .select2-choices {
+    background: none !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    border: 0px;
+    padding: 5px 5px 5px 18px;
+}
+.select2-container-multi .select2-search-choice-close {
+    margin-top: 2px;
+}
+
+.select2-dropdown-open .select2-choice {
+    background-image: none;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    box-shadow: none;
+}
+
+.select2-container-multi.select2-container-active .select2-choices {
+    border: 1px solid #367fa9;
+    box-shadow: none;
+}
+
+div.mosaic-inner-box {
+    height: 150px;
+}
+
+.sonata-tree__item {
+    border-radius: 0px;
+}
+
+.sonata-tree__item.is-active:before {
+    border-width: 0px;
+    margin-top: 0px;
+}
+
+.sonata-tree__item.is-active:after, .sonata-tree__item.is-active:before {
+    position: static;
+    border: 0px solid transparent;
+    top: 0px;
+    left: 0px;
+}
+
 /*----------------------------------------------- Retina displays fix ------------------------------------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     .select2-container .select2-choice abbr {
@@ -309,6 +431,15 @@
     text-align: right;
 }
 
+
+table.rz-table-orm > tbody > tr > td.control-group {
+    line-height: 30px;
+}
+
+table.rz-table-orm > tbody > tr > td.control-group > input[type="text"] {
+    min-width: 200px;
+}
+
 /*.rz-pagination-primary >li>a {*/
     /*color: #fff;*/
     /*background-color: #367fa9;*/
@@ -352,6 +483,19 @@
     .rz-table-footer {
         padding-top: 10px;
         text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .rz-container-fluid, .rz-box-footer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    body.fixed .rz-list-table,
+    .rz-list-table {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .form-horizontal .control-label {
@@ -377,6 +521,15 @@
 
     .rz-ba-form-actions-bottom {
         text-align: center;
+    }
+
+    .modal-body .rz-col {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    table.rz-table-orm > tbody > tr > td.control-group > input[type="text"] {
+        min-width: 100px;
     }
 }
 
@@ -414,6 +567,11 @@
     .rz-ba-form-actions-bottom {
         text-align: center;
     }
+
+    .modal-body .rz-container-fluid {
+        padding-right: 0px;
+        padding-right: 0px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -448,6 +606,11 @@
     .rz-ba-form-actions-bottom {
         text-align: left;
     }
+
+    .modal-body .rz-container-fluid {
+        padding-right: 0px;
+        padding-right: 0px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -481,5 +644,10 @@
 
     .rz-ba-form-actions-bottom {
         text-align: left;
+    }
+
+    .modal-body .rz-container-fluid {
+        padding-right: 0px;
+        padding-right: 0px;
     }
 }

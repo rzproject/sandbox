@@ -1,6 +1,7 @@
-#
+##########################
+# Sonata News
+##########################
 # more information can be found here https://sonata-project.org/bundles/news
-#
 sonata_news:
     class:
         post:       AppBundle\Entity\News\Post
@@ -9,6 +10,9 @@ sonata_news:
         collection: AppBundle\Entity\Classification\Collection
         user:       AppBundle\Entity\User\User
         media:      AppBundle\Entity\Media\Media
+    admin:
+        post:
+            class: AppBundle\Admin\News\PostAdmin
 
     title:        %sonata_news.blog_title%
     link:         %sonata_news.blog_link%
@@ -26,6 +30,9 @@ sonata_news:
             template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
 
 
+##########################
+# News Doctrine
+##########################
 # Enable Doctrine to map the provided entities
 doctrine:
     orm:

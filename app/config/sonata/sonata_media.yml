@@ -1,6 +1,20 @@
-#
+##########################
+# Media Doctrine
+##########################
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataMediaBundle: ~
+
+##########################
+# Sonata Media
+##########################
+
 # more information can be found here https://sonata-project.org/bundles/media
-#
+
 sonata_media:
     class:
         media:             AppBundle\Entity\Media\Media
@@ -49,15 +63,6 @@ sonata_media:
                 preview: { width: 100, quality: 100}
                 wide:    { width: 820, quality: 100}
 
-        product_catalog:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                preview:   { width: 100, quality: 100}
-                small:     { width: 300, quality: 100}
-                large:     { width: 750, quality: 100}
-
     cdn:
         # define the public base url for the uploaded media
         server:
@@ -76,20 +81,13 @@ sonata_media:
             resizer:    false
         image:
            thumbnail: sonata.media.thumbnail.format          # default value
-#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
-#            thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
         vimeo:
             thumbnail: sonata.media.thumbnail.format          # default value
-#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
-#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
         youtube:
             thumbnail: sonata.media.thumbnail.format          # default value
-#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
-#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
         dailymotion:
             thumbnail: sonata.media.thumbnail.format          # default value
-#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
-#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
+
 
     pixlr:
         enabled:  true
@@ -97,88 +95,32 @@ sonata_media:
 
     resizer:
         simple:
-#            mode:  outbound
             mode:  inset
 
-#
-# The LiipImagineBundle can be used if you want to convert on demand an image
-# to a specific format. (ie a controller render the file)
-#    more information can be found here : https://github.com/liip/LiipImagineBundle
-#
-#liip_imagine:
-#    filter_sets:
-#
-#        # this configuration match the sonata_media configuration format definition
-#        product_catalog_preview:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [100, 100], mode: outbound }
-#
-#        product_catalog_small:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [200, 100], mode: outbound }
-#
-#        product_catalog_large:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [600, 100], mode: outbound }
-#
-#        news_abstract:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [100, 100], mode: outbound }
-#
-#        news_wide:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [820, 100], mode: outbound }
-#
-#        sonata_collection_preview:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [100, 100], mode: outbound }
-#
-#        sonata_collection_wide:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [820, 100], mode: outbound }
-#
-#        sonata_category_preview:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [100, 100], mode: outbound }
-#
-#        sonata_category_wide:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [820, 100], mode: outbound }
-#
-#        default_small:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [100, 100], mode: outbound }
-#
-#        default_big:
-#            quality: 75
-#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-#            filters:
-#                thumbnail: { size: [820, 70], mode: outbound }
 
-# Enable Doctrine to map the provided entities
-doctrine:
+
+##########################
+# Rz Media
+##########################
+rz_media:
+  manager_class:
     orm:
-        entity_managers:
-            default:
-                mappings:
-                    SonataMediaBundle: ~
+      media:   'Rz\MediaBundle\Entity\MediaManager'
+      gallery: 'Rz\MediaBundle\Entity\GalleryManager'
+
+  admin:
+
+    media:
+      class:        'Rz\MediaBundle\Admin\ORM\MediaAdmin'
+      controller:   'RzMediaBundle:MediaAdmin'
+      translation:  'SonataMediaBundle'
+
+    gallery:
+      class:        'Rz\MediaBundle\Admin\ORM\GalleryAdmin'
+      controller:   'RzMediaBundle:GalleryAdmin'
+      translation:  'SonataMediaBundle'
+
+    gallery_has_media:
+      class:        'Rz\MediaBundle\Admin\ORM\GalleryHasMediaAdmin'
+      controller:   'SonataAdminBundle:CRUD'
+      translation:  'SonataMediaBundle'

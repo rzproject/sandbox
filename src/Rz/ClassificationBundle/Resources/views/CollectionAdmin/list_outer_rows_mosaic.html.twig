@@ -1,0 +1,10 @@
+{% extends 'RzAdminBundle:CRUD:list_outer_rows_mosaic.html.twig' %}
+
+{% block sonata_mosaic_background %}
+	<img src="{{ asset('bundles/rzadmin/images/mosaic-classification-placeholder.png') }}" alt="" />
+{% endblock %}
+
+{% block sonata_mosaic_hover_view %}
+	<span class="mosaic-box-label label label-primary pull-right">#{{ admin.id(object) }}</span>
+	{{ object.description }}
+{% endblock %}

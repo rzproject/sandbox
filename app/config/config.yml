@@ -36,18 +36,6 @@ imports:
     - { resource: sonata/sonata_notification.yml }
     - { resource: sonata/sonata_classification.yml }
 
-    # Rz Bundles
-    - { resource: rz/rz_admin.yml }
-
-    # Sonata e-commerce bundles
-#    - { resource: sonata/sonata_price.yml }
-#    - { resource: sonata/sonata_order.yml }
-#    - { resource: sonata/sonata_payment.yml }
-#    - { resource: sonata/sonata_product.yml }
-#    - { resource: sonata/sonata_invoice.yml }
-#    - { resource: sonata/sonata_delivery.yml }
-#    - { resource: sonata/sonata_customer.yml }
-#    - { resource: sonata/sonata_basket.yml }
 
 framework:
     #esi:                   ~

@@ -1,0 +1,21 @@
+{% extends 'RzAdminBundle:CRUD:list.html.twig' %}
+
+{% block actions %}
+    {% spaceless %}
+        {% if admin.hasRoute('create') and admin.isGranted('CREATE')%}
+            <li>{% include 'SonataAdminBundle:Core:create_button.html.twig' %}</li>
+        {% endif %}
+        {% if admin.hasRoute('createBaseCategory') and admin.isGranted('CREATE') and rz_classification_allow_create_base_category() %}
+            <li class="divider" role="presentation"></li>
+            <li>{% include 'RzClassificationBundle:Button:create_base_category_button.html.twig' %}</li>
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}
+
+{% block tab_menu %}
+    {% include 'RzClassificationBundle:CategoryAdmin:list_tab_menu.html.twig' with {
+        'mode':   'list',
+        'action': action,
+        'admin':  admin,
+    } only %}
+{% endblock %}

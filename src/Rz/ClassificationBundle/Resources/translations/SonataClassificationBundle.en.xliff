@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" >
+        <body>
+            <trans-unit id="context_title">
+                <source>context_title</source>
+                <target>Context</target>
+            </trans-unit>
+
+            <trans-unit id='flash_category_context_not_available'>
+                <source>flash_category_context_not_available</source>
+                <target>No new available context.</target>
+            </trans-unit>
+
+            <trans-unit id='flash_category_context_created'>
+                <source>flash_category_context_created</source>
+                <target>Created base category from context: %context%</target>
+            </trans-unit>
+
+            <trans-unit id='title_select_context'>
+                <source>title_select_context</source>
+                <target>Select context</target>
+            </trans-unit>
+
+            <trans-unit id="link_action_create_from_context">
+                <source>link_action_create_from_context</source>
+                <target>Add New from Context</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
