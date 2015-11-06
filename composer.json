@@ -63,9 +63,17 @@
         "rmzamora/datagrid-bundle": "2.5.0.*",
         "rmzamora/timeline-bundle": "2.5.0.*",
         "rmzamora/classification-bundle": "2.5.0.*",
-        "rmzamora/comment-bundle": "2.5.0.*",
 
-        "rmzamora/fos-comment-bundle": "~2.0@dev",
+        "rz/core-bundle": "2.0.0.*",
+        "rz/admin-bundle": "2.0.0.*",
+        "rz/classification-bundle": "2.0.0.*",
+        "rz/comment-bundle": "2.0.0.*",
+        "rz/doctrine-orm-admin-bundle": "2.0.0.*",
+        "rz/media-bundle": "2.0.0.*",
+        "rz/news-bundle": "2.0.0.*",
+        "rz/page-bundle": "2.0.0.*",
+        "rz/user-bundle": "2.0.0.*",
+
 
         "michelf/php-markdown": "~1.4",
         "simplethings/entity-audit-bundle": "~0.5",

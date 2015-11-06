@@ -10,9 +10,10 @@ sonata_news:
         collection: AppBundle\Entity\Classification\Collection
         user:       AppBundle\Entity\User\User
         media:      AppBundle\Entity\Media\Media
+
     admin:
         post:
-            class: AppBundle\Admin\News\PostAdmin
+            class:  AppBundle\Admin\News\PostAdmin
 
     title:        %sonata_news.blog_title%
     link:         %sonata_news.blog_link%
@@ -29,6 +30,13 @@ sonata_news:
             from:     %sonata_news.comment.email_from%
             template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
 
+##########################
+# Sonata Classification
+##########################
+rz_news:
+  manager_class:
+    orm:
+      post:       'Rz\NewsBundle\Entity\PostManager'
 
 ##########################
 # News Doctrine

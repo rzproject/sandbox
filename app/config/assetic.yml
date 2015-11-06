@@ -80,10 +80,12 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/waypoints/lib/jquery.waypoints.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/waypoints/lib/shortcuts/sticky.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js
-                - %kernel.root_dir%/../web/bundles/sonatapage/sonata-page.back.js
+                - %kernel.root_dir%/../web/bundles/rzpage/js/sonata-page.back.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/Admin.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/treeview.js
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/tabdrop/js/bootstrap-tabdrop.js
+                - %kernel.root_dir%/../web/bundles/rzcore/vendor/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js
+                - %kernel.root_dir%/../web/bundles/rzcore/vendor/bootstrap-fileinput/js/fileinput.js
             filters:
                 - yui_js
 
@@ -106,6 +108,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/footable-bootstrap/css/footable.bootstrap.css
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/responsive-mobilemenu/rmm-css/responsivemobilemenu.css
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/tabdrop/css/tabdrop.css
+                - %kernel.root_dir%/../web/bundles/rzcore/vendor/bootstrap-fileinput/css/fileinput.min.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/style.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/themes.css
 

@@ -79,6 +79,25 @@ sonata_media:
         file:
             # the resizer must be set to false, otherwhise this can delete icon files from the fs
             resizer:    false
+            allowed_extensions: ['pdf', 'txt', 'rtf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pttx', 'odt', 'odg', 'odp', 'ods', 'odc', 'odf', 'odb', 'csv', 'xml']
+            allowed_mime_types:
+              - 'application/pdf'
+              - 'application/x-pdf'
+              - 'application/rtf'
+              - 'text/html'
+              - 'text/rtf'
+              - 'text/plain'
+              - 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+              - 'application/vnd.openxmlformats-officedocument.spreadsheetml.template'
+              - 'application/vnd.openxmlformats-officedocument.presentationml.template'
+              - 'application/vnd.openxmlformats-officedocument.presentationml.slideshow'
+              - 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+              - 'application/vnd.openxmlformats-officedocument.presentationml.slide'
+              - 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+              - 'application/vnd.openxmlformats-officedocument.wordprocessingml.template'
+              - 'application/vnd.ms-excel.addin.macroEnabled.12'
+              - 'application/vnd.ms-excel.sheet.binary.macroEnabled.12'
+
         image:
            thumbnail: sonata.media.thumbnail.format          # default value
         vimeo:

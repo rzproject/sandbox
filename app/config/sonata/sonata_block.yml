@@ -91,3 +91,5 @@ sonata_block:
         sonata.formatter.block.formatter:
 
         sonata.seo.block.breadcrumb.homepage:
+
+        sonata.comment.block.thread.async:
