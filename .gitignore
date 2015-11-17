@@ -15,3 +15,5 @@
 .vagrant
 .docker/*.tar
 .idea
+/themes/
+/media/
