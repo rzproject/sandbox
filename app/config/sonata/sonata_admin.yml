@@ -290,6 +290,8 @@ sonata_admin:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
                 form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                view:
+                    outer_list_rows_mosaic:   'RzPageBundle:SiteAdmin:list_outer_rows_mosaic.html.twig'
 
 
 ##########################
