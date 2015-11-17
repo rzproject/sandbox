@@ -246,6 +246,14 @@ sonata_admin:
                     list:                     'RzMediaBundle:GalleryAdmin:list.html.twig'
                     outer_list_rows_mosaic:   'RzMediaBundle:GalleryAdmin:list_outer_rows_mosaic.html.twig'
 
+        sonata.comment.admin.thread:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                view:
+                    outer_list_rows_mosaic:   'RzCommentBundle:ThreadAdmin:list_outer_rows_mosaic.html.twig'
+
         sonata.comment.admin.comment:
             pager_type:  simple
             label:       comment
@@ -254,6 +262,7 @@ sonata_admin:
                 form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
                 view:
                     list:                     'RzCommentBundle:CommentAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzCommentBundle:CommentAdmin:list_outer_rows_mosaic.html.twig'
 
         sonata.page.admin.page:
             pager_type:  simple
