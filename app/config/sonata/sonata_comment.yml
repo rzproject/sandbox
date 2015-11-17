@@ -1,3 +1,6 @@
+##########################
+# Sonata Comment
+##########################
 #
 # more information can be found here https://sonata-project.org/bundles/comment
 #
@@ -7,3 +10,9 @@ sonata_comment:
         comment:  AppBundle\Entity\Comment\Comment # This is an optional value
         thread:   AppBundle\Entity\Comment\Thread   # This is an optional value
         category: AppBundle\Entity\Classification\Category   # This is an optional value
+
+    admin:
+        comment:
+            class:  Rz\CommentBundle\Admin\Entity\CommentAdmin
+        thread:
+            class:  Rz\CommentBundle\Admin\Entity\ThreadAdmin
