@@ -20,6 +20,7 @@ use Rz\PageBundle\Entity\BasePage as BasePage;
  *
  * @author <yourname> <youremail>
  */
+
 class Page extends BasePage
 {
 

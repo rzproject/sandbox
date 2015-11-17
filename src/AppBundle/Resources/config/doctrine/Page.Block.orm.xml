@@ -10,8 +10,7 @@
     -->
     <entity
         name="AppBundle\Entity\Page\Block"
-        table="page__block"
-        repository-class="Doctrine\ORM\EntityRepository">
+        table="page__block">
 
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>

@@ -4,7 +4,9 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="AppBundle\Entity\Comment\Thread" table="comment__thread">
+    <entity name="AppBundle\Entity\Comment\Thread"
+            table="comment__thread"
+            repository-class="Doctrine\ORM\EntityRepository">
 
         <id name="id" column="id" type="string" />
 

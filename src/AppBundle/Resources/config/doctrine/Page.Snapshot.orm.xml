@@ -10,9 +10,7 @@
     -->
     <entity
         name="AppBundle\Entity\Page\Snapshot"
-        table="page__snapshot"
-        >
-
+        table="page__snapshot">
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>

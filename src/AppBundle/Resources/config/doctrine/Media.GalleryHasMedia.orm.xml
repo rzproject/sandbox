@@ -11,7 +11,7 @@
     <entity
         name="AppBundle\Entity\Media\GalleryHasMedia"
         table="media__gallery_media"
-        >
+        repository-class="Doctrine\ORM\EntityRepository">
 
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
