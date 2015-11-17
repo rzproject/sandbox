@@ -26,6 +26,15 @@ monolog:
 #            type:  firephp
 #            level: info
 
+#doctrine_cache:
+#    providers:
+#        redis_cache:
+#            redis:
+#                host: 127.0.0.1
+#                port: 6379
+#                timeout: 30
+#                database: 20
+
 #
 #doctrine:
 #    orm:
@@ -36,17 +45,21 @@ monolog:
 #                metadata_cache_driver: redis
 #                query_cache_driver:    redis
 #                result_cache_driver:   redis
+#                auto_mapping: true
+#                mappings: ~
 #                second_level_cache:
 #                    region_cache_driver:
-#                        type: redis
+#                        type: service
+#                        id: doctrine_cache.providers.redis_cache
 #                    enabled:              true
 #                    region_lock_lifetime: 60
 #                    log_enabled:          true
 #                    region_lifetime:      3600
 #                    regions:
-#                       fos_user_user_region:
+#                       page_entity_region:
 #                            cache_driver:
 #                                type: redis
+#                                id: doctrine_cache.providers.redis_cache
 #                metadata_cache_driver:
 #                   type: memcached
 #                   host: %memcache_host%
@@ -76,8 +89,6 @@ monolog:
 #                               host: %memcache_host%
 #                               port: %memcache_port%
 #                               instance_class: Memcached
-#                auto_mapping: true
-#                mappings: ~
 #sonata_payment:
 #    methods:
 #        debug: ~

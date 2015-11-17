@@ -32,16 +32,16 @@ sonata_admin:
         blocks:
             #- { position: left, type: sonata.admin.block.admin_list }
             - { position: right, type: sonata.admin_doctrine_orm.block.audit}
-            -
-                class:    col-lg-6 col-xs-6
-                position: top
-                type:     sonata.admin.block.stats
-                settings:
-                    code: sonata.news.admin.comment
-                    icon: fa-comments
-                    text: Open Comment
-                    filters:
-                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
+#            -
+#                class:    col-lg-6 col-xs-6
+#                position: top
+#                type:     sonata.admin.block.stats
+#                settings:
+#                    code: sonata.news.admin.comment
+#                    icon: fa-comments
+#                    text: Open Comment
+#                    filters:
+#                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
             -
                 class:    col-lg-6 col-xs-6
                 position: top
@@ -71,7 +71,6 @@ sonata_admin:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
                     - sonata.comment.admin.thread
-                    - sonata.comment.admin.comment
 
             sonata.admin.group.classification:
                 label:           sonata_classification
@@ -100,6 +99,7 @@ sonata_admin:
                     - sonata.user.admin.group
                     - sonata.page.admin.site
                     - sonata.notification.admin.message
+
 
             sonata.admin.group.demo:
                 label: Demo
@@ -252,6 +252,8 @@ sonata_admin:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
                 form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                view:
+                    list:                     'RzCommentBundle:CommentAdmin:list.html.twig'
 
         sonata.page.admin.page:
             pager_type:  simple

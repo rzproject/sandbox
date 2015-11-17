@@ -36,7 +36,7 @@ sonata_block:
         sonata.page.block.breadcrumb:
 
         # MediaBundle's Blocks
-        sonata.media.block.media:
+        rz.media.block.media:
         sonata.media.block.gallery:
         sonata.media.block.feature_media:
 

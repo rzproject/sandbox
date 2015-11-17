@@ -79,7 +79,7 @@ sonata_media:
         file:
             # the resizer must be set to false, otherwhise this can delete icon files from the fs
             resizer:    false
-            allowed_extensions: ['pdf', 'txt', 'rtf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pttx', 'odt', 'odg', 'odp', 'ods', 'odc', 'odf', 'odb', 'csv', 'xml']
+            allowed_extensions: ['pdf', 'txt', 'rtf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pttx', 'odt', 'odg', 'odp', 'ods', 'odc', 'odf', 'odb', 'csv', 'xml', 'zip']
             allowed_mime_types:
               - 'application/pdf'
               - 'application/x-pdf'
@@ -97,6 +97,7 @@ sonata_media:
               - 'application/vnd.openxmlformats-officedocument.wordprocessingml.template'
               - 'application/vnd.ms-excel.addin.macroEnabled.12'
               - 'application/vnd.ms-excel.sheet.binary.macroEnabled.12'
+              - 'application/zip'
 
         image:
            thumbnail: sonata.media.thumbnail.format          # default value
@@ -143,3 +144,13 @@ rz_media:
       class:        'Rz\MediaBundle\Admin\ORM\GalleryHasMediaAdmin'
       controller:   'SonataAdminBundle:CRUD'
       translation:  'SonataMediaBundle'
+
+  blocks:
+    media:
+      # Override Class
+      #class: Rz\MediaBundle\Block\MediaBlockService
+      # Block Templates
+      templates:
+        media_block:
+          name: Default
+          path: RzMediaBundle:Block:media.html.twig

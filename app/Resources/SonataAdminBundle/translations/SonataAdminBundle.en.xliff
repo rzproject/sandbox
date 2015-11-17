@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="" >
         <body>
-            <trans-unit id="sonata_ecommerce">
-                <source>sonata_ecommerce</source>
-                <target>E-Commerce</target>
+            <trans-unit id="title_audit_log">
+                <source>title_audit_log</source>
+                <target>Audit Logs</target>
             </trans-unit>
         </body>
     </file>

@@ -28,20 +28,20 @@ doctrine:
                   host: %memcache_host%
                   port: %memcache_port%
                   instance_class: Memcached
-                  second_level_cache:
-                        region_cache_driver:
-                          type: memcached
-                          host: %memcache_host%
-                          port: %memcache_port%
-                          instance_class: Memcached
-                        enabled:              true
-                        regions:
-                            region_name:
-                                cache_driver:
-                                  type: memcached
-                                  host: %memcache_host%
-                                  port: %memcache_port%
-                                  instance_class: Memcached
+#                  second_level_cache:
+#                        region_cache_driver:
+#                          type: memcached
+#                          host: %memcache_host%
+#                          port: %memcache_port%
+#                          instance_class: Memcached
+#                        enabled:              true
+#                        regions:
+#                            region_name:
+#                                cache_driver:
+#                                  type: memcached
+#                                  host: %memcache_host%
+#                                  port: %memcache_port%
+#                                  instance_class: Memcached
                 auto_mapping: true
                 mappings: ~
 monolog:

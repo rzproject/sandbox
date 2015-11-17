@@ -37,3 +37,12 @@ parameters:
 
     # Fixtures variables
     sonata.fixtures.page.create_subsite: false # create a second website, so you can test the multisite feature
+
+    rabbitmq_host: 127.0.0.1
+    rabbitmq_user: user
+    rabbitmq_pass: pass
+    rabbitmq_port: 5672
+    rabbitmq_vhost: /
+
+    memcache_host: localhost
+    memcache_port: 11211
