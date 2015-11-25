@@ -50,6 +50,7 @@
         "rmzamora/seo-bundle": "2.5.0.*",
         "rmzamora/admin-bundle": "2.5.0.*",
         "rmzamora/doctrine-orm-admin-bundle": "2.5.0.*",
+        "rmzamora/doctrine-mongodb-admin-bundle": "2.5.0.*",
         "rmzamora/notification-bundle": "2.5.0.*",
         "rmzamora/block-bundle": "2.5.0.*",
         "rmzamora/media-bundle": "2.5.0.*",

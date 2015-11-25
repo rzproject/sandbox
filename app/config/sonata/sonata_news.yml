@@ -13,7 +13,8 @@ sonata_news:
 
     admin:
         post:
-            class:  AppBundle\Admin\News\PostAdmin
+            class:        AppBundle\Admin\News\PostAdmin
+            controller:   RzNewsBundle:PostAdmin
 
     title:        %sonata_news.blog_title%
     link:         %sonata_news.blog_link%

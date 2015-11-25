@@ -37,6 +37,7 @@ class AppKernel extends Kernel
             // DOCTRINE
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             //new Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
 
             // KNP HELPER BUNDLES
@@ -56,6 +57,7 @@ class AppKernel extends Kernel
 
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
 
             // Disable this if you don't want the audit on entities
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
