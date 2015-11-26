@@ -123,6 +123,17 @@ sonata_media:
 # Rz Media
 ##########################
 rz_media:
+
+  ###################################################################
+  # DEFAULT VALUE -- OLNY REQUIRED IF TOP BUNDLE IS NOT APPBUNDLE
+  ###################################################################
+
+  #class:
+  #    media:               AppBundle\Entity\Media\Media
+  #    gallery:             AppBundle\Entity\Media\Gallery
+  #    gallery_has_media:   AppBundle\Entity\Media\GalleryHasMedia
+  #    collection:          AppBundle\Entity\Classification\Collection
+
   manager_class:
     orm:
       media:   'Rz\MediaBundle\Entity\MediaManager'
@@ -144,6 +155,11 @@ rz_media:
       class:        'Rz\MediaBundle\Admin\ORM\GalleryHasMediaAdmin'
       controller:   'SonataAdminBundle:CRUD'
       translation:  'SonataMediaBundle'
+
+#  providers:
+#    default:
+#      gallery_provider:           rz.media.gallery_provider.default
+#      gallery_has_media_provider: rz.media.gallery_has_media_provider.default
 
   blocks:
     media:
