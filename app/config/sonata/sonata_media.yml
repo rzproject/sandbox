@@ -42,6 +42,10 @@ sonata_media:
         news:
             providers:
                 - sonata.media.provider.image
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.vimeo
 
             formats:
                 abstract: { width: 100, quality: 100}
@@ -134,13 +138,18 @@ rz_media:
   #    gallery_has_media:   AppBundle\Entity\Media\GalleryHasMedia
   #    collection:          AppBundle\Entity\Classification\Collection
 
+  #####################
+  # Entity Manager
+  #####################
   manager_class:
     orm:
       media:   'Rz\MediaBundle\Entity\MediaManager'
       gallery: 'Rz\MediaBundle\Entity\GalleryManager'
 
+  #####################
+  # Admin
+  #####################
   admin:
-
     media:
       class:        'Rz\MediaBundle\Admin\ORM\MediaAdmin'
       controller:   'RzMediaBundle:MediaAdmin'
@@ -156,11 +165,22 @@ rz_media:
       controller:   'SonataAdminBundle:CRUD'
       translation:  'SonataMediaBundle'
 
-#  providers:
-#    default:
-#      gallery_provider:           rz.media.gallery_provider.default
-#      gallery_has_media_provider: rz.media.gallery_has_media_provider.default
+  #####################
+  # Default Collection
+  #####################
+  default_collection: default
 
+  ###################################
+  # Gallery Collection Configuration
+  ###################################
+  collections:
+      default:  # the default context is mandatory
+          gallery_provider: rz.media.gallery_provider.default
+          gallery_has_media_provider: rz.media.gallery_has_media_provider.default
+
+  #####################
+  # Blocks
+  #####################
   blocks:
     media:
       # Override Class
