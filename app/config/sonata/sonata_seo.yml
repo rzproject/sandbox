@@ -1,3 +1,6 @@
+##########################
+# SONATA SEO
+##########################
 #
 # more information can be found here https://sonata-project.org/bundles/page
 #
@@ -43,3 +46,21 @@ sonata_seo:
             - { connection: doctrine.dbal.default_connection, route: sonata_catalog_category, parameters: {category_id: null, category_slug: null}, query: "SELECT id as category_id, slug as category_slug, updated_at as lastmod, 'weekly' as changefreq, '0.5' as prioriy FROM classification__category WHERE enabled = true" }
             # products
             - { connection: doctrine.dbal.default_connection, route: sonata_product_view, parameters: {productId: null, slug: null}, query: "SELECT id as productId, slug, updated_at as lastmod, 'weekly' as changefreq, '0.5' as prioriy FROM product__product WHERE enabled = true" }
+
+##########################
+# SONATA SEO
+##########################
+rz_seo:
+  metatags:
+    - Articles
+    - Blog
+    - Book
+    - Event
+    - Local Business
+    - Organization
+    - Person
+    - Product
+    - Reviews
+    - Photos
+    - Audio
+    - Video

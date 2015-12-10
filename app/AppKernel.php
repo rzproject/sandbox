@@ -108,6 +108,7 @@ class AppKernel extends Kernel
             new Rz\MediaBundle\RzMediaBundle(),
             new Rz\CommentBundle\RzCommentBundle(),
             new Rz\PageBundle\RzPageBundle(),
+            new Rz\SeoBundle\RzSeoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -74,6 +74,7 @@
         "rz/news-bundle": "2.0.0.*",
         "rz/page-bundle": "2.0.0.*",
         "rz/user-bundle": "2.0.0.*",
+        "rz/seo-bundle": "2.0.0.*",
 
 
         "michelf/php-markdown": "~1.4",

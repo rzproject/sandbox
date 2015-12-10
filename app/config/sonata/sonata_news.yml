@@ -39,6 +39,19 @@ rz_news:
     orm:
       post:       'Rz\NewsBundle\Entity\PostManager'
 
+  #####################
+  # Default Collection
+  #####################
+  default_collection: default
+
+  ###################################
+  # News Collection Configuration
+  ###################################
+  collections:
+      default:  # the default context is mandatory
+          provider: rz.news.provider.default
+
+
 ##########################
 # News Doctrine
 ##########################
