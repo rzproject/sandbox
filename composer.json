@@ -39,7 +39,7 @@
         "symfony-cmf/routing-bundle": "~1.1",
 
         "knplabs/gaufrette": "~0.1.6",
-        "knplabs/knp-menu-bundle": "~2.0",
+        "knplabs/knp-menu-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "~2.3",
 
         "sonata-project/easy-extends-bundle": "~2.1@dev",
