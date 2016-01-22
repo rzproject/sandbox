@@ -39,7 +39,7 @@ class Builder extends ContainerAware
 //        $shopCategories = $this->container->get('sonata.classification.manager.category')->getRootCategory('product_catalog');
 
         $menuOptions = array_merge($options, array(
-            'childrenAttributes' => array('class' => 'nav nav-pills'),
+            'childrenAttributes' => array('class' => 'nav navbar-nav navbar-right'),
         ));
 
         $menu = $factory->createItem('main', $menuOptions);
