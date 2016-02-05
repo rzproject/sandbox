@@ -21,6 +21,8 @@ sonata_block:
 
         # Builtin Block
         sonata.block.service.text:
+            templates:
+                - { name: 'Sample', template: 'RzBlockBundle:Block:block_core_text.html.twig' }
         sonata.block.service.container:
         sonata.block.service.rss:
         sonata.block.service.menu:

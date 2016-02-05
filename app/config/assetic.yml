@@ -81,6 +81,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/waypoints/lib/shortcuts/sticky.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js
                 - %kernel.root_dir%/../web/bundles/rzpage/js/sonata-page.back.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/vendor/blockui/js/jquery.blockUI.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/Admin.js
                 - %kernel.root_dir%/../web/bundles/sonataadmin/treeview.js
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/tabdrop/js/bootstrap-tabdrop.js
@@ -111,6 +112,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzcore/vendor/bootstrap-fileinput/css/fileinput.min.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/style.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/theme/rz/themes.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/vendor/blockui/css/jquery.blockUI.css
 
             filters:
                 - cssrewrite
