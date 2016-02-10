@@ -1,0 +1,15 @@
+##########################
+# Redirect Config
+##########################
+rz_redirect: ~
+
+##########################
+# Redirect Doctrine
+##########################
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    RzRedirectBundle: ~

@@ -36,6 +36,9 @@ imports:
     - { resource: sonata/sonata_notification.yml }
     - { resource: sonata/sonata_classification.yml }
 
+    # Rz Extension Bundles
+    - { resource: rz/rz_redirect.yml }
+
 
 framework:
     #esi:                   ~

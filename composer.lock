@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b00f90b4861caf6b2391b8e2e3e92075",
-    "content-hash": "107b3c41cf5ad0fc4f6d8f9489139bd7",
+    "hash": "9cd2ba0a73adf114cd3c0d88806e9ca4",
+    "content-hash": "971550e51034ae821eb856a91ec3d8be",
     "packages": [
         {
             "name": "andres-montanez/magallanes",
@@ -1645,12 +1645,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "8d8e0e1a6151a46ea5cda344e2234b7225c61e7a"
+                "reference": "ff1d463edb2c74e39f4ec76f7eb99fd47b237507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/8d8e0e1a6151a46ea5cda344e2234b7225c61e7a",
-                "reference": "8d8e0e1a6151a46ea5cda344e2234b7225c61e7a",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/ff1d463edb2c74e39f4ec76f7eb99fd47b237507",
+                "reference": "ff1d463edb2c74e39f4ec76f7eb99fd47b237507",
                 "shasum": ""
             },
             "require": {
@@ -1687,7 +1687,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-02-04 15:55:27"
+            "time": "2016-02-09 21:50:17"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3363,12 +3363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "10c45504ccaa4a64e5dc05ed259781262afc4b08"
+                "reference": "b93df5b5920700249ff4dae28f67cd3bd52a991e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/10c45504ccaa4a64e5dc05ed259781262afc4b08",
-                "reference": "10c45504ccaa4a64e5dc05ed259781262afc4b08",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/b93df5b5920700249ff4dae28f67cd3bd52a991e",
+                "reference": "b93df5b5920700249ff4dae28f67cd3bd52a991e",
                 "shasum": ""
             },
             "require": {
@@ -3446,7 +3446,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2016-02-05 03:33:35"
+            "time": "2016-02-10 02:00:21"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -3674,12 +3674,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataClassificationBundle.git",
-                "reference": "74907f5287e0e55ccad7ce805ffbfaee88447e93"
+                "reference": "8cdb39d69077b94ff91aefa9f52c8886414c8c68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/74907f5287e0e55ccad7ce805ffbfaee88447e93",
-                "reference": "74907f5287e0e55ccad7ce805ffbfaee88447e93",
+                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/8cdb39d69077b94ff91aefa9f52c8886414c8c68",
+                "reference": "8cdb39d69077b94ff91aefa9f52c8886414c8c68",
                 "shasum": ""
             },
             "require": {
@@ -3694,12 +3694,12 @@
             },
             "require-dev": {
                 "friendsofsymfony/rest-bundle": "~1.1",
-                "jms/serializer-bundle": "~1.1",
+                "jms/serializer-bundle": "~0.11|~1.0",
                 "rmzamora/media-bundle": "2.5.0.*",
                 "symfony/phpunit-bridge": "~2.7|~3.0"
             },
             "suggest": {
-                "rmzamora/media-bundle": "2.4.2.*"
+                "rmzamora/media-bundle": "2.5.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -3740,7 +3740,7 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2016-01-05 06:16:50"
+            "time": "2016-02-10 02:07:58"
         },
         {
             "name": "rmzamora/comment-bundle",
@@ -4261,12 +4261,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataMediaBundle.git",
-                "reference": "f8a960369989bddbe94f1312eecea04fa79e66a4"
+                "reference": "fb5e3fad0025e2c508c10d73dad9a079f3f8b652"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/f8a960369989bddbe94f1312eecea04fa79e66a4",
-                "reference": "f8a960369989bddbe94f1312eecea04fa79e66a4",
+                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/fb5e3fad0025e2c508c10d73dad9a079f3f8b652",
+                "reference": "fb5e3fad0025e2c508c10d73dad9a079f3f8b652",
                 "shasum": ""
             },
             "require": {
@@ -4348,7 +4348,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2016-02-05 02:33:45"
+            "time": "2016-02-10 02:01:15"
         },
         {
             "name": "rmzamora/news-bundle",
@@ -5339,6 +5339,54 @@
                 "Symfony2"
             ],
             "time": "2016-02-04 06:14:39"
+        },
+        {
+            "name": "rz/redirect-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rzproject/RedirectBundle.git",
+                "reference": "48c52d96595ec4f91ce5324230ed46f0a0c492e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rzproject/RedirectBundle/zipball/48c52d96595ec4f91ce5324230ed46f0a0c492e7",
+                "reference": "48c52d96595ec4f91ce5324230ed46f0a0c492e7",
+                "shasum": ""
+            },
+            "require": {
+                "rz/admin-bundle": "2.0.0.*",
+                "rz/doctrine-orm-admin-bundle": "2.0.0.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rz\\RedirectBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mell zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://www.rzproject.org"
+                }
+            ],
+            "description": "Symfony2 Bundle",
+            "homepage": "https://github.com/rzproject/RedirectBundle",
+            "keywords": [
+                "RZProject",
+                "Symfony2"
+            ],
+            "time": "2016-02-10 06:25:25"
         },
         {
             "name": "rz/seo-bundle",
@@ -6961,12 +7009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "9d04018350436809a3948b81e076a776bb75192c"
+                "reference": "3c382c54c50ea146c768978b147fd9f347a2df27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/9d04018350436809a3948b81e076a776bb75192c",
-                "reference": "9d04018350436809a3948b81e076a776bb75192c",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/3c382c54c50ea146c768978b147fd9f347a2df27",
+                "reference": "3c382c54c50ea146c768978b147fd9f347a2df27",
                 "shasum": ""
             },
             "require": {
@@ -7087,7 +7135,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-02-08 07:35:16"
+            "time": "2016-02-09 20:05:33"
         },
         {
             "name": "twbs/bootstrap",

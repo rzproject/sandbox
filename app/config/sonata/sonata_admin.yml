@@ -89,6 +89,7 @@ sonata_admin:
                 items:
                     - sonata.page.admin.page
                     - sonata.page.admin.site
+                    - rz.redirect.admin.redirect
 
             sonata.admin.group.administration:
                 label:           sonata_administration

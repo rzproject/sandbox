@@ -21,8 +21,8 @@ cmf_routing:
             #symfony_cmf_routing_extra.dynamic_router: 200
             # enable the symfony default router with a lower priority
             sonata.page.router: 150
+            rz.redirect.router: 110
             router.default: 100
-
 
 ##########################
 # Sonata Page
