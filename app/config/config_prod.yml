@@ -15,18 +15,18 @@ doctrine:
             default:
                 metadata_cache_driver:
                   type: memcached
-                  host: %memcache_host%
-                  port: %memcache_port%
+                  host: "%memcache_host%"
+                  port: "%memcache_port%"
                   instance_class: Memcached
                 query_cache_driver:
                   type: memcached
-                  host: %memcache_host%
-                  port: %memcache_port%
+                  host: "%memcache_host%"
+                  port: "%memcache_port%"
                   instance_class: Memcached
                 result_cache_driver:
                   type: memcached
-                  host: %memcache_host%
-                  port: %memcache_port%
+                  host: "%memcache_host%"
+                  port: "%memcache_port%"
                   instance_class: Memcached
 #                  second_level_cache:
 #                        region_cache_driver:
@@ -44,6 +44,7 @@ doctrine:
 #                                  instance_class: Memcached
                 auto_mapping: true
                 mappings: ~
+
 monolog:
     handlers:
         main:
@@ -51,6 +52,8 @@ monolog:
             action_level: error
             handler:      nested
         nested:
-            type:         stream
-            path:         %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
-            level:        debug
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        console:
+            type:  console

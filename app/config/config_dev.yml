@@ -2,107 +2,47 @@ imports:
     - { resource: config.yml }
 
 framework:
-    router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
+    router:
+        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        strict_requirements: true
     profiler: { only_exceptions: false }
 
 web_profiler:
-    toolbar:             true
+    toolbar: true
     intercept_redirects: false
 
 monolog:
     handlers:
-#        main:
-#            type:  stream
-#            path:  %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
-#            level: debug
         main:
-            type:  rotating_file
-            path:  %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
-            level: debug
-            # max number of log files to keep
-            # defaults to zero, which means infinite files
-            max_files: 10
-#        firephp:
-#            type:  firephp
-#            level: info
+            type:   stream
+            path:   "%kernel.logs_dir%/%kernel.environment%.log"
+            level:  debug
+        console:
+            type:   console
+            bubble: false
+            verbosity_levels:
+                VERBOSITY_VERBOSE: INFO
+                VERBOSITY_VERY_VERBOSE: DEBUG
+            channels: ["!doctrine"]
+        console_very_verbose:
+            type:   console
+            bubble: false
+            verbosity_levels:
+                VERBOSITY_VERBOSE: NOTICE
+                VERBOSITY_VERY_VERBOSE: NOTICE
+                VERBOSITY_DEBUG: DEBUG
+            channels: ["doctrine"]
+        # uncomment to get logging in your browser
+        # you may have to allow bigger header sizes in your Web server configuration
+        #firephp:
+        #    type:   firephp
+        #    level:  info
+        #chromephp:
+        #    type:   chromephp
+        #    level:  info
 
-#doctrine_cache:
-#    providers:
-#        redis_cache:
-#            redis:
-#                host: 127.0.0.1
-#                port: 6379
-#                timeout: 30
-#                database: 20
+assetic:
+    use_controller: true
 
-#
-#doctrine:
-#    orm:
-#        auto_generate_proxy_classes: %kernel.debug%
-#        default_entity_manager: default
-#        entity_managers:
-#            default:
-#                metadata_cache_driver: redis
-#                query_cache_driver:    redis
-#                result_cache_driver:   redis
-#                auto_mapping: true
-#                mappings: ~
-#                second_level_cache:
-#                    region_cache_driver:
-#                        type: service
-#                        id: doctrine_cache.providers.redis_cache
-#                    enabled:              true
-#                    region_lock_lifetime: 60
-#                    log_enabled:          true
-#                    region_lifetime:      3600
-#                    regions:
-#                       page_entity_region:
-#                            cache_driver:
-#                                type: redis
-#                                id: doctrine_cache.providers.redis_cache
-#                metadata_cache_driver:
-#                   type: memcached
-#                   host: %memcache_host%
-#                   port: %memcache_port%
-#                   instance_class: Memcached
-#                 query_cache_driver:
-#                   type: memcached
-#                   host: %memcache_host%
-#                   port: %memcache_port%
-#                   instance_class: Memcached
-#                 result_cache_driver:
-#                   type: memcached
-#                   host: %memcache_host%
-#                   port: %memcache_port%
-#                   instance_class: Memcached
-#                 second_level_cache:
-#                     region_cache_driver:
-#                         type: memcached
-#                         host: %memcache_host%
-#                         port: %memcache_port%
-#                         instance_class: Memcached
-#                     enabled:              true
-#                     regions:
-#                         region_name:
-#                             cache_driver:
-#                               type: memcached
-#                               host: %memcache_host%
-#                               port: %memcache_port%
-#                               instance_class: Memcached
-#sonata_payment:
-#    methods:
-#        debug: ~
-#    services:
-#        debug:
-#            name:    Debug Payment
-#            code:    debug
-#            browser: sonata.payment.browser.curl
-#
-#            transformers:
-#                basket: sonata.payment.transformer.basket
-#                order:  sonata.payment.transformer.order
-#
-#            options:
-#                url_callback:  sonata_payment_callback
-#                url_return_ko: sonata_payment_error
-#                url_return_ok: sonata_payment_confirmation
+#swiftmailer:
+#    delivery_address: me@example.com

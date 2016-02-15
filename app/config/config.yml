@@ -42,22 +42,21 @@ imports:
 
 framework:
     #esi:                   ~
-    translator:
-        fallback:           en
-    secret:                 %secret%
+    translator:             { fallbacks: ["%locale%"] }
+    secret:                 "%secret%"
     router:
         resource:           "%kernel.root_dir%/config/routing.yml"
         strict_requirements: ~
-    form:                    true
-    csrf_protection:         true
-    validation:
-        enable_annotations:  true
+    form:                    ~
+    csrf_protection:         ~
+    validation:              { enable_annotations: true }
     templating:
         engines:             ['twig']
         #assets_version:      SomeVersionScheme
 
-    default_locale:          %locale%
+    default_locale:          "%locale%"
     session:
+        handler_id:          ~
         save_path:           %kernel.root_dir%/cache/sessions
 
     fragments:               ~
@@ -66,8 +65,8 @@ framework:
 
 # Twig Configuration
 twig:
-    debug:            %kernel.debug%
-    strict_variables: %kernel.debug%
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
 
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
 
@@ -86,24 +85,26 @@ doctrine:
 
         connections:
             default:
-                driver:   %database.driver%
-                dbname:   %database.name%
-                user:     %database.user%
-                host:     %database.host%
-                password: %database.password%
+                driver:   "%database.driver%"
+                dbname:   "%database.name%"
+                user:     "%database.user%"
+                host:     "%database.host%"
+                password: "%database.password%"
                 charset:  UTF8
 
         types:
+            currency: Sonata\Component\Currency\CurrencyDoctrineType
             json:     Sonata\Doctrine\Types\JsonType
 
     orm:
-        auto_generate_proxy_classes: %kernel.debug%
-        default_entity_manager: default
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy:             doctrine.orm.naming_strategy.underscore
+        auto_mapping:                true
 
-        entity_managers:
-            default:
-                auto_mapping: true
-                mappings: ~
+#        entity_managers:
+#            default:
+#                auto_mapping: true
+#                mappings: ~
 
 doctrine_mongodb:
     connections:
@@ -117,10 +118,10 @@ doctrine_mongodb:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: %mailer_transport%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
 
 jms_serializer:
     metadata:
