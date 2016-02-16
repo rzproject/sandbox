@@ -93,7 +93,6 @@ doctrine:
                 charset:  UTF8
 
         types:
-            currency: Sonata\Component\Currency\CurrencyDoctrineType
             json:     Sonata\Doctrine\Types\JsonType
 
     orm:
