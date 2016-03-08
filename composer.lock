@@ -3369,12 +3369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "b9a68fa7cf4c699419a5a3870b41d47042e0a448"
+                "reference": "e1dfdc9337d60da0390957f6e8cd84ecd3b50629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/b9a68fa7cf4c699419a5a3870b41d47042e0a448",
-                "reference": "b9a68fa7cf4c699419a5a3870b41d47042e0a448",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/e1dfdc9337d60da0390957f6e8cd84ecd3b50629",
+                "reference": "e1dfdc9337d60da0390957f6e8cd84ecd3b50629",
                 "shasum": ""
             },
             "require": {
@@ -3403,7 +3403,7 @@
             },
             "require-dev": {
                 "sensio/generator-bundle": "~2.3|~3.0",
-                "sonata-project/intl-bundle": "dev-master",
+                "sonata-project/intl-bundle": "^2.2.4",
                 "symfony/phpunit-bridge": "~2.7|~3.0",
                 "symfony/yaml": "~2.3|~3.0"
             },
@@ -3452,7 +3452,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2016-03-03 02:44:10"
+            "time": "2016-03-08 03:05:02"
         },
         {
             "name": "rmzamora/block-bundle",
