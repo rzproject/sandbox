@@ -91,7 +91,9 @@
 
         "andres-montanez/magallanes": "~1.0.1",
 
-        "predis/predis": "~0.8"
+        "predis/predis": "~0.8",
+
+        "nelmio/api-doc-bundle": "~2.11"
     },
 
     "require-dev": {
