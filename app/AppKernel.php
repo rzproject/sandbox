@@ -111,6 +111,7 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
             new Rz\RedirectBundle\RzRedirectBundle(),
+            new Rz\FormatterBundle\RzFormatterBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

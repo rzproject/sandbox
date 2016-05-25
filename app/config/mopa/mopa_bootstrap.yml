@@ -1,6 +1,7 @@
 mopa_bootstrap:
     form:   # Adds twig form theme  support
-        show_legend: false
-        render_optional_text: false
+        show_legend: true
+        show_child_legend: true
+        render_optional_text: true
         render_required_asterisk: true
 #    menu: ~  # enables twig helpers for menu

@@ -67,7 +67,7 @@ class Builder extends ContainerAware
 //
 //        $shop = $menu->addChild('Shop', $shopMenuParams);
 
-        $menu->addChild('News', array('route' => 'sonata_news_home'));
+//        $menu->addChild('News', array('route' => 'sonata_news_home'));
 
 //        foreach ($shopCategories->getChildren() as $category) {
 //            $shop->addChild($category->getName(), array(
@@ -97,8 +97,8 @@ class Builder extends ContainerAware
 
         $extras->addChild('Bundles', array('route' => 'page_slug', 'routeParameters' => array('path' => '/bundles')));
         $extras->addChild('Api', array('route' => 'page_slug', 'routeParameters' => array('path' => '/api-landing')));
-        $extras->addChild('Gallery', array('route' => 'sonata_media_gallery_index'));
-        $extras->addChild('Media & SEO', array('route' => 'sonata_demo_media'));
+        //$extras->addChild('Gallery', array('route' => 'sonata_media_gallery_index'));
+        //$extras->addChild('Media & SEO', array('route' => 'sonata_demo_media'));
 
         $menu->addChild($extras);
 

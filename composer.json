@@ -76,24 +76,19 @@
         "rz/user-bundle": "2.0.0.*",
         "rz/seo-bundle": "2.0.0.*",
         "rz/redirect-bundle": "2.0.0.*",
-
+        "rz/formatter-bundle": "2.0.0.*",
 
         "michelf/php-markdown": "~1.4",
         "simplethings/entity-audit-bundle": "~0.5",
         "willdurand/faker-bundle": "~1.0",
-
         "mopa/bootstrap-bundle": "v3.0.0-beta3",
         "twbs/bootstrap": "v3.0.0",
-
         "stof/doctrine-extensions-bundle": "~1.1",
-
         "incenteev/composer-parameter-handler": "~2.0",
-
         "andres-montanez/magallanes": "~1.0.1",
-
         "predis/predis": "~0.8",
-
-        "nelmio/api-doc-bundle": "~2.11"
+        "nelmio/api-doc-bundle": "~2.11",
+        "egeloen/ckeditor-bundle": "3.0.1"
     },
 
     "require-dev": {

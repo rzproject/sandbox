@@ -32,27 +32,6 @@ sonata_news:
             template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
 
 ##########################
-# Sonata Classification
-##########################
-rz_news:
-  manager_class:
-    orm:
-      post:       'Rz\NewsBundle\Entity\PostManager'
-
-  #####################
-  # Default Collection
-  #####################
-  default_collection: default
-
-  ###################################
-  # News Collection Configuration
-  ###################################
-  collections:
-      default:  # the default context is mandatory
-          provider: rz.news.provider.default
-
-
-##########################
 # News Doctrine
 ##########################
 # Enable Doctrine to map the provided entities
@@ -62,3 +41,109 @@ doctrine:
             default:
                 mappings:
                     SonataNewsBundle: ~
+
+
+#=====================================================================
+# RzNewsBundle Settings
+#=====================================================================
+rz_news:
+  manager_class:
+    orm:
+      post:       'Rz\NewsBundle\Entity\PostManager'
+
+  #=====================================================================
+  # Required Default Settings
+  #=====================================================================
+  default_seo_provider: rz.news.provider.seo.default #NOTE: default seo provider additional fields for SEO
+  slugify_service: 'sonata.core.slugify.cocur' # slugify service for context & collection NOTE: sonata.core.slugify.native is already depricated
+
+  #=====================================================================
+  # TO BE USED ON A FULL CUSTOMIZED CMS
+  #   (old way of implemeting NEWS BUNDLE)
+  #   NOTE: ALL CONTROLLERS SHOULD BE IMPLEMENTED ON THE AppBundle LEVEL
+  #=====================================================================
+  #enable_controller: false #should be set at the start of the project. If set to false all post/news will generate pages
+
+
+  #=====================================================================
+  # News Collection Configuration
+  #   provider are classes that allows programatically adding
+  #   new fields on the POST table
+  #=====================================================================
+  post:
+    default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+    default_collection: 'article' # NOTE: default collection used for grouping provider type
+    default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+    collections:
+        default:  # the default collection is mandatory (fallback provider when no other provider is set)
+            provider: rz.news.post.provider.default
+            #default template should be present on post_block_service template list
+            #will be the prefered choice for template selection
+            preferred_template: RzNewsBundle:Block:block_post_default.html.twig
+        vlog:
+            provider: rz.news.post.provider.default
+            preferred_template: RzNewsBundle:Block:block_post.html.twig
+
+
+
+  #=====================================================================
+  # Default permalink
+  #   permalinks services generates SEO friendly URL for post
+  #   requires 2 permalinks article URL and category URL eg.
+  #   article URL: /article/article-slug ---> canonical URL
+  #   category URL /category1/sub-category/article-slug ---> duplicate URL
+  #=====================================================================
+  permalink:
+    default_permalink: default
+    default_category_permalink: category_default
+    #=====================================================================
+    # News Permalink Configuration
+    # define several permalink generators
+    #=====================================================================
+    permalinks:
+        default:  # the default permalink is mandatory
+            permalink: rz.news.permalink.default
+        category_default:  # the default category permalink is mandatory
+            permalink: rz.news.permalink.category
+        slug:  # optional permalik can replace default
+            permalink: rz.news.permalink.slug
+
+  #=====================================================================
+  # News Page Settings
+  #   1. Transformer class to generate A page for a certain POST
+  #=====================================================================
+  news_page:
+    #=====================================================================
+    # News Page Post Block Service Settings (Default Values)
+    #=====================================================================
+    post_block_service: rz.news.news_page.default.block.post #block service to be used when creating post page
+    default_post_block_template: #default template if no template is set on rz.news.news_page.block.post
+      name: Default
+      template: RzNewsBundle:Block:block_post_default.html.twig
+    news_page_parent_slug: 'articles'
+    transformer:
+      class:      'Rz\NewsBundle\Entity\Transformer'
+    page_templates:
+      default:
+        name: 'Default'
+        template_code: 'default'
+
+
+  #=====================================================================
+  # Post Sets Provider
+  #=====================================================================
+  post_sets:
+    default_context: post-sets
+    default_collection: default
+    default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+    collections:
+          default:  # the default context is mandatory
+              post_sets:
+                provider: rz.news.post_sets.provider.default
+              post_sets_has_posts:
+                provider: rz.news.post_sets_has_posts.provider.default
+
+
+
+
+

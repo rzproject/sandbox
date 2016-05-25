@@ -45,6 +45,10 @@ sonata_block:
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
         sonata.news.block.recent_posts:
+        rz.news.news_page.default.block.post:
+            templates:
+                - { name: 'Default', template: 'RzNewsBundle:Block:block_post_default.html.twig' }
+                - { name: 'Block', template: 'RzNewsBundle:Block:block_post.html.twig' }
 
         # Ecommerce's Blocks
         #sonata.order.block.recent_orders:
@@ -88,10 +92,11 @@ sonata_block:
 
         sonata.demo.block.newsletter:
 
-
         # Formatter
         sonata.formatter.block.formatter:
 
         sonata.seo.block.breadcrumb.homepage:
 
         sonata.comment.block.thread.async:
+
+        sonata.page.block.shared_block:

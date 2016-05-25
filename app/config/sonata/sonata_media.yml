@@ -165,18 +165,21 @@ rz_media:
       controller:   'SonataAdminBundle:CRUD'
       translation:  'SonataMediaBundle'
 
-  #####################
-  # Default Collection
-  #####################
-  default_collection: default
 
   ###################################
   # Gallery Collection Configuration
   ###################################
-  collections:
-      default:  # the default context is mandatory
-          gallery_provider: rz.media.gallery_provider.default
-          gallery_has_media_provider: rz.media.gallery_has_media_provider.default
+  gallery:
+    # Default Collection
+    default_collection: default
+    # Default Context
+    default_context: gallery # gallery context must be present
+    # Default provider collection
+    default_provider_collection: default
+    collections:
+        default:  # the default context is mandatory
+            gallery_provider: rz.media.gallery_provider.default
+            gallery_has_media_provider: rz.media.gallery_has_media_provider.default
 
   #####################
   # Blocks

@@ -27,6 +27,7 @@ sonata_admin:
         use_bootlint:   %kernel.debug%
         use_select2:    true
         use_icheck:     true
+        use_stickyforms:      true
 
     dashboard:
         blocks:
@@ -68,6 +69,8 @@ sonata_admin:
                 icon:            '<i class="fa fa-th"></i>'
                 items:
                     - sonata.news.admin.post
+                    - rz.news.admin.post_sets
+                    #- rz.news.admin.post_has_category
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
                     - sonata.comment.admin.thread
@@ -88,6 +91,7 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - sonata.page.admin.page
+                    - sonata.page.admin.shared_block
                     - sonata.page.admin.site
                     - rz.redirect.admin.redirect
 
@@ -174,7 +178,8 @@ sonata_admin:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     list:                     'RzUserBundle:CRUD:list.html.twig'
                     outer_list_rows_mosaic:   'RzUserBundle:CRUD:list_outer_rows_mosaic_user.html.twig'
@@ -182,14 +187,16 @@ sonata_admin:
         sonata.user.admin.group:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzUserBundle:CRUD:list_outer_rows_mosaic_group.html.twig'
 
         sonata.classification.admin.category:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     list:                     'RzClassificationBundle:CategoryAdmin:list.html.twig'
                     outer_list_rows_mosaic:   'RzClassificationBundle:CategoryAdmin:list_outer_rows_mosaic.html.twig'
@@ -197,23 +204,32 @@ sonata_admin:
         sonata.classification.admin.collection:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
-                    list:                     'RzClassificationBundle:CollectionAdmin:list.html.twig'
+                    #Tabbed Version
+                    #list:                     'RzClassificationBundle:CollectionAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzClassificationBundle:CollectionAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzClassificationBundle:CollectionAdmin:list_outer_rows_mosaic.html.twig'
 
         sonata.classification.admin.tag:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
-                    list:                     'RzClassificationBundle:TagAdmin:list.html.twig'
+                    #Tabbed Version
+                    #list:                     'RzClassificationBundle:TagAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzClassificationBundle:TagAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzClassificationBundle:TagAdmin:list_outer_rows_mosaic.html.twig'
 
         sonata.classification.admin.context:
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzClassificationBundle:ContextAdmin:list_outer_rows_mosaic.html.twig'
 
@@ -221,16 +237,22 @@ sonata_admin:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
-                    list:                     'RzNewsBundle:PostAdmin:list.html.twig'
+                    #Tabbed Version
+                    #list:                     'RzNewsBundle:PostAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzNewsBundle:PostAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzNewsBundle:PostAdmin:list_outer_rows_mosaic.html.twig'
+                    edit:                     'RzNewsBundle:PostAdmin:edit.html.twig'
 
         sonata.media.admin.media:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     list:                     'RzMediaBundle:MediaAdmin:list.html.twig'
                     edit:                     'RzMediaBundle:MediaAdmin:edit.html.twig'
@@ -243,16 +265,21 @@ sonata_admin:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
-                    list:                     'RzMediaBundle:GalleryAdmin:list.html.twig'
+                    #Tabbed Version
+                    #list:                     'RzMediaBundle:GalleryAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzMediaBundle:GalleryAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzMediaBundle:GalleryAdmin:list_outer_rows_mosaic.html.twig'
 
         sonata.comment.admin.thread:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzCommentBundle:ThreadAdmin:list_outer_rows_mosaic.html.twig'
 
@@ -261,7 +288,8 @@ sonata_admin:
             label:       comment
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     list:                     'RzCommentBundle:CommentAdmin:list.html.twig'
                     outer_list_rows_mosaic:   'RzCommentBundle:CommentAdmin:list_outer_rows_mosaic.html.twig'
@@ -270,7 +298,8 @@ sonata_admin:
             pager_type:  simple
             templates:
                 # required form override of
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     list:                     'RzPageBundle:PageAdmin:list.html.twig'
                     outer_list_rows_mosaic:   'RzPageBundle:PageAdmin:list_outer_rows_mosaic.html.twig'
@@ -279,24 +308,60 @@ sonata_admin:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    outer_list_rows_mosaic:   'RzPageBundle:BlockAdmin:list_outer_rows_mosaic.html.twig'
+
+        sonata.page.admin.shared_block:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzPageBundle:BlockAdmin:list_outer_rows_mosaic.html.twig'
 
         sonata.page.admin.snapshot:
             pager_type:  simple
             templates:
-                # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
 
         sonata.page.admin.site:
             pager_type:  simple
             templates:
                 # required form override of RzDoctrineORMAdminBundle
-                form: ['RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig']
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzPageBundle:SiteAdmin:list_outer_rows_mosaic.html.twig'
 
+        rz.news.admin.post_has_category:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    #Tabbed Version
+                    #list:                     'RzNewsBundle:PostHasCategoryAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzNewsBundle:PostHasCategoryAdmin:list_alt.html.twig'
+                    outer_list_rows_mosaic:   'RzNewsBundle:PostHasCategoryAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.news.admin.post_sets:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    #Tabbed Version
+                    #list:                     'RzNewsBundle:PostSetsAdmin:list.html.twig'
+                    #Side menu version
+                    list:                     'RzNewsBundle:PostSetsAdmin:list_alt.html.twig'
+                    outer_list_rows_mosaic:   'RzNewsBundle:PostSetsAdmin:list_outer_rows_mosaic.html.twig'
 
 ##########################
 # Sonata Doctrine ORM
@@ -307,7 +372,7 @@ sonata_admin:
 sonata_doctrine_orm_admin:
     templates:
       form:
-        - RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig
+        - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
       filter:
         - RzDoctrineORMAdminBundle:Form:filter_admin_fields.html.twig
       types:
