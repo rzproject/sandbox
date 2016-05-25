@@ -51,13 +51,11 @@ class AppKernel extends Kernel
             new Sonata\PageBundle\SonataPageBundle(),
             new Sonata\NewsBundle\SonataNewsBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
-//            new Liip\ImagineBundle\LiipImagineBundle(),
 
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
 
             // Disable this if you don't want the audit on entities
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
@@ -66,7 +64,7 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
-            // SONATA E-COMMERCE
+            // SONATA BUNDLES
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\CommentBundle\FOSCommentBundle(),
             new Sonata\CommentBundle\SonataCommentBundle(),
@@ -82,9 +80,6 @@ class AppKernel extends Kernel
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
             new Sonata\DatagridBundle\SonataDatagridBundle(),
-
-            // Search Integration
-            //new FOS\ElasticaBundle\FOSElasticaBundle(),
 
             // CMF Integration
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
