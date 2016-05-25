@@ -138,10 +138,12 @@ rz_news:
     default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
     collections:
           default:  # the default context is mandatory
+              # optional
               post_sets:
-                provider: rz.news.post_sets.provider.default
+                provider: ~ #rz.news.post_sets.provider.default
+              # optional
               post_sets_has_posts:
-                provider: rz.news.post_sets_has_posts.provider.default
+                provider: ~ #rz.news.post_sets_has_posts.provider.default
 
 
 
