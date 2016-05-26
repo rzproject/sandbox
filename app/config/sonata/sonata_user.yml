@@ -1,23 +1,7 @@
-#
-# more information can be found here https://sonata-project.org/bundles/user
-#
-# Enable Doctrine to map the provided entities
-##########################
-# User Doctrine
-##########################
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    FOSUserBundle: ~
-                    SonataUserBundle: ~
-
-##########################
+##############################################################################
 # Sonata User
-##########################
-
 # if you change the class configuration, please also alter the fos_user.yml file
+##############################################################################
 sonata_user:
     class:
         user:  AppBundle\Entity\User\User
@@ -62,9 +46,21 @@ sonata_user:
                 - Profile
                 - Default
 
-##########################
+
+##############################################################################
+# User Doctrine
+##############################################################################
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    FOSUserBundle: ~
+                    SonataUserBundle: ~
+
+##############################################################################
 # RZ User
-##########################
+##############################################################################
 rz_user:
     manager_type: orm
 

@@ -1,6 +1,6 @@
-##########################
+##############################################################################
 # Sonata Classification
-##########################
+##############################################################################
 sonata_classification:
     class:
         tag:            AppBundle\Entity\Classification\Tag
@@ -22,9 +22,9 @@ sonata_classification:
             class:      AppBundle\Admin\Classification\CollectionAdmin
             controller: RzClassificationBundle:CollectionAdmin
 
-##########################
-# Sonata Classification
-##########################
+##############################################################################
+# RzClassification
+##############################################################################
 rz_classification:
   manager_class:
     orm:
@@ -33,9 +33,46 @@ rz_classification:
       collection: 'Rz\ClassificationBundle\Entity\CollectionManager'
       context:    'Rz\ClassificationBundle\Entity\ContextManager'
 
-##########################
+  #=====================================================================
+  # PROVIDERS Configuration
+  #   provider are classes that allows programatically adding
+  #   new fields on the classification modules
+  #=====================================================================
+  providers:
+
+    #----------------------------------------------------------
+    # Category Provider
+    #----------------------------------------------------------
+    category:
+      default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+      default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      context:
+          default:  # the default context is mandatory (fallback provider when no other provider is set)
+              provider: rz.classification.category.provider.default
+
+    #----------------------------------------------------------
+    # Category Provider
+    #----------------------------------------------------------
+    collection:
+      default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+      default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      context:
+          default:  # the default context is mandatory (fallback provider when no other provider is set)
+              provider: rz.classification.collection.provider.default
+
+    #----------------------------------------------------------
+    # Category Provider
+    #----------------------------------------------------------
+    tag:
+      default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+      default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      context:
+          default:  # the default context is mandatory (fallback provider when no other provider is set)
+              provider: rz.classification.tag.provider.default
+
+##############################################################################
 # Classification Doctrine
-##########################
+##############################################################################
 doctrine:
     orm:
         entity_managers:

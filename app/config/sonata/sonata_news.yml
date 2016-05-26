@@ -1,7 +1,7 @@
-##########################
+##############################################################################
 # Sonata News
-##########################
 # more information can be found here https://sonata-project.org/bundles/news
+##############################################################################
 sonata_news:
     class:
         post:       AppBundle\Entity\News\Post
@@ -31,10 +31,10 @@ sonata_news:
             from:     %sonata_news.comment.email_from%
             template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
 
-##########################
+##############################################################################
 # News Doctrine
-##########################
 # Enable Doctrine to map the provided entities
+##############################################################################
 doctrine:
     orm:
         entity_managers:
@@ -43,9 +43,9 @@ doctrine:
                     SonataNewsBundle: ~
 
 
-#=====================================================================
-# RzNewsBundle Settings
-#=====================================================================
+###############################################################################
+# RzNews
+###############################################################################
 rz_news:
   manager_class:
     orm:
@@ -54,7 +54,6 @@ rz_news:
   #=====================================================================
   # Required Default Settings
   #=====================================================================
-  default_seo_provider: rz.news.provider.seo.default #NOTE: default seo provider additional fields for SEO
   slugify_service: 'sonata.core.slugify.cocur' # slugify service for context & collection NOTE: sonata.core.slugify.native is already depricated
 
   #=====================================================================
@@ -64,27 +63,51 @@ rz_news:
   #=====================================================================
   #enable_controller: false #should be set at the start of the project. If set to false all post/news will generate pages
 
-
   #=====================================================================
-  # News Collection Configuration
+  # PROVIDERS Configuration
   #   provider are classes that allows programatically adding
   #   new fields on the POST table
   #=====================================================================
-  post:
-    default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
-    default_collection: 'article' # NOTE: default collection used for grouping provider type
-    default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
-    collections:
-        default:  # the default collection is mandatory (fallback provider when no other provider is set)
-            provider: rz.news.post.provider.default
-            #default template should be present on post_block_service template list
-            #will be the prefered choice for template selection
-            preferred_template: RzNewsBundle:Block:block_post_default.html.twig
-        vlog:
-            provider: rz.news.post.provider.default
-            preferred_template: RzNewsBundle:Block:block_post.html.twig
+  providers:
+    #----------------------------------------------------------
+    # Post Provider
+    #----------------------------------------------------------
+    post:
+      default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+      default_collection: 'article' # NOTE: default collection used for grouping provider type
+      default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      collections:
+          default:  # the default collection is mandatory (fallback provider when no other provider is set)
+              provider: rz.news.post.provider.default
+              #default template should be present on post_block_service template list
+              #will be the prefered choice for template selection
+              preferred_template: RzNewsBundle:Block:block_post_default.html.twig
+          vlog:
+              provider: rz.news.post.provider.default
+              preferred_template: RzNewsBundle:Block:block_post.html.twig
 
+    #----------------------------------------------------------
+    # Post Sets Provider
+    #----------------------------------------------------------
+    post_sets:
+      default_context: post-sets
+      default_collection: default
+      default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      #optional
+      collections:
+            default:
+                # optional
+                post_sets:
+                  provider: rz.news.post_sets.provider.default
+                # optional
+                post_sets_has_posts:
+                  provider: ~ #rz.news.post_sets_has_posts.provider.default
 
+    #----------------------------------------------------------
+    # SEO Provider
+    #----------------------------------------------------------
+    seo:
+      default_provider: rz.news.provider.seo.default #NOTE: default seo provider additional fields for SEO
 
   #=====================================================================
   # Default permalink
@@ -127,25 +150,3 @@ rz_news:
       default:
         name: 'Default'
         template_code: 'default'
-
-
-  #=====================================================================
-  # Post Sets Provider
-  #=====================================================================
-  post_sets:
-    default_context: post-sets
-    default_collection: default
-    default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
-    collections:
-          default:  # the default context is mandatory
-              # optional
-              post_sets:
-                provider: ~ #rz.news.post_sets.provider.default
-              # optional
-              post_sets_has_posts:
-                provider: ~ #rz.news.post_sets_has_posts.provider.default
-
-
-
-
-

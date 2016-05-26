@@ -1,3 +1,6 @@
+##############################################################################
+# Sonata Timeline
+##############################################################################
 sonata_timeline:
     manager_type: orm
 
@@ -7,6 +10,9 @@ sonata_timeline:
         component:        %spy_timeline.class.component%
         action_component: %spy_timeline.class.action_component%
 
+##############################################################################
+# Spy Timeline
+##############################################################################
 spy_timeline:
     drivers:
         orm:

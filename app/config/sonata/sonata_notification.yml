@@ -1,3 +1,7 @@
+##############################################################################
+# Sonata Notification
+# Enable Doctrine to map the provided entities
+##############################################################################
 sonata_notification:
     class:
         message: AppBundle\Entity\Notification\Message
@@ -31,6 +35,10 @@ sonata_notification:
 #                port:     5672
 #                vhost:    /
 
+##############################################################################
+# Notification Doctrine
+# Enable Doctrine to map the provided entities
+##############################################################################
 doctrine:
     orm:
         entity_managers:

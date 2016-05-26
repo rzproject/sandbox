@@ -1,6 +1,6 @@
-##########################
+##############################################################################
 # Sonata Formatter
-##########################
+##############################################################################
 sonata_formatter:
     formatters:
         richhtml:
@@ -36,21 +36,21 @@ sonata_formatter:
             browser: 'RzFormatterBundle:Ckeditor:browser.html.twig'
             upload:  'SonataFormatterBundle:Ckeditor:upload.html.twig'
 
-##########################
-# Rz Formatter
-##########################
+##############################################################################
+# RzFormatter
+##############################################################################
 rz_formatter:
   admin_extenstion:
     ckeditor:
       class:  Rz\FormatterBundle\Admin\CkeditorAdminExtension
 
-##########################
+##############################################################################
 #  CKEditor
 #
 #  This section can be used to include the SonataMediaBundle with CKEDITOR
 #  => https://sonata-project.org/bundles/media/master/doc/reference/extra.html#ckeditor-integration
 #  there is also a configuration in the sonata_formatter section (see sonata_formatter.yml)
-##########################
+##############################################################################
 ivory_ck_editor:
     default_config: default
     configs:

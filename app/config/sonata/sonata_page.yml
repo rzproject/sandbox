@@ -1,19 +1,7 @@
-##########################
-# Page Doctrine
-##########################
-# Enable Doctrine to map the provided entities
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    SonataPageBundle: ~
-##########################
+##############################################################################
 # CMF Routing
-##########################
-#
 # more information can be found here https://sonata-project.org/bundles/page
-#
+##############################################################################
 cmf_routing:
     chain:
         routers_by_id:
@@ -24,9 +12,9 @@ cmf_routing:
             rz.redirect.router: 110
             router.default: 100
 
-##########################
+##############################################################################
 # Sonata Page
-##########################
+##############################################################################
 sonata_page:
     class:
         site:     AppBundle\Entity\Page\Site
@@ -154,9 +142,21 @@ sonata_page:
         not_found: [404]    # render 404 page with "not_found" key (name generated: _page_internal_error_{key})
         fatal:     [500]    # so you can use the same page for different http errors or specify specific page for each error
 
-##########################
+
+##############################################################################
+# Page Doctrine
+##############################################################################
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataPageBundle: ~
+
+##############################################################################
 # Rz Page
-##########################
+##############################################################################
 rz_page:
   manager_class:
     orm:

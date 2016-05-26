@@ -1,20 +1,7 @@
-##########################
-# Media Doctrine
-##########################
-# Enable Doctrine to map the provided entities
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    SonataMediaBundle: ~
-
-##########################
+##############################################################################
 # Sonata Media
-##########################
-
 # more information can be found here https://sonata-project.org/bundles/media
-
+##############################################################################
 sonata_media:
     class:
         media:             AppBundle\Entity\Media\Media
@@ -121,16 +108,26 @@ sonata_media:
         simple:
             mode:  inset
 
+##############################################################################
+# Media Doctrine
+# Enable Doctrine to map the provided entities
+##############################################################################
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataMediaBundle: ~
 
 
-##########################
+
+##############################################################################
 # Rz Media
-##########################
+##############################################################################
 rz_media:
-
-  ###################################################################
+  #==================================================================
   # DEFAULT VALUE -- OLNY REQUIRED IF TOP BUNDLE IS NOT APPBUNDLE
-  ###################################################################
+  #==================================================================
 
   #class:
   #    media:               AppBundle\Entity\Media\Media
@@ -138,17 +135,17 @@ rz_media:
   #    gallery_has_media:   AppBundle\Entity\Media\GalleryHasMedia
   #    collection:          AppBundle\Entity\Classification\Collection
 
-  #####################
+  #==================================================================
   # Entity Manager
-  #####################
+  #==================================================================
   manager_class:
     orm:
       media:   'Rz\MediaBundle\Entity\MediaManager'
       gallery: 'Rz\MediaBundle\Entity\GalleryManager'
 
-  #####################
+  #==================================================================
   # Admin
-  #####################
+  #==================================================================
   admin:
     media:
       class:        'Rz\MediaBundle\Admin\ORM\MediaAdmin'
@@ -166,24 +163,25 @@ rz_media:
       translation:  'SonataMediaBundle'
 
 
-  ###################################
-  # Gallery Collection Configuration
-  ###################################
-  gallery:
-    # Default Collection
-    default_collection: default
-    # Default Context
-    default_context: gallery # gallery context must be present
-    # Default provider collection
-    default_provider_collection: default
-    collections:
-        default:  # the default context is mandatory
-            gallery_provider: rz.media.gallery_provider.default
-            gallery_has_media_provider: rz.media.gallery_has_media_provider.default
+  #==================================================================
+  # Providers Configuration
+  #==================================================================
+  providers:
+    gallery:
+      # Default Collection
+      default_collection: default
+      # Default Context
+      default_context: gallery # gallery context must be present
+      # Default provider collection
+      default_provider_collection: default
+      collections:
+          default:  # the default context is mandatory
+              gallery_provider: rz.media.gallery_provider.default
+              gallery_has_media_provider: rz.media.gallery_has_media_provider.default
 
-  #####################
+  #==================================================================
   # Blocks
-  #####################
+  #==================================================================
   blocks:
     media:
       # Override Class
