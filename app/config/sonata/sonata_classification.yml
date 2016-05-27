@@ -47,7 +47,7 @@ rz_classification:
       default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
       default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       context:
-          default:  # the default context is mandatory (fallback provider when no other provider is set)
+          default:  # the default context optional
               provider: rz.classification.category.provider.default
 
     #----------------------------------------------------------
@@ -57,7 +57,7 @@ rz_classification:
       default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
       default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       context:
-          default:  # the default context is mandatory (fallback provider when no other provider is set)
+          default:  # the default context optional
               provider: rz.classification.collection.provider.default
 
     #----------------------------------------------------------
@@ -67,7 +67,7 @@ rz_classification:
       default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
       default_provider_context: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       context:
-          default:  # the default context is mandatory (fallback provider when no other provider is set)
+          default:  # the default context optional
               provider: rz.classification.tag.provider.default
 
 ##############################################################################
