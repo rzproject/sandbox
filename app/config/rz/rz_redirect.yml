@@ -1,7 +1,28 @@
 ##############################################################################
 # Redirect Config
 ##############################################################################
-rz_redirect: ~
+rz_redirect:
+  # ORM Manager
+  manager_class:
+    orm:
+      redirect: 'Rz\RedirectBundle\Entity\RedirectManager'
+  # Sonata Admin Class
+  admin:
+    redirect:
+      class:       'Rz\RedirectBundle\Admin\RedirectAdmin'
+      controller:  'SonataAdminBundle:CRUD'
+      translation: 'RzRedirectBundle'
+  # Entity
+  class:
+    redirect: 'AppBundle\Entity\Redirect\Redirect'
+  # Redirect Types
+  redirect:
+    default_type: 301
+    types:
+      301:
+        name: 'Permanent Redirect'
+      302:
+        name: 'Temporary Redirect'
 
 ##############################################################################
 # Redirect Doctrine
