@@ -69,9 +69,9 @@ rz_news:
   #   new fields on the POST table
   #=====================================================================
   providers:
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     # Post Provider
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     post:
       #----------------------------------------------------------------------------------------
       # Use context ID from ClassificationBundle
@@ -85,16 +85,18 @@ rz_news:
       collections:
           default:  # the default collection is mandatory (fallback provider when no other provider is set)
               provider: rz.news.post.provider.default
-              #default template should be present on post_block_service template list
-              #will be the prefered choice for template selection
+              #----------------------------------------------------------------------------------------
+              # NOTE! default template should be present on post_block_service template list
+              #       preferred_template will be the prefered choice for template selection
+              #----------------------------------------------------------------------------------------
               preferred_template: RzNewsBundle:Block:block_post_default.html.twig
           acticle:
               provider: rz.news.post.provider.default
               preferred_template: RzNewsBundle:Block:block_post.html.twig
 
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     # Post Sets Provider
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     post_sets:
       #----------------------------------------------------------------------------------------
       # Use context ID from ClassificationBundle
@@ -102,19 +104,30 @@ rz_news:
       default_context: post-sets
       default_collection: default
       default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      #default settings for PostSetsHasPost lookup.
+      post_lookup_settings:
+        default_collection: article
+        hide_collection: true
       #optional
       collections:
             default:
                 # optional
                 post_sets:
                   provider: rz.news.post_sets.provider.default
+                  #----------------------------------------------------------------------------------------
+                  # Optional! if provider is set and no lookup collection post_lookup_settings.collection
+                  #           will automcatically set as post_lookup_settings.collection.
+                  #----------------------------------------------------------------------------------------
+                  post_lookup_settings: ~
+                    #collection: article
+                    #hide_collection: true
                 # optional
                 post_sets_has_posts:
                   provider: ~ # rz.news.post_sets_has_posts.provider.default
 
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     # SEO Provider
-    #----------------------------------------------------------
+    #----------------------------------------------------------------------------------------
     seo:
       default_provider: rz.news.provider.seo.default #NOTE: default seo provider additional fields for SEO
 
