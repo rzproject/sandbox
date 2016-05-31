@@ -4958,12 +4958,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/MediaBundle.git",
-                "reference": "a0439e51116e5a3e831aa77174c490acc00c7d19"
+                "reference": "82b0f22340cf1002d269d97e5f339b93c4b92edb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/a0439e51116e5a3e831aa77174c490acc00c7d19",
-                "reference": "a0439e51116e5a3e831aa77174c490acc00c7d19",
+                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/82b0f22340cf1002d269d97e5f339b93c4b92edb",
+                "reference": "82b0f22340cf1002d269d97e5f339b93c4b92edb",
                 "shasum": ""
             },
             "require": {
@@ -5001,7 +5001,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-05-30 15:23:59"
+            "time": "2016-05-31 05:32:38"
         },
         {
             "name": "rz/news-bundle",
@@ -5009,12 +5009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "8f44e8986128d09aca38d5ada8f50123b409708a"
+                "reference": "1d7e876e4a050bce7efd3688dfabd395f32eb692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/8f44e8986128d09aca38d5ada8f50123b409708a",
-                "reference": "8f44e8986128d09aca38d5ada8f50123b409708a",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/1d7e876e4a050bce7efd3688dfabd395f32eb692",
+                "reference": "1d7e876e4a050bce7efd3688dfabd395f32eb692",
                 "shasum": ""
             },
             "require": {
@@ -5058,7 +5058,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-05-30 15:36:24"
+            "time": "2016-05-31 05:27:30"
         },
         {
             "name": "rz/page-bundle",
