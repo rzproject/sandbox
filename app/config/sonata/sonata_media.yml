@@ -168,16 +168,28 @@ rz_media:
   #==================================================================
   providers:
     gallery:
+      # Default Media Context
+      default_context: gallery # gallery context must be present
       # Default Collection
       default_collection: default
-      # Default Context
-      default_context: gallery # gallery context must be present
       # Default provider collection
       default_provider_collection: default
+      # GalleryHasMedia default settings
+      media_lookup_settings:
+        hide_context: false
+        default_context: default
+        default_category: default
       collections:
           default:  # the default context is mandatory
-              gallery_provider: rz.media.gallery_provider.default
-              gallery_has_media_provider: rz.media.gallery_has_media_provider.default
+            gallery:
+              provider: rz.media.gallery_provider.default
+              # GalleryHasMedia settings
+              media_lookup_settings:
+                hide_context: true
+                context: news
+                category: blog
+            gallery_has_media:
+              provider: rz.media.gallery_has_media_provider.default
 
   #==================================================================
   # Blocks
