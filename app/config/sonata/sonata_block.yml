@@ -48,10 +48,10 @@ sonata_block:
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
         sonata.news.block.recent_posts:
-        rz.news.news_page.default.block.post:
+        rz.news_page.block.service.post:
             templates:
-                - { name: 'Default', template: 'RzNewsBundle:Block:block_post_default.html.twig' }
-                - { name: 'Block', template: 'RzNewsBundle:Block:block_post.html.twig' }
+                - { name: 'Default', template: 'RzNewsPageBundle:Block:block_post_default.html.twig' }
+                - { name: 'Block', template: 'RzNewsPageBundle:Block:block_post.html.twig' }
 
         # Ecommerce's Blocks
         #sonata.order.block.recent_orders:

@@ -240,9 +240,9 @@ sonata_admin:
                     #Tabbed Version
                     #list:                     'RzNewsBundle:PostAdmin:list.html.twig'
                     #Side menu version
-                    list:                     'RzNewsBundle:PostAdmin:list_alt.html.twig'
+                    list:                     'RzNewsPageBundle:PostAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzNewsBundle:PostAdmin:list_outer_rows_mosaic.html.twig'
-                    edit:                     'RzNewsBundle:PostAdmin:edit.html.twig'
+                    edit:                     'RzNewsPageBundle:PostAdmin:edit.html.twig'
 
         sonata.media.admin.media:
             pager_type:  simple
@@ -344,7 +344,7 @@ sonata_admin:
                     #Tabbed Version
                     #list:                     'RzNewsBundle:PostHasCategoryAdmin:list.html.twig'
                     #Side menu version
-                    list:                     'RzNewsBundle:PostHasCategoryAdmin:list_alt.html.twig'
+                    list:                     'RzNewsPageBundle:PostHasCategoryAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzNewsBundle:PostHasCategoryAdmin:list_outer_rows_mosaic.html.twig'
 
         rz.news.admin.post_sets:

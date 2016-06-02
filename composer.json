@@ -76,6 +76,7 @@
         "rz/seo-bundle": "2.0.0.*",
         "rz/redirect-bundle": "2.0.0.*",
         "rz/formatter-bundle": "2.0.0.*",
+        "rz/news-page-bundle": "2.0.0.*",
 
         "michelf/php-markdown": "~1.4",
         "simplethings/entity-audit-bundle": "~0.5",
