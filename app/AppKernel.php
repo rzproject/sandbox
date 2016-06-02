@@ -106,7 +106,6 @@ class AppKernel extends Kernel
             new Rz\BlockBundle\RzBlockBundle(),
             new Rz\RedirectBundle\RzRedirectBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
-            //new Rz\CategoryPageBundle\RzCategoryPageBundle(),
             new Rz\NewsPageBundle\RzNewsPageBundle(),
         );
 
