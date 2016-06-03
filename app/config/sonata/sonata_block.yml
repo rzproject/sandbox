@@ -48,10 +48,17 @@ sonata_block:
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
         sonata.news.block.recent_posts:
+
+        #NewPageBundle
         rz.news_page.block.service.post:
             templates:
-                - { name: 'Default', template: 'RzNewsPageBundle:Block:block_post_default.html.twig' }
-                - { name: 'Block', template: 'RzNewsPageBundle:Block:block_post.html.twig' }
+                - { name: 'Default Post Block', template: 'RzNewsPageBundle:Block:block_post_default.html.twig' }
+                - { name: 'Post Block', template: 'RzNewsPageBundle:Block:block_post.html.twig' }
+
+        rz.news_page.block.service.post_list_by_category:
+            templates:
+                - { name: 'Category Post List Block', template: 'RzNewsPageBundle:Block:block_post_list_by_category.html.twig' }
+                - { name: 'Category Post List Default Block', template: 'RzNewsPageBundle:Block:block_post_list_by_category_default.html.twig' }
 
         # Ecommerce's Blocks
         #sonata.order.block.recent_orders:

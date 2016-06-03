@@ -122,12 +122,6 @@ rz_news:
           #sample: #-------------------------------------> your collection slug
           #    provider: rz.news.post.provider.sample #--> your provider service
           #    settings: #-------------------------------> settings are the provider parameters
-          #
-          #        templates: #--------------------------> templates param for the currently declared provider
-          #          params:
-          #            - { key: 'Sample', value: 'RzNewsBundle:Post:post_sample.html.twig' }
-          #            - { key: 'Another Sample', value: 'RzNewsBundle:Post:post_default_sample.html.twig' }
-          #
           #        post_has_media:
           #          params:
           #            - { key: enable, value: true }
@@ -144,9 +138,13 @@ rz_news:
           #            - { key: enable, value: true }
           #            - { key: collection, value: vlog }
           #            - { key: hide_collection, value: true }
+          #        templates: #----> required for rz.news.post.provider.default
+          #          params:
+          #            - { key: 'RzNewsPageBundle:Block:block_post.html.twig', value: 'Sample' }
+          #            - { key: 'RzNewsPageBundle:Block:block_post_default.html.twig', value: 'Another Sample' }
 
           article:
-              provider: rz.news.post.provider.default
+              provider: rz.news_page.post.provider.default
               settings:
                   post_has_media:
                     params:
@@ -164,10 +162,6 @@ rz_news:
                       - { key: enable, value: true }
                       - { key: collection, value: vlog }
                       - { key: hide_collection, value: true }
-                  templates:
-                    params:
-                      - { key: 'RzNewsBundle:Post:post_sample.html.twig', value: 'Sample' }
-                      - { key: 'RzNewsBundle:Post:post_default_sample.html.twig', value: 'Another Sample' }
 
     #----------------------------------------------------------------------------------------
     # Post Sets Provider
@@ -199,64 +193,3 @@ rz_news:
                 # optional
                 post_sets_has_posts:
                   provider: ~ # rz.news.post_sets_has_posts.provider.default
-
-
-###############################################################################
-# RzNewsPage
-#   - NewsBundle and PageBundle Bridge
-###############################################################################
-rz_news_page:
-  slugify_service: 'sonata.core.slugify.cocur'
-  page:
-    parent_slug: 'articles'
-    templates:
-      default:
-        name: 'Default'
-        template_code: 'default'
-    transformer:
-       class:  'Rz\NewsPageBundle\Entity\Transformer'
-    services:
-      post:
-        service: rz.news_page.page.service.post
-        settings:
-          class: Rz\NewsPageBundle\Page\Service\PostPageService
-          name: Post
-      post_canonical:
-        service: rz.news_page.page.service.post_canonical
-        settings:
-          class: Rz\NewsPageBundle\Page\Service\PostCanonicalPageService
-          name: Post Canonical
-  block:
-    service: rz.news_page.block.service.post
-    template: #default template if no template is set on rz.news.news_page.block.post
-        name: Default
-        path: RzNewsPageBundle:Block:block_post_default.html.twig
-
-  #=====================================================================
-  # Default permalink
-  #   permalinks services generates SEO friendly URL for post
-  #   article URL: /article/article-slug ---> canonical URL
-  #=====================================================================
-  permalink:
-    default: default
-    #=====================================================================
-    # News Permalink Configuration
-    # define several permalink generators
-    #=====================================================================
-    permalinks:
-        default:  # the default permalink is mandatory
-            permalink: rz.news_page.permalink.default
-        slug:  # optional permalik can replace default
-            permalink: rz.news_page.permalink.slug
-
-  #=====================================================================
-  # PROVIDERS Configuration
-  #   provider are classes that allows programatically adding
-  #   new fields on the POST table
-  #=====================================================================
-  providers:
-    #----------------------------------------------------------------------------------------
-    # SEO Provider
-    #----------------------------------------------------------------------------------------
-    seo:
-      default_provider: rz.news_page.provider.seo.default #NOTE: default seo provider additional fields for SEO

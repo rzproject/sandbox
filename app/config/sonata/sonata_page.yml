@@ -93,6 +93,56 @@ sonata_page:
                      B: content_bottom
                      F: footer
 
+        post:
+            path: 'RzPageBundle:Page:Theme\montage\post_default.html.twig'
+            name: 'post'
+            containers:
+                 header:
+                     name: Header
+                 content:
+                     name: Post content
+                     blocks:
+                        - rz.news_page.block.service.post
+                        - sonata.page.block.shared_block
+                 footer:
+                     name: Footer
+            matrix:
+                 layout: |
+                     HHHHHHHH
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     FFFFFFFF
+
+                 mapping:
+                     H: header
+                     C: content
+                     F: footer
+        category:
+            path: 'RzPageBundle:Page:Theme\montage\category_default.html.twig'
+            name: 'category'
+            containers:
+                 header:
+                     name: Header
+                 content:
+                     name: Category post list content
+                     blocks:
+                        - rz.news_page.block.service.post_list_by_category
+                 footer:
+                     name: Footer
+            matrix:
+                 layout: |
+                     HHHHHHHH
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     FFFFFFFF
+
+                 mapping:
+                     H: header
+                     C: content
+                     F: footer
+
         2columns:
             path: 'AppBundle::demo_2columns_layout.html.twig'
             name: '2 columns layout'
@@ -190,3 +240,128 @@ rz_page:
       class:        'Rz\PageBundle\Admin\SharedBlockAdmin'
       controller:   'RzPageBundle:BlockAdmin'
       translation:  'SonataPageBundle'
+
+###############################################################################
+# RzNewsPage
+#   - NewsBundle and PageBundle Bridge
+###############################################################################
+rz_news_page:
+  slugify_service: 'sonata.core.slugify.cocur'
+  page:
+    #=====================================================================
+    # parent URL slug for all posts (canonical)
+    #  page will be automatically create when a new post is added
+    #=====================================================================
+    parent_slug: 'articles'
+    #=====================================================================
+    # page template for POST page
+    #=====================================================================
+    templates:
+      post:
+        name: 'Post'
+        template_code: 'post'
+    #=====================================================================
+    # default transformer to be used when automatically creating POST page
+    #=====================================================================
+    transformer:
+       class:  'Rz\NewsPageBundle\Entity\Transformer'
+    #=====================================================================
+    # page service for post and post canonical page
+    #=====================================================================
+    services:
+      post:
+        service: rz.news_page.page.service.post
+      post_canonical:
+        service: rz.news_page.page.service.post_canonical
+  #=====================================================================
+  # block to render the post on page and its canonical
+  #  automatically added when the post page is created
+  #=====================================================================
+  block:
+    service: rz.news_page.block.service.post
+    template: #default template if no template is set on rz.news.news_page.block.post
+        name: Default
+        path: RzNewsPageBundle:Block:block_post_default.html.twig
+
+  #=====================================================================
+  # Override page service class and name
+  #=====================================================================
+  page_service:
+    post:
+      class: Rz\NewsPageBundle\Page\Service\PostPageService
+      name: Post
+    post_canonical:
+      class: Rz\NewsPageBundle\Page\Service\PostCanonicalPageService
+      name: Post Canonical
+
+  #=====================================================================
+  # Default permalink
+  #   permalinks services generates SEO friendly URL for post
+  #   article URL: /article/article-slug ---> canonical URL
+  #=====================================================================
+  permalink:
+    default: default
+    #=====================================================================
+    # News Permalink Configuration
+    # define several permalink generators
+    #=====================================================================
+    permalinks:
+        default:  # the default permalink is mandatory
+            permalink: rz.news_page.permalink.default
+        slug:  # optional permalik can replace default
+            permalink: rz.news_page.permalink.slug
+
+  #=====================================================================
+  # PROVIDERS Configuration
+  #   provider are classes that allows programatically adding
+  #   new fields on the POST table
+  #=====================================================================
+  providers:
+    #----------------------------------------------------------------------------------------
+    # SEO Provider
+    #----------------------------------------------------------------------------------------
+    seo:
+      default_provider: rz.news_page.provider.seo.default #NOTE: default seo provider additional fields for SEO
+
+
+###############################################################################
+# RzNewsPage
+#   - NewsBundle and PageBundle Bridge
+###############################################################################
+rz_category_page:
+  slugify_service: 'sonata.core.slugify.cocur'
+  page:
+     #=====================================================================
+     # page template for CATEGORY page
+     #=====================================================================
+    templates:
+      category:
+        name: 'Category'
+        template_code: 'category'
+    #=====================================================================
+    # page service for category and category canonical page
+    #=====================================================================
+    services:
+      category:
+        service: rz.category_page.page.service.category
+      category_canonical:
+        service: rz.category_page.page.service.category_canonical
+  #=====================================================================
+  # block to render the post list of a category on page
+  #  automatically added when the category page is created
+  #=====================================================================
+  block:
+    service: rz.news_page.block.service.post_list_by_category
+    template:
+        name: Default
+        template: RzNewsPageBundle:Block:block_post_list_by_category.html.twig
+  #=====================================================================
+  # Override page service class and name
+  #=====================================================================
+  page_service:
+    category:
+      class: Rz\CategoryPageBundle\Page\Service\CategoryPageService
+      name: Category
+    category_canonical:
+      class: Rz\CategoryPageBundle\Page\Service\CategoryCanonicalPageService
+      name: Category Canonical

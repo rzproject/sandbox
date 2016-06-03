@@ -89,6 +89,8 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - sonata.page.admin.page
+                    - rz.category_page.admin.category_has_page
+                    - rz.news_page.admin.post_has_page
                     - sonata.page.admin.shared_block
                     - sonata.page.admin.site
                     - rz.redirect.admin.redirect
@@ -359,6 +361,27 @@ sonata_admin:
                     #Side menu version
                     list:                     'RzNewsBundle:PostSetsAdmin:list_alt.html.twig'
                     outer_list_rows_mosaic:   'RzNewsBundle:PostSetsAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.category_page.admin.category_has_page:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    list:                     'RzCategoryPageBundle:CategoryHasPageAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzCategoryPageBundle:CategoryHasPageAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.news_page.admin.post_has_page:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    list:                     'RzNewsPageBundle:PostHasPageAdmin:list.html.twig'
+                    outer_list_rows_mosaic:   'RzNewsPageBundle:PostHasPageAdmin:list_outer_rows_mosaic.html.twig'
+
 
 ##############################################################################
 # Sonata Doctrine ORM
