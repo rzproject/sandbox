@@ -4616,12 +4616,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "b90d880dcb844af70cbbd919e167c68d46dfd51a"
+                "reference": "1df2ea2f1dacd3e266b67252fa5c5ec3d74e930a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/b90d880dcb844af70cbbd919e167c68d46dfd51a",
-                "reference": "b90d880dcb844af70cbbd919e167c68d46dfd51a",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/1df2ea2f1dacd3e266b67252fa5c5ec3d74e930a",
+                "reference": "1df2ea2f1dacd3e266b67252fa5c5ec3d74e930a",
                 "shasum": ""
             },
             "require": {
@@ -4656,7 +4656,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-05-30 15:12:31"
+            "time": "2016-06-04 14:26:25"
         },
         {
             "name": "rz/block-bundle",
@@ -5060,12 +5060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "3353cbea509b760e4a86d0ac4c9f1b441e4880d7"
+                "reference": "5bdff380128f6a01c963804a29b30cf64435f6a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/3353cbea509b760e4a86d0ac4c9f1b441e4880d7",
-                "reference": "3353cbea509b760e4a86d0ac4c9f1b441e4880d7",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/5bdff380128f6a01c963804a29b30cf64435f6a1",
+                "reference": "5bdff380128f6a01c963804a29b30cf64435f6a1",
                 "shasum": ""
             },
             "require": {
@@ -5106,7 +5106,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-06-04 04:17:23"
+            "time": "2016-06-04 14:24:18"
         },
         {
             "name": "rz/news-page-bundle",
@@ -5114,12 +5114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsPageBundle.git",
-                "reference": "0ffb883dd097fad63ff22a4962258fb29d8c0e51"
+                "reference": "a32b86eda327bfcf6d2bbb610a74d10255ecc55c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/0ffb883dd097fad63ff22a4962258fb29d8c0e51",
-                "reference": "0ffb883dd097fad63ff22a4962258fb29d8c0e51",
+                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/a32b86eda327bfcf6d2bbb610a74d10255ecc55c",
+                "reference": "a32b86eda327bfcf6d2bbb610a74d10255ecc55c",
                 "shasum": ""
             },
             "require": {
@@ -5158,7 +5158,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2016-06-04 04:21:14"
+            "time": "2016-06-04 14:25:13"
         },
         {
             "name": "rz/page-bundle",
