@@ -2760,12 +2760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "970a78c61428111f7b3b24fbfb05d488c31b70da"
+                "reference": "d0eaafadcbaa671953e554c3074c57384745386f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/970a78c61428111f7b3b24fbfb05d488c31b70da",
-                "reference": "970a78c61428111f7b3b24fbfb05d488c31b70da",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/d0eaafadcbaa671953e554c3074c57384745386f",
+                "reference": "d0eaafadcbaa671953e554c3074c57384745386f",
                 "shasum": ""
             },
             "require": {
@@ -2836,7 +2836,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2016-06-02 09:29:59"
+            "time": "2016-06-03 15:50:40"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -5060,12 +5060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "4b2eebcd673a9bf13317ef06b8c8a98f616579fd"
+                "reference": "3353cbea509b760e4a86d0ac4c9f1b441e4880d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/4b2eebcd673a9bf13317ef06b8c8a98f616579fd",
-                "reference": "4b2eebcd673a9bf13317ef06b8c8a98f616579fd",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/3353cbea509b760e4a86d0ac4c9f1b441e4880d7",
+                "reference": "3353cbea509b760e4a86d0ac4c9f1b441e4880d7",
                 "shasum": ""
             },
             "require": {
@@ -5106,7 +5106,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-06-03 11:09:56"
+            "time": "2016-06-04 04:17:23"
         },
         {
             "name": "rz/news-page-bundle",
@@ -5114,12 +5114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsPageBundle.git",
-                "reference": "6c0d83f7b5406f2803c7d8de5ee36e0fcee6a762"
+                "reference": "0ffb883dd097fad63ff22a4962258fb29d8c0e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/6c0d83f7b5406f2803c7d8de5ee36e0fcee6a762",
-                "reference": "6c0d83f7b5406f2803c7d8de5ee36e0fcee6a762",
+                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/0ffb883dd097fad63ff22a4962258fb29d8c0e51",
+                "reference": "0ffb883dd097fad63ff22a4962258fb29d8c0e51",
                 "shasum": ""
             },
             "require": {
@@ -5158,7 +5158,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2016-06-03 11:13:46"
+            "time": "2016-06-04 04:21:14"
         },
         {
             "name": "rz/page-bundle",
@@ -5636,12 +5636,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/sonata-doctrine-extensions.git",
-                "reference": "065999aeeb860b38369f043f248a2e6e517caa70"
+                "reference": "209145bfda95e807c1b9fde34f7b38cf0990c801"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/sonata-doctrine-extensions/zipball/065999aeeb860b38369f043f248a2e6e517caa70",
-                "reference": "065999aeeb860b38369f043f248a2e6e517caa70",
+                "url": "https://api.github.com/repos/sonata-project/sonata-doctrine-extensions/zipball/209145bfda95e807c1b9fde34f7b38cf0990c801",
+                "reference": "209145bfda95e807c1b9fde34f7b38cf0990c801",
                 "shasum": ""
             },
             "require": {
@@ -5685,7 +5685,7 @@
                 "doctrine2",
                 "json"
             ],
-            "time": "2016-06-02 10:15:06"
+            "time": "2016-06-04 00:45:05"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -5693,12 +5693,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataEasyExtendsBundle.git",
-                "reference": "c4f3fd43c4f2bfb5d9a5e8604bedb276b36f2b37"
+                "reference": "5a9b53a8d05f397d9cb4beacac13c3308642ca1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/c4f3fd43c4f2bfb5d9a5e8604bedb276b36f2b37",
-                "reference": "c4f3fd43c4f2bfb5d9a5e8604bedb276b36f2b37",
+                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/5a9b53a8d05f397d9cb4beacac13c3308642ca1e",
+                "reference": "5a9b53a8d05f397d9cb4beacac13c3308642ca1e",
                 "shasum": ""
             },
             "require": {
@@ -5744,7 +5744,7 @@
                 "Easy Extends",
                 "sonata"
             ],
-            "time": "2016-06-02 10:20:07"
+            "time": "2016-06-04 00:50:05"
         },
         {
             "name": "sonata-project/exporter",
@@ -5816,12 +5816,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/GoogleAuthenticator.git",
-                "reference": "0c37e2ab5d7442a8c875ab5ebf94dce8fa178e69"
+                "reference": "34b99da3684024fb987706b60553e435646fe795"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/GoogleAuthenticator/zipball/0c37e2ab5d7442a8c875ab5ebf94dce8fa178e69",
-                "reference": "0c37e2ab5d7442a8c875ab5ebf94dce8fa178e69",
+                "url": "https://api.github.com/repos/sonata-project/GoogleAuthenticator/zipball/34b99da3684024fb987706b60553e435646fe795",
+                "reference": "34b99da3684024fb987706b60553e435646fe795",
                 "shasum": ""
             },
             "require": {
@@ -5866,7 +5866,7 @@
             "keywords": [
                 "google authenticator"
             ],
-            "time": "2016-06-02 10:30:09"
+            "time": "2016-06-04 00:55:07"
         },
         {
             "name": "sonata-project/intl-bundle",
