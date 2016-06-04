@@ -78,6 +78,10 @@ rz_news:
   # Bundle Default Settings
   #=====================================================================
   settings:
+    media:
+      default_context: ~
+      hide_context: ~
+      default_category: ~
     related_articles:
       enabled: false
       default_collection: ~
@@ -91,6 +95,10 @@ rz_news:
       default_context: ~
       hide_context: ~
       default_category: ~
+    post_has_category:
+      default_context: ~
+    tags:
+      default_context: default
 
   #=====================================================================
   # PROVIDERS Configuration
@@ -122,6 +130,18 @@ rz_news:
           #sample: #-------------------------------------> your collection slug
           #    provider: rz.news.post.provider.sample #--> your provider service
           #    settings: #-------------------------------> settings are the provider parameters
+          #        media:
+          #          params:
+          #            - { key: context, value: default }
+          #            - { key: hide_context, value: true }
+          #            - { key: category, value: news }
+          #        post_has_category:
+          #          params:
+          #            - { key: context, value: default }
+          #        tags:
+          #          params:
+          #            - { key: context, value: news }
+          #            - { key: hide_context, value: true }
           #        post_has_media:
           #          params:
           #            - { key: enable, value: true }
@@ -146,12 +166,24 @@ rz_news:
           article:
               provider: rz.news_page.post.provider.default
               settings:
+                  media:
+                    params:
+                      - { key: context, value: default }
+                      - { key: hide_context, value: true }
+                      - { key: category, value: news }
                   post_has_media:
                     params:
                       - { key: enable, value: true }
                       - { key: context, value: default }
                       - { key: hide_context, value: true }
                       - { key: category, value: default }
+                  post_has_category:
+                    params:
+                      - { key: context, value: default }
+                  tags:
+                    params:
+                      - { key: context, value: news }
+                      - { key: hide_context, value: true }
                   suggested_articles:
                     params:
                       - { key: enable, value: true }
