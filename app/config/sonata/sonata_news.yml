@@ -78,27 +78,33 @@ rz_news:
   # Bundle Default Settings
   #=====================================================================
   settings:
-    media:
-      default_context: ~
-      hide_context: ~
-      default_category: ~
-    related_articles:
-      enabled: false
-      default_collection: ~
-      hide_collection: ~
-    suggested_articles:
-      enabled: false
-      default_collection: ~
-      hide_collection: ~
-    post_has_media:
-      enabled: false
-      default_context: ~
-      hide_context: ~
-      default_category: ~
-    post_has_category:
-      default_context: ~
-    tags:
-      default_context: default
+    post:
+      media:
+        default_context: ~
+        hide_context: ~
+        default_category: ~
+      related_articles:
+        enabled: false
+        default_collection: ~
+        hide_collection: ~
+      suggested_articles:
+        enabled: false
+        default_collection: ~
+        hide_collection: ~
+      post_has_media:
+        enabled: false
+        default_context: ~
+        hide_context: ~
+        default_category: ~
+      post_has_category:
+        default_context: ~
+      tags:
+        default_context: default
+
+    post_sets_has_posts:
+      post:
+        default_collection: article
+        hide_collection: false
 
   #=====================================================================
   # PROVIDERS Configuration
@@ -115,7 +121,7 @@ rz_news:
       #----------------------------------------------------------------------------------------
       default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
       default_collection: 'article' # NOTE: default collection used for grouping provider type
-      default_provider_collection: article # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
+      #default_provider_collection: article # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       #----------------------------------------------------------------------------------------
       # use the collection description or slug for collections configuration ID it will be automatically slugified
       #----------------------------------------------------------------------------------------
@@ -204,24 +210,16 @@ rz_news:
       #----------------------------------------------------------------------------------------
       default_context: post-sets
       default_collection: default
-      default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
-      #default settings for PostSetsHasPost lookup.
-      post_lookup_settings:
-        default_collection: article
-        hide_collection: true
+      #default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       #optional
       collections:
-            default:
-                # optional
-                post_sets:
-                  provider: rz.news.post_sets.provider.default
-                  #----------------------------------------------------------------------------------------
-                  # Optional! if provider is set and no lookup collection post_lookup_settings.collection
-                  #           will automcatically set as post_lookup_settings.collection.
-                  #----------------------------------------------------------------------------------------
-                  post_lookup_settings: ~
-                    #collection: article
-                    #hide_collection: true
-                # optional
-                post_sets_has_posts:
-                  provider: ~ # rz.news.post_sets_has_posts.provider.default
+          default:
+              post_sets:
+                provider: rz.news.post_sets.provider.default
+              post_sets_has_posts:
+                provider: rz.news.post_sets_has_posts.provider.default
+                settings:
+                  post:
+                    params:
+                      - { key: collection, value: vlog }
+                      - { key: hide_collection, value: false }
