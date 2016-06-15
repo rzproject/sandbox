@@ -38,6 +38,7 @@ imports:
 
     # Rz Extension Bundles
     - { resource: rz/rz_redirect.yml }
+    - { resource: rz/rz_search.yml }
 
 
 framework:

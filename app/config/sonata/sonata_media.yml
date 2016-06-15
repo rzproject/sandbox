@@ -162,34 +162,72 @@ rz_media:
       controller:   'SonataAdminBundle:CRUD'
       translation:  'SonataMediaBundle'
 
+  #=====================================================================
+  # Bundle Default Settings
+  #=====================================================================
+  settings:
+    media:
+      default_context: ~
+      hide_context: ~
+      default_category: ~
+    gallery:
+        default_context: gallery
+        default_collection: featured-gallery
+    gallery_has_media:
+      media:
+        default_context: news
+        hide_context: false
+        default_category: blog
 
   #==================================================================
   # Providers Configuration
   #==================================================================
   providers:
+    #----------------------------------------------------------------------------------------
+    # Providers and Pool class override - SAMPLE with default classes
+    #----------------------------------------------------------------------------------------
+    #class:
+    #  pool:
+    #    gallery:            'Rz\MediaBundle\Provider\Gallery\Pool'
+    #    gallery_has_media:  'Rz\MediaBundle\Provider\GalleryHasMedia\Pool'
+    #  default_provider:
+    #    gallery:            'Rz\MediaBundle\Provider\Gallery\DefaultProvider'
+    #    gallery_has_media:  'Rz\MediaBundle\Provider\GalleryHasMedia\DefaultProvider'
+
+    #----------------------------------------------------------------------------------------
+    # Provider by context definition
+    #----------------------------------------------------------------------------------------
     gallery:
-      # Default Media Context
-      default_context: gallery # gallery context must be present
-      # Default Collection
-      default_collection: default
-      # Default provider collection
-      default_provider_collection: default
-      # GalleryHasMedia default settings
-      media_lookup_settings:
-        hide_context: false
-        default_context: default
-        default_category: default
       collections:
-          default:  # the default context is mandatory
+          #----------------------------------------------------------------------------------------
+          # SAMPLE COLLECTION SETTINGS
+          #   1. Below is a sample settings for the default provider rz.news.post.provider.default.
+          #   2. You can declare your own settings based on your provider requirements by following
+          #      the "params" pattern of key -> value
+          #----------------------------------------------------------------------------------------
+          #featured-gallery:
+          #  gallery:
+          #    provider: rz.media.gallery_provider.default
+          #  gallery_has_media:
+          #    provider: ~
+          #    settings:
+          #      media:
+          #        params:
+          #          - { key: context, value: default }
+          #          - { key: hide_context, value: true }
+          #          - { key: category, value: default }
+          default:
             gallery:
               provider: rz.media.gallery_provider.default
-              # GalleryHasMedia settings
-              media_lookup_settings:
-                hide_context: true
-                context: news
-                category: blog
             gallery_has_media:
               provider: rz.media.gallery_has_media_provider.default
+              settings:
+                media:
+                  params:
+                    - { key: context, value: default }
+                    - { key: hide_context, value: true }
+                    - { key: category, value: default }
+
 
   #==================================================================
   # Blocks

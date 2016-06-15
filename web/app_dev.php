@@ -25,7 +25,7 @@ require_once __DIR__.'/../app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
-$request = Sonata\PageBundle\Request\RequestFactory::createFromGlobals('host_with_path');
+$request = Sonata\PageBundle\Request\RequestFactory::createFromGlobals('host');
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);

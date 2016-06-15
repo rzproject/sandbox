@@ -22,13 +22,14 @@ sonata_page:
         page:     AppBundle\Entity\Page\Page
         block:    AppBundle\Entity\Page\Block
 
-    multisite:             host_with_path # host
+    multisite:             host
     is_inline_edition_on:  false
     use_streamed_response: false # set the value to false in debug mode or if the reverse proxy does not handle streamed response
 
     ignore_uri_patterns:
         - ^/admin(.*)
         - ^/api/(.*)
+        - ^/helper/(.*)
 
     ignore_route_patterns:
         - (.*)admin(.*)     # ignore admin route, ie route containing 'admin'
@@ -223,7 +224,7 @@ rz_page:
 
     snapshot:
       class:        'Rz\PageBundle\Admin\SnapshotAdmin'
-      controller:   'RzPageBundle:SnapshotAdmin'
+      controller:   'RzAdvancePageBundle:SnapshotAdmin'
       translation:  'SonataPageBundle'
 
     page:
@@ -240,6 +241,9 @@ rz_page:
       class:        'Rz\PageBundle\Admin\SharedBlockAdmin'
       controller:   'RzPageBundle:BlockAdmin'
       translation:  'SonataPageBundle'
+
+  consumer_class:
+    create_snapshot: 'Rz\AdvancePageBundle\Consumer\CreateSnapshotConsumer'
 
 ###############################################################################
 # RzNewsPage
@@ -365,3 +369,31 @@ rz_category_page:
     category_canonical:
       class: Rz\CategoryPageBundle\Page\Service\CategoryCanonicalPageService
       name: Category Canonical
+
+
+
+###############################################################################
+# RzAdvancePage
+#   - PageBundle Extension
+###############################################################################
+rz_advance_page:
+  class:
+    #----------------------------------------------------------------------------------------
+    # Default Model Processor for Post Page Search can be overriden
+    #----------------------------------------------------------------------------------------
+    processor: 'Rz\AdvancePageBundle\Processor\Model\NewsPageProcessor'
+  settings:
+    #=====================================================================
+    # page search settings
+    #=====================================================================
+    search:
+      #----------------------------------------------------------------------------------------
+      # Processor to be used for indexing Post Pages during snapshots
+      #----------------------------------------------------------------------------------------
+      processor:
+        service: rz_advance_page.processor.model.news_page
+      #----------------------------------------------------------------------------------------
+      # Search config model indentifier defined on rz_search.yml
+      #----------------------------------------------------------------------------------------
+      config:
+        identifier: sonata.page.snapshot

@@ -1,0 +1,100 @@
+##############################################################################
+# Search Config
+##############################################################################
+rz_search:
+    #=====================================================================
+    # Bundle Default Settings
+    #=====================================================================
+    settings:
+      slugify_service: 'sonata.core.slugify.cocur'
+      search:
+        pagination:
+          per_page: 1
+        variables: # search query variable configuration
+          search_query: 'q' # search query get variable
+          default_identifier: 'sonata.page.snapshot' #default identifier for search required
+        controller: # controller override
+          search: 'RzSearchBundle:Search:search' # search controller
+          ajax:   'RzSearchBundle:Helper:fetchData' #ajax controller
+        templates:
+          solr:
+            empty:        'RzSearchBundle:Search:Solr\empty.html.twig'
+            no_results:   'RzSearchBundle:Search:Solr\no_results.html.twig'
+            results:      'RzSearchBundle:Search:Solr\results.html.twig'
+            result_item:  'RzSearchBundle:Search:Solr\result_item.html.twig'
+            results_ajax: 'RzSearchBundle:Search:Solr\results_ajax.html.twig'
+
+    #=====================================================================
+    # blocks configuration
+    #=====================================================================
+    blocks:
+      # Post By Category Block Configuration
+      search:
+          class: 'Rz\SearchBundle\Block\SearchBlockService'
+          templates:
+            default:
+              name: 'Default'
+              path: 'RzSearchBundle:Block:Search\default.html.twig'
+
+    #=====================================================================
+    # search engine configuration SOLR
+    #=====================================================================
+    engine:
+      solr:
+        endpoints:
+            default:
+                host: localhost
+                port: 8983
+                path: /solr
+                core: sandbox
+                timeout: 5
+        clients:
+          sonata.page.snapshot:
+              endpoints: [default]
+
+    #=====================================================================
+    # search index mapping
+    #=====================================================================
+    configs:
+      sonata.page.snapshot: # Identifier can by any word with no space replace space using . or _
+          label: News Page Index # Required for Search Block Label
+          model:
+            identifier: sonata.page.snapshot # identifier name for indexes could be the same as the config ID
+            #----------------------------------------------------------------------------------------
+            # processor for returning the correct format to be sent to SOLR
+            #  each solr core/table to be indexed must have a model processor counter part
+            #  for processing the returned value to be passed to SOLR.
+            #----------------------------------------------------------------------------------------
+            processor: rz_advance_page.processor.model.news_page
+
+          #----------------------------------------------------------------------------------------
+          # Solarium Client to be used to index the model the value must be defined as one of the
+          #   clients under rz_search.engine.solr.clinets
+          #----------------------------------------------------------------------------------------
+          client: sonata.page.snapshot
+
+          #----------------------------------------------------------------------------------------
+          # These are the filters to be passed during CLI indexing to the fetchAll query to filter
+          #   data to be indexed.
+          #----------------------------------------------------------------------------------------
+          cli:
+            options:
+                - { name: 'site', is_required: 'required', description: 'Site id to index' }
+
+          #----------------------------------------------------------------------------------------
+          # Field map solr_field : doctrine_field
+          #----------------------------------------------------------------------------------------
+          field_mapping: #
+                id : id
+                model_id : id
+                url : url
+                title : title
+                description : abstract
+                content : content
+                tags : tags
+          template:
+            empty:        'RzSearchBundle:Search:Solr\empty.html.twig'
+            no_result:    'RzSearchBundle:Search:Solr\no_results.html.twig'
+            results:      'RzSearchBundle:Search:Solr\results.html.twig'
+            result_item:  'RzSearchBundle:Search:Solr\result_item.html.twig'
+            results_ajax: 'RzSearchBundle:Search:Solr\results_ajax.html.twig'

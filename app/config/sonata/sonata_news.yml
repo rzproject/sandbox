@@ -78,7 +78,17 @@ rz_news:
   # Bundle Default Settings
   #=====================================================================
   settings:
+
+    #----------------------------------------------------------------------------------------
+    # Default Settings for POST
+    #----------------------------------------------------------------------------------------
     post:
+      #----------------------------------------------------------------------------------------
+      # Default valuess: Use context ID from ClassificationBundle
+      #----------------------------------------------------------------------------------------
+      default_context: news # NOTE: default context used for grouping tag, media, ckeditor_context, collection
+      default_collection: article # NOTE: default collection used for grouping provider type
+
       media:
         default_context: ~
         hide_context: ~
@@ -101,6 +111,15 @@ rz_news:
       tags:
         default_context: default
 
+    #----------------------------------------------------------------------------------------
+    # Default Settings for PostSets
+    #----------------------------------------------------------------------------------------
+    post_sets:
+      default_context: post-sets
+      default_collection: default
+    #----------------------------------------------------------------------------------------
+    # Default Settings for PostSetsHasPost
+    #----------------------------------------------------------------------------------------
     post_sets_has_posts:
       post:
         default_collection: article
@@ -113,15 +132,22 @@ rz_news:
   #=====================================================================
   providers:
     #----------------------------------------------------------------------------------------
+    # Providers and Pool class override - SAMPLE with default classes
+    #----------------------------------------------------------------------------------------
+    #class:
+    #  pool:
+    #    post:                 'Rz\NewsBundle\Provider\Pool'
+    #    post_sets:            'Rz\NewsBundle\Provider\PostSets\Pool'
+    #    post_sets_has_posts:  'Rz\NewsBundle\Provider\PostSetsHasPosts\Pool'
+    #  default_provider:
+    #    post:                 'Rz\NewsBundle\Provider\Post\DefaultProvider'
+    #    post_sets:            'Rz\NewsBundle\Provider\PostSets\DefaultProvider'
+    #    post_sets_has_posts:  'Rz\NewsBundle\Provider\PostSetsHasPosts\DefaultProvider'
+
+    #----------------------------------------------------------------------------------------
     # Post Provider
     #----------------------------------------------------------------------------------------
     post:
-      #----------------------------------------------------------------------------------------
-      # Use context ID from ClassificationBundle
-      #----------------------------------------------------------------------------------------
-      default_context: 'news' # NOTE: default context used for grouping tag, media, ckeditor_context, collection
-      default_collection: 'article' # NOTE: default collection used for grouping provider type
-      #default_provider_collection: article # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       #----------------------------------------------------------------------------------------
       # use the collection description or slug for collections configuration ID it will be automatically slugified
       #----------------------------------------------------------------------------------------
@@ -205,12 +231,6 @@ rz_news:
     # Post Sets Provider
     #----------------------------------------------------------------------------------------
     post_sets:
-      #----------------------------------------------------------------------------------------
-      # Use context ID from ClassificationBundle
-      #----------------------------------------------------------------------------------------
-      default_context: post-sets
-      default_collection: default
-      #default_provider_collection: default # NOTE: default provider - provider are classes that allows programatically adding new fields on the POST table
       #optional
       collections:
           default:

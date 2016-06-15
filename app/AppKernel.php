@@ -22,9 +22,6 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
-
-            new AppBundle\AppBundle(),
-
             // SYMFONY STANDARD EDITION
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -108,6 +105,12 @@ class AppKernel extends Kernel
             new Rz\FormatterBundle\RzFormatterBundle(),
             new Rz\CategoryPageBundle\RzCategoryPageBundle(),
             new Rz\NewsPageBundle\RzNewsPageBundle(),
+            new Rz\AdvancePageBundle\RzAdvancePageBundle(),
+            new Rz\SearchBundle\RzSearchBundle(),
+
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+
+            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

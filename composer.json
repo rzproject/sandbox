@@ -17,7 +17,7 @@
         "twig/twig": "~1.20|~2.0",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "2.8.6",
+        "symfony/symfony": "2.8.7",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.3",
@@ -77,6 +77,8 @@
         "rz/redirect-bundle": "2.0.0.*",
         "rz/formatter-bundle": "2.0.0.*",
         "rz/news-page-bundle": "2.0.0.*",
+        "rz/advance-page-bundle": "2.0.0.*",
+        "rz/search-bundle": "2.0.0.*",
 
         "michelf/php-markdown": "~1.4",
         "simplethings/entity-audit-bundle": "~0.5",
