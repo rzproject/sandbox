@@ -242,9 +242,6 @@ rz_page:
       controller:   'RzPageBundle:BlockAdmin'
       translation:  'SonataPageBundle'
 
-  consumer_class:
-    create_snapshot: 'Rz\AdvancePageBundle\Consumer\CreateSnapshotConsumer'
-
 ###############################################################################
 # RzNewsPage
 #   - NewsBundle and PageBundle Bridge
@@ -382,6 +379,13 @@ rz_advance_page:
     # Default Model Processor for Post Page Search can be overriden
     #----------------------------------------------------------------------------------------
     processor: 'Rz\AdvancePageBundle\Processor\Model\NewsPageProcessor'
+
+  #----------------------------------------------------------------------------------------
+  # Consumer Class override
+  #----------------------------------------------------------------------------------------
+  consumer_class:
+    create_snapshot: 'Rz\AdvancePageBundle\Consumer\CreateSnapshotConsumer'
+
   settings:
     #=====================================================================
     # page search settings
