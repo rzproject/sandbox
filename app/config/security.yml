@@ -49,13 +49,24 @@ security:
                 target:         /admin/login
             anonymous:    true
 
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+#        oauth_authorize:
+#            pattern:    ^/oauth/v2/auth
+#            context:        user
+#            stateless: true
+#            anonymous: true
+            # Add your favorite authentication process here
+
         api:
             pattern:   /api/(.*)
-            http_basic:
-                realm:         "Secured Demo Area"
-                provider:       in_memory
-
-            stateless: true
+            context:    user
+            fos_oauth:  true
+            stateless:  true
+            anonymous:  true
+            #anonymous:  true # note that anonymous access is now enabled
 
         # This firewall is used to handle the public login area
         # This part is handled by the FOS User Bundle
@@ -77,6 +88,7 @@ security:
             anonymous:    true
 
     access_control:
+        #- { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
         # URL of FOSUserBundle which need to be available to anonymous users
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }

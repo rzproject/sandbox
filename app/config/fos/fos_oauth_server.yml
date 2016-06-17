@@ -1,0 +1,13 @@
+# app/config/fos/fos_oauth_server.yml
+fos_oauth_server:
+    db_driver: orm       # Driver availables: orm, mongodb, or propel
+    client_class:        AppBundle\Entity\OAuthServer\Client
+    access_token_class:  AppBundle\Entity\OAuthServer\AccessToken
+    refresh_token_class: AppBundle\Entity\OAuthServer\RefreshToken
+    auth_code_class:     AppBundle\Entity\OAuthServer\AuthCode
+
+    service:
+        user_provider: fos_user.user_manager
+        options:
+            enforce_state: false
+            supported_scopes: user

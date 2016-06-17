@@ -105,14 +105,13 @@ sonata_admin:
                     - sonata.page.admin.site
                     - sonata.notification.admin.message
 
-            sonata.admin.group.demo:
-                label: Demo
-                icon:  '<i class="fa fa-play-circle"></i>'
+            sonata.admin.group.api:
+                label: main_menu_api
+                label_catalogue: RzOAuthServerBundle
+                icon:  '<i class="fa fa-fw fa-exchange"></i>'
                 items:
-                    - sonata.demo.admin.car
-                    - sonata.demo.admin.engine
-                    - sonata.demo.admin.color
-                    - sonata.demo.admin.material
+                    - rz.oauth_server.admin.access_token
+                    - rz.oauth_server.admin.client
 
     templates:
         user_block:                   'SonataUserBundle:Admin\Core:user_block.html.twig'
@@ -381,6 +380,24 @@ sonata_admin:
                 view:
                     list:                     'RzNewsPageBundle:PostHasPageAdmin:list.html.twig'
                     outer_list_rows_mosaic:   'RzNewsPageBundle:PostHasPageAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.oauth_server.admin.access_token:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    outer_list_rows_mosaic:   'RzOAuthServerBundle:AccessTokenAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.oauth_server.admin.client:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    outer_list_rows_mosaic:   'RzOAuthServerBundle:ClientAdmin:list_outer_rows_mosaic.html.twig'
 
 
 ##############################################################################

@@ -79,6 +79,8 @@
         "rz/news-page-bundle": "2.0.0.*",
         "rz/advance-page-bundle": "2.0.0.*",
         "rz/search-bundle": "2.0.0.*",
+        "rz/google-api-client-bundle": "2.0.0.*",
+        "rz/oauth-server-bundle": "2.0.0.*",
 
         "michelf/php-markdown": "~1.4",
         "simplethings/entity-audit-bundle": "~0.5",

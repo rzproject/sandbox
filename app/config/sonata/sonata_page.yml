@@ -144,37 +144,22 @@ sonata_page:
                      C: content
                      F: footer
 
-        2columns:
-            path: 'AppBundle::demo_2columns_layout.html.twig'
-            name: '2 columns layout'
+        oauth_authorize:
+            path: 'RzOAuthServerBundle:Authorize:page_layout.html.twig'
+            name: 'OAuth Authorize Page'
             containers:
-                 header:
-                     name: Header
-                 content_top:
-                     name: Top content
-                 left_col:
-                     name: Left content
-                 rigth_col:
-                     name: Right content
-                 content_bottom:
-                     name: Bottom content
-                 footer:
-                     name: Footer
+                 content:
+                    name: Content
             matrix:
                  layout: |
-                     HHHHHHHH
-                     TTTTTTTT
-                     LLLLRRRR
-                     BBBBBBBB
-                     FFFFFFFF
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
 
                  mapping:
-                     H: header
-                     T: content_top
-                     L: left_col
-                     R: rigth_col
-                     B: content_bottom
-                     F: footer
+                     C: content
 
     page_defaults:
         homepage: { decorate: false, enabled: true }

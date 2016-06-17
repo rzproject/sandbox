@@ -17,6 +17,14 @@ sonata_user_change_password:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_change_password_1.xml"
     prefix: /profile
 
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+    prefix: /
+
+fos_oauth_server_authorize:
+    resource: "@RzOAuthServerBundle/Resources/config/routing/authorize.xml"
+    prefix: /
+
 sonata_cache_cache:
     resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
     prefix: /

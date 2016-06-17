@@ -106,9 +106,15 @@ class AppKernel extends Kernel
             new Rz\CategoryPageBundle\RzCategoryPageBundle(),
             new Rz\NewsPageBundle\RzNewsPageBundle(),
             new Rz\AdvancePageBundle\RzAdvancePageBundle(),
+            new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
 
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+
+            //SSO Server for API
+            //new Mosaic\SsoBundle\MosaicSsoBundle(),
+            new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
+            new Rz\OAuthServerBundle\RzOAuthServerBundle(),
 
             new AppBundle\AppBundle(),
         );
