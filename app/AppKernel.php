@@ -83,7 +83,7 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
             // DEMO and QA - Can be deleted
-            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
+            #new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
             new Sonata\Bundle\QABundle\SonataQABundle(),
 
             // Disable this if you don't want the timeline in the admin
