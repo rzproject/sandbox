@@ -118,6 +118,7 @@ doctrine:
             default:
                 mappings:
                     SonataMediaBundle: ~
+                    RzMediaBundle: ~
 
 
 

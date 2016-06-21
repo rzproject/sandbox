@@ -1,9 +1,15 @@
 parameters:
-    database.driver:   pdo_mysql
-    database.host:     127.0.0.1
-    database.name:     sonata_sandbox
-    database.user:     sonata
-    database.password: sonata
+
+    default.database.driver: pdo_mysql
+    default.database.host: localhost
+    default.database.name: sonata_sandbox
+    default.database.user: dbuser
+    default.database.password: same2you
+    audit.database.driver: pdo_mysql
+    audit.database.host: localhost
+    audit.database.name: sonata_sandbox_audit
+    audit.database.user: dbuser
+    audit.database.password: same2you
 
     mailer_transport:   smtp
     mailer_host:        localhost

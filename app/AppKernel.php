@@ -31,6 +31,11 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
 
+            // Disable this if you don't want the audit on entities
+            // should be decalred before doctrine bundle to allow overriding of default connection
+            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            new Rz\EntityAuditBundle\RzEntityAuditBundle(),
+
             // DOCTRINE
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
@@ -52,9 +57,6 @@ class AppKernel extends Kernel
 
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-
-            // Disable this if you don't want the audit on entities
-            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
 
             // API
             new FOS\RestBundle\FOSRestBundle(),

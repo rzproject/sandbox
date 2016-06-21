@@ -11,6 +11,17 @@ sonata_timeline:
         action_component: %spy_timeline.class.action_component%
 
 ##############################################################################
+# Timeline Doctrine
+##############################################################################
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataTimelineBundle: ~
+                    SpyTimelineBundle: ~
+
+##############################################################################
 # Spy Timeline
 ##############################################################################
 spy_timeline:

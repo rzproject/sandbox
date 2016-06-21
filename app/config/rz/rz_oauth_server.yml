@@ -1,1 +1,12 @@
+##############################################################################
+# User Doctrine
+##############################################################################
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    RzOAuthServerBundle: ~
+                    FOSOAuthServerBundle: ~
+
 rz_oauth_server: ~

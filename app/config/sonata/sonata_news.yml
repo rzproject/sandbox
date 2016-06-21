@@ -40,7 +40,10 @@ doctrine:
         entity_managers:
             default:
                 mappings:
+                    RzNewsBundle: ~
                     SonataNewsBundle: ~
+                    SonataCommentBundle: ~
+                    FOSCommentBundle: ~
 
 
 ###############################################################################

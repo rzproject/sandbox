@@ -57,6 +57,7 @@ doctrine:
                 mappings:
                     FOSUserBundle: ~
                     SonataUserBundle: ~
+                    RzUserBundle: ~
 
 ##############################################################################
 # RZ User

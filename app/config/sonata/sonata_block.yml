@@ -127,3 +127,13 @@ sonata_block:
         rz.search.block.search:
             templates:
                 - { name: 'Default Search Bar', template: 'RzSearchBundle:Block:Search\default.html.twig' }
+
+##############################################################################
+# Block Doctrine
+##############################################################################
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataBlockBundle: ~

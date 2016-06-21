@@ -18,6 +18,9 @@ imports:
 
     #- { resource: bazinga/bazinga_hateos.yml }
 
+    # SimpleThings Enity Audit
+    - { resource: simplethings/simplethings_entity_audit.yml }
+
     # Sonata Core Bundles
     - { resource: sonata/sonata_block.yml }
     - { resource: sonata/sonata_formatter.yml }
@@ -96,11 +99,18 @@ doctrine:
 
         connections:
             default:
-                driver:   "%database.driver%"
-                dbname:   "%database.name%"
-                user:     "%database.user%"
-                host:     "%database.host%"
-                password: "%database.password%"
+                driver:   "%default.database.driver%"
+                dbname:   "%default.database.name%"
+                user:     "%default.database.user%"
+                host:     "%default.database.host%"
+                password: "%default.database.password%"
+                charset:  UTF8
+            audit:
+                driver:   "%audit.database.driver%"
+                dbname:   "%audit.database.name%"
+                user:     "%audit.database.user%"
+                host:     "%audit.database.host%"
+                password: "%audit.database.password%"
                 charset:  UTF8
 
         types:
@@ -108,13 +118,20 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy:             doctrine.orm.naming_strategy.underscore
-        auto_mapping:                true
+#        naming_strategy:             doctrine.orm.naming_strategy.underscore
+#        auto_mapping:                true
 
-#        entity_managers:
-#            default:
+        entity_managers:
+            default:
+                connection: default
 #                auto_mapping: true
 #                mappings: ~
+                mappings:
+                    AppBundle: ~
+            audit:
+                connection: audit
+                mappings:
+                  SimpleThingsEntityAuditBundle: ~
 
 #doctrine_mongodb:
 #    connections:

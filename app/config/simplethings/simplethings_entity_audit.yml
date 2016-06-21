@@ -1,0 +1,12 @@
+simple_things_entity_audit:
+    global_ignore_columns:
+        - created_at
+        - updated_at
+
+#doctrine:
+#    orm:
+#        entity_managers:
+#            audit:
+#                connection: audit
+#                mappings:
+#                  SimpleThingsEntityAuditBundle: ~
