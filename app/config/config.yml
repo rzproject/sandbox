@@ -152,7 +152,7 @@ swiftmailer:
 
 jms_serializer:
     metadata:
-        debug: true
+        #debug: true
         directories:
             - { path: %kernel.root_dir%/../vendor/rmzamora/user-bundle/Resources/config/serializer/FOSUserBundle, namespace_prefix: 'FOS\UserBundle' }
             - { path: %kernel.root_dir%/../vendor/rmzamora/datagrid-bundle/Resources/config/serializer, namespace_prefix: 'Sonata\DatagridBundle' }
