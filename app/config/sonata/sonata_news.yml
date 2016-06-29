@@ -127,6 +127,12 @@ rz_news:
       post:
         default_collection: article
         hide_collection: false
+    #----------------------------------------------------------------------------------------
+    # Default Settings for PostHasCategory
+    #----------------------------------------------------------------------------------------
+    post_has_category:
+      category:
+        default_context: default #default context for category selection if no post has been assigned a category.
 
   #=====================================================================
   # PROVIDERS Configuration
