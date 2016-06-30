@@ -85,12 +85,13 @@ sonata_admin:
 
             sonata.admin.group.site_builder:
                 label:           Site Builder
-                label_catalogue: SonataDemoBundle
+                label_catalogue: SonataPageBundle
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - sonata.page.admin.page
                     - rz.category_page.admin.category_has_page
-                    - rz.news_page.admin.post_has_page
+                    - { label: 'Pages | Post', route: 'admin_app_newspage_posthaspage_list', admin: 'rz.news_page.admin.post_has_page',  route_params: { 'isCanonical': true }}
+                    #- rz.news_page.admin.post_has_page
                     - sonata.page.admin.shared_block
                     - sonata.page.admin.site
                     - rz.redirect.admin.redirect

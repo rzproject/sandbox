@@ -64,11 +64,11 @@ rz_news:
         controller:   SonataAdminBundle:CRUD
         translation:  SonataNewsBundle
     suggested_articles:
-        class:        Rz\NewsBundle\Admin\SuggestedArticlesAdmin
+        class:        Rz\NewsPageBundle\Admin\SuggestedArticlesAdmin
         controller:   SonataAdminBundle:CRUD
         translation:  SonataNewsBundle
     related_articles:
-        class:        Rz\NewsBundle\Admin\RelatedArticlesAdmin
+        class:        Rz\NewsPageBundle\Admin\RelatedArticlesAdmin
         controller:   SonataAdminBundle:CRUD
         translation:  SonataNewsBundle
 
