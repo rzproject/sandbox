@@ -445,12 +445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "b3cae5efef97191a08d53d733260f7eb667c16e4"
+                "reference": "a7609ea602b6ee56e09f1a2a5ddd070c83616d88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/b3cae5efef97191a08d53d733260f7eb667c16e4",
-                "reference": "b3cae5efef97191a08d53d733260f7eb667c16e4",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/a7609ea602b6ee56e09f1a2a5ddd070c83616d88",
+                "reference": "a7609ea602b6ee56e09f1a2a5ddd070c83616d88",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2016-06-20 18:08:26"
+            "time": "2016-06-30 14:28:31"
         },
         {
             "name": "doctrine/dbal",
@@ -792,12 +792,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "2a595d696897dc569d7554d3c9756ba164a279e6"
+                "reference": "0b89ee55bceb53c60bc4ba32924ac5053e377abb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/2a595d696897dc569d7554d3c9756ba164a279e6",
-                "reference": "2a595d696897dc569d7554d3c9756ba164a279e6",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/0b89ee55bceb53c60bc4ba32924ac5053e377abb",
+                "reference": "0b89ee55bceb53c60bc4ba32924ac5053e377abb",
                 "shasum": ""
             },
             "require": {
@@ -845,7 +845,7 @@
                 "migrations",
                 "schema"
             ],
-            "time": "2016-05-08 20:31:53"
+            "time": "2016-06-30 19:26:35"
         },
         {
             "name": "doctrine/inflector",
@@ -1609,12 +1609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "913b4661019b412ab6ef99172a3d6e3175c9f855"
+                "reference": "f23e41880c6dd611a125bca584c95a60214bfe48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/913b4661019b412ab6ef99172a3d6e3175c9f855",
-                "reference": "913b4661019b412ab6ef99172a3d6e3175c9f855",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f23e41880c6dd611a125bca584c95a60214bfe48",
+                "reference": "f23e41880c6dd611a125bca584c95a60214bfe48",
                 "shasum": ""
             },
             "require": {
@@ -1651,7 +1651,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-06-29 16:36:43"
+            "time": "2016-06-30 12:51:34"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1879,23 +1879,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "79c6fbef131eed51ab82bf813e9694419931bc8b"
+                "reference": "502b40014c5f6c5b17894ce7ea7258b550b6b018"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/79c6fbef131eed51ab82bf813e9694419931bc8b",
-                "reference": "79c6fbef131eed51ab82bf813e9694419931bc8b",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/502b40014c5f6c5b17894ce7ea7258b550b6b018",
+                "reference": "502b40014c5f6c5b17894ce7ea7258b550b6b018",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/promises": "~1.0",
-                "guzzlehttp/psr7": "~1.1",
-                "php": ">=5.5.0"
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.3.1",
+                "php": ">=5.5"
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "~4.0",
-                "psr/log": "~1.0"
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -1933,7 +1933,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-06-20 07:37:14"
+            "time": "2016-06-30 17:58:34"
         },
         {
             "name": "guzzlehttp/promises",
@@ -6020,12 +6020,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "5d056e8da7be28f1182fac8b2534d92c05f2b4cd"
+                "reference": "562473a558fec127f97da734286d5fd0c1c024c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/5d056e8da7be28f1182fac8b2534d92c05f2b4cd",
-                "reference": "5d056e8da7be28f1182fac8b2534d92c05f2b4cd",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/562473a558fec127f97da734286d5fd0c1c024c0",
+                "reference": "562473a558fec127f97da734286d5fd0c1c024c0",
                 "shasum": ""
             },
             "require": {
@@ -6067,7 +6067,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-06-30 02:15:43"
+            "time": "2016-06-30 15:03:22"
         },
         {
             "name": "rz/news-page-bundle",
@@ -6075,12 +6075,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsPageBundle.git",
-                "reference": "9fac929d1599d837bc115b5a9619dd5b119a1460"
+                "reference": "649dd0f204c9d09573b38fe085c0d01bd78154d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/9fac929d1599d837bc115b5a9619dd5b119a1460",
-                "reference": "9fac929d1599d837bc115b5a9619dd5b119a1460",
+                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/649dd0f204c9d09573b38fe085c0d01bd78154d8",
+                "reference": "649dd0f204c9d09573b38fe085c0d01bd78154d8",
                 "shasum": ""
             },
             "require": {
@@ -6116,7 +6116,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2016-06-30 02:16:28"
+            "time": "2016-06-30 15:04:11"
         },
         {
             "name": "rz/oauth-server-bundle",
@@ -7154,12 +7154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "565a99fe375f3d4dc5ad0642352401275f99b67e"
+                "reference": "7c0abd960cc60ff9870863886e6ce626c2e93bad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/565a99fe375f3d4dc5ad0642352401275f99b67e",
-                "reference": "565a99fe375f3d4dc5ad0642352401275f99b67e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7c0abd960cc60ff9870863886e6ce626c2e93bad",
+                "reference": "7c0abd960cc60ff9870863886e6ce626c2e93bad",
                 "shasum": ""
             },
             "require": {
@@ -7199,7 +7199,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-06-21 05:39:39"
+            "time": "2016-06-30 14:03:38"
         },
         {
             "name": "symfony-cmf/routing",
