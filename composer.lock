@@ -1609,12 +1609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "f23e41880c6dd611a125bca584c95a60214bfe48"
+                "reference": "726a36230cf4811db4b71f18fdd19b9ea4389a54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f23e41880c6dd611a125bca584c95a60214bfe48",
-                "reference": "f23e41880c6dd611a125bca584c95a60214bfe48",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/726a36230cf4811db4b71f18fdd19b9ea4389a54",
+                "reference": "726a36230cf4811db4b71f18fdd19b9ea4389a54",
                 "shasum": ""
             },
             "require": {
@@ -1651,7 +1651,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-06-30 12:51:34"
+            "time": "2016-07-01 12:18:29"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1879,12 +1879,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "502b40014c5f6c5b17894ce7ea7258b550b6b018"
+                "reference": "10a49d5e1b8729c5e05cbdbf475b38b7099eb35e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/502b40014c5f6c5b17894ce7ea7258b550b6b018",
-                "reference": "502b40014c5f6c5b17894ce7ea7258b550b6b018",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/10a49d5e1b8729c5e05cbdbf475b38b7099eb35e",
+                "reference": "10a49d5e1b8729c5e05cbdbf475b38b7099eb35e",
                 "shasum": ""
             },
             "require": {
@@ -1933,7 +1933,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-06-30 17:58:34"
+            "time": "2016-07-01 23:54:08"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1992,12 +1992,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+                "reference": "7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa",
+                "reference": "7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa",
                 "shasum": ""
             },
             "require": {
@@ -2042,7 +2042,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-06-24 23:00:38"
+            "time": "2016-07-01 19:26:18"
         },
         {
             "name": "imagine/imagine",
@@ -2699,12 +2699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "a6fc4b0e8951124eb4abb652f23b576d6c8fb403"
+                "reference": "e849f8480dba566b8c0189d3ad963afce7a64ee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/a6fc4b0e8951124eb4abb652f23b576d6c8fb403",
-                "reference": "a6fc4b0e8951124eb4abb652f23b576d6c8fb403",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/e849f8480dba566b8c0189d3ad963afce7a64ee9",
+                "reference": "e849f8480dba566b8c0189d3ad963afce7a64ee9",
                 "shasum": ""
             },
             "require": {
@@ -2757,7 +2757,7 @@
                 "menu",
                 "tree"
             ],
-            "time": "2016-06-24 14:57:19"
+            "time": "2016-07-01 13:28:15"
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -6020,12 +6020,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "562473a558fec127f97da734286d5fd0c1c024c0"
+                "reference": "459b22b019693c685dd15b795bd9cc1e0f2cc1e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/562473a558fec127f97da734286d5fd0c1c024c0",
-                "reference": "562473a558fec127f97da734286d5fd0c1c024c0",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/459b22b019693c685dd15b795bd9cc1e0f2cc1e7",
+                "reference": "459b22b019693c685dd15b795bd9cc1e0f2cc1e7",
                 "shasum": ""
             },
             "require": {
@@ -6067,7 +6067,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-06-30 15:03:22"
+            "time": "2016-07-02 05:57:11"
         },
         {
             "name": "rz/news-page-bundle",
@@ -6075,12 +6075,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsPageBundle.git",
-                "reference": "649dd0f204c9d09573b38fe085c0d01bd78154d8"
+                "reference": "b00839d335c13f3a604b1a394bf183443c08593b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/649dd0f204c9d09573b38fe085c0d01bd78154d8",
-                "reference": "649dd0f204c9d09573b38fe085c0d01bd78154d8",
+                "url": "https://api.github.com/repos/rzproject/NewsPageBundle/zipball/b00839d335c13f3a604b1a394bf183443c08593b",
+                "reference": "b00839d335c13f3a604b1a394bf183443c08593b",
                 "shasum": ""
             },
             "require": {
@@ -6116,7 +6116,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2016-06-30 15:04:11"
+            "time": "2016-07-02 05:56:24"
         },
         {
             "name": "rz/oauth-server-bundle",
@@ -6695,12 +6695,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/sonata-doctrine-extensions.git",
-                "reference": "f5e7f07d5c43b9ec845f26d487e0a9804bcbd2c8"
+                "reference": "de6b7aa8349c102c29a14b2c4361ebbef7487f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/sonata-doctrine-extensions/zipball/f5e7f07d5c43b9ec845f26d487e0a9804bcbd2c8",
-                "reference": "f5e7f07d5c43b9ec845f26d487e0a9804bcbd2c8",
+                "url": "https://api.github.com/repos/sonata-project/sonata-doctrine-extensions/zipball/de6b7aa8349c102c29a14b2c4361ebbef7487f47",
+                "reference": "de6b7aa8349c102c29a14b2c4361ebbef7487f47",
                 "shasum": ""
             },
             "require": {
@@ -6718,8 +6718,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Sonata\\Doctrine\\": "src/",
-                    "Sonata\\Doctrine\\Tests\\": "tests/"
+                    "Sonata\\Doctrine\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6744,7 +6743,7 @@
                 "doctrine2",
                 "json"
             ],
-            "time": "2016-06-25 01:50:05"
+            "time": "2016-07-01 10:57:13"
         },
         {
             "name": "sonata-project/easy-extends-bundle",
@@ -6875,12 +6874,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/GoogleAuthenticator.git",
-                "reference": "152efcbd8dbae57c6bb191394c49f59ccb0c037c"
+                "reference": "5301050f2971855e92e190a5d3ae8993e80874ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/GoogleAuthenticator/zipball/152efcbd8dbae57c6bb191394c49f59ccb0c037c",
-                "reference": "152efcbd8dbae57c6bb191394c49f59ccb0c037c",
+                "url": "https://api.github.com/repos/sonata-project/GoogleAuthenticator/zipball/5301050f2971855e92e190a5d3ae8993e80874ee",
+                "reference": "5301050f2971855e92e190a5d3ae8993e80874ee",
                 "shasum": ""
             },
             "require": {
@@ -6898,8 +6897,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Google\\Authenticator\\": "lib/",
-                    "Google\\Authenticator\\Tests\\": "tests/"
+                    "Google\\Authenticator\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6925,7 +6923,7 @@
             "keywords": [
                 "google authenticator"
             ],
-            "time": "2016-06-25 02:30:06"
+            "time": "2016-07-01 10:57:45"
         },
         {
             "name": "sonata-project/intl-bundle",
@@ -9300,6 +9298,7 @@
                 "rest",
                 "web service"
             ],
+            "abandoned": "guzzlehttp/guzzle",
             "time": "2015-04-29 17:06:53"
         },
         {
