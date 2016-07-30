@@ -39,5 +39,4 @@ class PostHasMedia extends BasePostHasMedia
     {
         return $this->id;
     }
-
 }
