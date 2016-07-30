@@ -23,7 +23,8 @@ function test() {
 
 Description | Status
 ----------- | ------
-Bug fix: | yes
+Bug fix: | no
 Feature addition: | no
+Enhancement: | yes
 Backwards compatibility break: | no
 Fixes the following tickets: | -

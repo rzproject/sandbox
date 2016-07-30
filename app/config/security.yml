@@ -79,6 +79,7 @@ security:
                 use_forward:    false
                 check_path:     /login_check
                 failure_path:   null
+                failure_handler: rz_user_security.component.authentication.handler.login_failure_handler
             logout:
                 path: /logout
                 # We set invalidate_session to false because we want basket

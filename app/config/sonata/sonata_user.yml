@@ -4,8 +4,8 @@
 ##############################################################################
 sonata_user:
     class:
-        user:  AppBundle\Entity\User\User
-        group: AppBundle\Entity\User\Group
+        user:  'AppBundle\Entity\User\User'
+        group: 'AppBundle\Entity\User\Group'
 
     security_acl:             false
     table:
@@ -23,22 +23,24 @@ sonata_user:
 
     admin:
         user:
-            class: AppBundle\Admin\User\Entity\UserAdmin
+            class: 'AppBundle\Admin\User\Entity\UserAdmin'
         group:
-            class: AppBundle\Admin\User\Entity\GroupAdmin
-
+            class: 'AppBundle\Admin\User\Entity\GroupAdmin'
     profile:
         dashboard:
             blocks:
                 - { position: left, type: sonata.block.service.text, settings: { content: "<h2>Welcome!</h2> <p>This is a sample user profile dashboard, feel free to override it in the configuration! Want to make this text dynamic? For instance display the user's name? Create a dedicated block and edit the configuration!</p>"} }
-                - { position: right, type: sonata.timeline.block.timeline, settings: { max_per_page: 15 }}
-                - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: public }}
-                - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: public }}
+                - { position: right, type: sonata.timeline.block.timeline, settings: { max_per_page: 5 }}
+#                - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: public }}
+#                - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: public }}
         menu:
-            - { route: 'sonata_user_profile_show', label: 'sonata_profile_title', domain: 'SonataUserBundle'}
-            - { route: 'sonata_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_profile_show',    label: 'sonata_profile_title', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_profile_edit',    label: 'link_edit_profile', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_change_password', label: 'sonata_change_password_link', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_security_logout', label: 'link_logout', domain: 'SonataUserBundle'}
+
         form:
-            type:                 sonata_user_profile
+            type:                 rz_user_profile
             handler:              sonata.user.profile.form.handler.default
             name:                 sonata_user_profile_form
             validation_groups:
@@ -46,9 +48,137 @@ sonata_user:
                 - Profile
                 - Default
 
+        register:
+            form:
+              type:                 rz_user_register
+              handler:              sonata.user.registration.form.handler.default
+              name:                 sonata_user_registration_form
+              validation_groups:
+                  # Defaults:
+                  - Registration
+                  - Default
 
 ##############################################################################
-# User Doctrine
+# RZ User
+##############################################################################
+rz_user:
+    manager_type: orm
+
+    #=====================================================================
+    # User
+    #=====================================================================
+    user:
+        class:
+            entity:                   'AppBundle\Entity\User\User'
+    #=====================================================================
+    # Group
+    #=====================================================================
+    user:
+        class:
+            entity:                   'AppBundle\Entity\User\Group'
+
+    #=====================================================================
+    # User Authentication Logs
+    #=====================================================================
+    user_age_demographics:
+        enabled: true
+
+        class:
+            entity:                   'AppBundle\Entity\User\UserAgeDemographics'
+            reference_entity:         'AppBundle\Entity\Classification\Collection'
+            #orm:                      'Rz\UserBundle\Entity\UserAgeDemographicsManager'
+
+        listener:
+            # Context ID defined on ClassificationBundle
+            context:                  'user-age-demographics'
+            #class:                    'Rz\UserBundle\Event\Listener\UserAgeDemographicsListener'
+
+    #=====================================================================
+    # User Authentication Logs
+    #=====================================================================
+    user_authentication_logs:
+        enabled: true
+        class:
+            entity:                   'AppBundle\Entity\User\UserAuthenticationLogs'
+            # Default Values
+            #orm:                      'Rz\UserBundle\Entity\UserAuthenticationLogsManager'
+            #authentication_listener:  'Rz\UserBundle\Event\Listener\AuthenticationListener'
+            #logout_handler:           'Rz\UserBundle\Component\Authentication\UserLogoutHandler'
+
+    #=====================================================================
+    # Password Security
+    #=====================================================================
+    password_security:
+      requirement:
+        min_length: 5
+        require_letters: true
+        require_case_diff: false
+        require_numbers: false
+        require_special_character: false
+      strength:
+        min_length: 5
+        min_strength: 1
+
+    #=====================================================================
+    # Password Expiration
+    #=====================================================================
+    password_expire:
+      enabled: true
+      # login listener class
+      listener:
+        login:
+          class: 'Rz\UserBundle\Event\Listener\InteractiveLoginListener'
+        force_password_change:
+          class: 'Rz\UserBundle\Event\Listener\ForcePasswordUpdateListener'
+      settings:
+        # expire settings
+        days_to_expire: 360
+        redirect_route: 'fos_user_change_password'
+
+
+
+##############################################################################
+# RZ User Security
+##############################################################################
+rz_user_security:
+    entity:
+        user:
+            class:  'AppBundle\Entity\User\User'
+        session:
+            class:  'AppBundle\Entity\UserSecurity\Session'
+    login_shield:
+        route_login:
+            name:                  fos_user_security_login
+            params:                []
+        force_account_recovery:    # Specify all routes to block after attempt limit is reached, and account recovery route to force browser redirect.
+            enabled:               true
+            after_attempts:        2
+            duration_in_minutes:   1
+            route_recover_account:
+                name:              fos_user_resetting_request
+                params:            []
+            routes:
+                - fos_user_security_login
+                - fos_user_security_check
+                - fos_user_security_logout
+        block_pages:               # Specify all routes to block after attempt limit is reached.
+            enabled:               true
+            after_attempts:        4
+            duration_in_minutes:   2
+            routes:
+                - fos_user_security_login
+                - fos_user_security_check
+                - fos_user_security_logout
+                - fos_user_registration_register
+                - fos_user_registration_check_email
+                - fos_user_registration_confirm
+                - fos_user_registration_confirmed
+                - fos_user_resetting_request
+                - fos_user_resetting_send_email
+
+
+##############################################################################
+# Doctrine
 ##############################################################################
 doctrine:
     orm:
@@ -58,10 +188,4 @@ doctrine:
                     FOSUserBundle: ~
                     SonataUserBundle: ~
                     RzUserBundle: ~
-
-##############################################################################
-# RZ User
-##############################################################################
-rz_user:
-    manager_type: orm
-
+                    RzUserSecurityBundle: ~

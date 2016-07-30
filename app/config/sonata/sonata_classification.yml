@@ -78,6 +78,9 @@ rz_classification:
       context:
           default:  # the default context optional
               provider: rz.classification.collection.provider.default
+          # USER DEMOGRAPHICS FROM RzUserBundle
+          user-age-demographics:
+              provider: rz.user.provider.collection.age_demographics
 
     #----------------------------------------------------------
     # Category Provider

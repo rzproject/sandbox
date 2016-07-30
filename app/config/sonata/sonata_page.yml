@@ -65,7 +65,7 @@ sonata_page:
     templates:
         default:
             path: 'RzPageBundle:Page:Theme\montage\default.html.twig'
-            name: 'default'
+            name: 'Default'
             containers:
                  header:
                      name: Header
@@ -94,9 +94,34 @@ sonata_page:
                      B: content_bottom
                      F: footer
 
+        hybrid:
+            path: 'RzPageBundle:Page:Theme\montage\hybrid.html.twig'
+            name: 'Hybrid'
+            containers:
+                 header:
+                     name: Header
+                     blocks:
+                        - sonata.block.service.text
+                 content:
+                     name: Main content
+                 footer:
+                     name: Footer
+            matrix:
+                 layout: |
+                     HHHHHHHH
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     FFFFFFFF
+
+                 mapping:
+                     H: header
+                     C: content
+                     F: footer
+
         post:
             path: 'RzPageBundle:Page:Theme\montage\post_default.html.twig'
-            name: 'post'
+            name: 'Post'
             containers:
                  header:
                      name: Header
@@ -121,7 +146,7 @@ sonata_page:
                      F: footer
         category:
             path: 'RzPageBundle:Page:Theme\montage\category_default.html.twig'
-            name: 'category'
+            name: 'Category'
             containers:
                  header:
                      name: Header
@@ -154,6 +179,50 @@ sonata_page:
                  layout: |
                      CCCCCCCC
                      CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+
+                 mapping:
+                     C: content
+
+        registration:
+            path: 'RzPageBundle:Page:Theme\montage\user_register.html.twig'
+            name: 'User Registration'
+            containers:
+                 content:
+                     name: Main content
+            matrix:
+                 layout: |
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+
+                 mapping:
+                     C: content
+        resettings:
+            path: 'RzPageBundle:Page:Theme\montage\user_resetting.html.twig'
+            name: 'User Password Resetting'
+            containers:
+                 content:
+                     name: Main content
+            matrix:
+                 layout: |
+                     CCCCCCCC
+                     CCCCCCCC
+                     CCCCCCCC
+
+                 mapping:
+                     C: content
+
+        login:
+            path: 'RzPageBundle:Page:Theme\montage\user_login.html.twig'
+            name: 'User Login'
+            containers:
+                 content:
+                     name: Main content
+            matrix:
+                 layout: |
                      CCCCCCCC
                      CCCCCCCC
                      CCCCCCCC

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f9821554eda8ba6e692b2219789cf96",
-    "content-hash": "243afbddf34aade0c85a408b4287b74d",
+    "hash": "b1e2a03240c3f3c902a33c2458552080",
+    "content-hash": "67071f3695ec291c4c5ce26efe202888",
     "packages": [
         {
             "name": "andres-montanez/magallanes",
@@ -56,6 +56,68 @@
                 "deployment"
             ],
             "time": "2015-04-12 19:45:32"
+        },
+        {
+            "name": "beberlei/DoctrineExtensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/DoctrineExtensions.git",
+                "reference": "6dbe65e469e8bdcfe165ea16636b7049af479a24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/6dbe65e469e8bdcfe165ea16636b7049af479a24",
+                "reference": "6dbe65e469e8bdcfe165ea16636b7049af479a24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.1",
+                "nesbot/carbon": "*",
+                "phpunit/phpunit": "~4.5",
+                "symfony/yaml": "~2.6",
+                "zf1/zend-date": "~1.12",
+                "zf1/zend-registry": "~1.12"
+            },
+            "suggest": {
+                "nesbot/carbon": "Alternative to DateTime",
+                "zf1/zend-date": "Alternative to DateTime"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DoctrineExtensions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Steve Lacey",
+                    "email": "steve@stevelacey.net"
+                }
+            ],
+            "description": "A set of extensions to Doctrine 2 that add support for additional query functions available in MySQL and Oracle.",
+            "keywords": [
+                "database",
+                "doctrine",
+                "orm"
+            ],
+            "time": "2016-07-06 17:12:30"
         },
         {
             "name": "behat/transliterator",
@@ -372,12 +434,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "c16f1f8063fed82aa4e495fed19f84cca3263254"
+                "reference": "20c19dd91fb55fb5960454bb6038ff2a7138cdbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/c16f1f8063fed82aa4e495fed19f84cca3263254",
-                "reference": "c16f1f8063fed82aa4e495fed19f84cca3263254",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/20c19dd91fb55fb5960454bb6038ff2a7138cdbf",
+                "reference": "20c19dd91fb55fb5960454bb6038ff2a7138cdbf",
                 "shasum": ""
             },
             "require": {
@@ -437,7 +499,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2016-06-19 16:38:36"
+            "time": "2016-07-07 01:38:48"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -445,12 +507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "a7609ea602b6ee56e09f1a2a5ddd070c83616d88"
+                "reference": "f6ffd3185c31ee6e0ea9bd2c5eefd2d7ab61cc40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/a7609ea602b6ee56e09f1a2a5ddd070c83616d88",
-                "reference": "a7609ea602b6ee56e09f1a2a5ddd070c83616d88",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/f6ffd3185c31ee6e0ea9bd2c5eefd2d7ab61cc40",
+                "reference": "f6ffd3185c31ee6e0ea9bd2c5eefd2d7ab61cc40",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +558,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2016-06-30 14:28:31"
+            "time": "2016-07-05 22:04:12"
         },
         {
             "name": "doctrine/dbal",
@@ -1028,12 +1090,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "93a4458195aaf65a84b3d8b5a98b89149ef49776"
+                "reference": "3c5cdb143d5e00b3429c0676224b495e83cbdadf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/93a4458195aaf65a84b3d8b5a98b89149ef49776",
-                "reference": "93a4458195aaf65a84b3d8b5a98b89149ef49776",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/3c5cdb143d5e00b3429c0676224b495e83cbdadf",
+                "reference": "3c5cdb143d5e00b3429c0676224b495e83cbdadf",
                 "shasum": ""
             },
             "require": {
@@ -1048,6 +1110,7 @@
                 "doctrine/orm": "2.*",
                 "jdorn/sql-formatter": "~1.1",
                 "johnkary/phpunit-speedtrap": "~1.0@dev",
+                "mikey179/vfsstream": "^1.6",
                 "mockery/mockery": "^0.9.4",
                 "phpunit/phpunit": "~4.7",
                 "satooshi/php-coveralls": "0.6.*"
@@ -1093,7 +1156,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2016-06-18 20:43:29"
+            "time": "2016-07-07 11:56:49"
         },
         {
             "name": "doctrine/orm",
@@ -1609,12 +1672,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "726a36230cf4811db4b71f18fdd19b9ea4389a54"
+                "reference": "039eeba8a61788df89c7800eccb2c56723a0db34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/726a36230cf4811db4b71f18fdd19b9ea4389a54",
-                "reference": "726a36230cf4811db4b71f18fdd19b9ea4389a54",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/039eeba8a61788df89c7800eccb2c56723a0db34",
+                "reference": "039eeba8a61788df89c7800eccb2c56723a0db34",
                 "shasum": ""
             },
             "require": {
@@ -1651,7 +1714,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-07-01 12:18:29"
+            "time": "2016-07-11 08:36:05"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1797,12 +1860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/google-api-php-client-services.git",
-                "reference": "97d3968f58da1f24bcd18df594e1acb86e87de1a"
+                "reference": "b8868742d9d37df45aed90033af1ffaf694c9017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/97d3968f58da1f24bcd18df594e1acb86e87de1a",
-                "reference": "97d3968f58da1f24bcd18df594e1acb86e87de1a",
+                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/b8868742d9d37df45aed90033af1ffaf694c9017",
+                "reference": "b8868742d9d37df45aed90033af1ffaf694c9017",
                 "shasum": ""
             },
             "require": {
@@ -1823,7 +1886,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2016-06-27 17:53:00"
+            "time": "2016-07-06 22:31:40"
         },
         {
             "name": "google/auth",
@@ -1992,12 +2055,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa"
+                "reference": "bf357011d0693d610171c73ce3e4b494ab6e29cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa",
-                "reference": "7ddcd25eeaf9f51173c5b477c75b1230a1e02eaa",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/bf357011d0693d610171c73ce3e4b494ab6e29cc",
+                "reference": "bf357011d0693d610171c73ce3e4b494ab6e29cc",
                 "shasum": ""
             },
             "require": {
@@ -2033,16 +2096,23 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "PSR-7 message implementation",
+            "description": "PSR-7 message implementation that also provides common utility methods",
             "keywords": [
                 "http",
                 "message",
+                "request",
+                "response",
                 "stream",
-                "uri"
+                "uri",
+                "url"
             ],
-            "time": "2016-07-01 19:26:18"
+            "time": "2016-07-08 22:34:56"
         },
         {
             "name": "imagine/imagine",
@@ -2050,12 +2120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "8680170235321bbd26fa102c94e0a09ca05e7815"
+                "reference": "68d416ee2be3423c5758bddd31be11fcd80d16e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/8680170235321bbd26fa102c94e0a09ca05e7815",
-                "reference": "8680170235321bbd26fa102c94e0a09ca05e7815",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/68d416ee2be3423c5758bddd31be11fcd80d16e5",
+                "reference": "68d416ee2be3423c5758bddd31be11fcd80d16e5",
                 "shasum": ""
             },
             "require": {
@@ -2099,7 +2169,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2016-04-28 19:05:38"
+            "time": "2016-07-05 22:11:34"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -3059,12 +3129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "33df7889304575a7912935ada1beab36fa85a5d9"
+                "reference": "55841909e2bcde01b5318c35f2b74f8ecc86e037"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/33df7889304575a7912935ada1beab36fa85a5d9",
-                "reference": "33df7889304575a7912935ada1beab36fa85a5d9",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/55841909e2bcde01b5318c35f2b74f8ecc86e037",
+                "reference": "55841909e2bcde01b5318c35f2b74f8ecc86e037",
                 "shasum": ""
             },
             "require": {
@@ -3129,7 +3199,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-06-11 15:09:14"
+            "time": "2016-07-02 14:02:10"
         },
         {
             "name": "mopa/bootstrap-bundle",
@@ -3560,6 +3630,175 @@
             "time": "2015-05-17 12:39:23"
         },
         {
+            "name": "phpmentors/domain-kata",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmentors-jp/domain-kata.git",
+                "reference": "c2c1c4ec8f895d3f26e0755860f6b98bbd4db4d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmentors-jp/domain-kata/zipball/c2c1c4ec8f895d3f26e0755860f6b98bbd4db4d4",
+                "reference": "c2c1c4ec8f895d3f26e0755860f6b98bbd4db4d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPMentors\\DomainKata\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "KUBO Atsuhiro",
+                    "email": "kubo@iteman.jp"
+                },
+                {
+                    "name": "GOTO Hidenori",
+                    "email": "hidenorigoto@gmail.com"
+                }
+            ],
+            "description": "Kata for domain models",
+            "keywords": [
+                "Domain Driven Design",
+                "architecture",
+                "ddd",
+                "design",
+                "generative programming",
+                "modeling"
+            ],
+            "time": "2015-06-13 03:10:25"
+        },
+        {
+            "name": "phpmentors/workflower",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmentors-jp/workflower.git",
+                "reference": "acbfe6d11d8f85ede9841e248c78dcc4467b9d31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmentors-jp/workflower/zipball/acbfe6d11d8f85ede9841e248c78dcc4467b9d31",
+                "reference": "acbfe6d11d8f85ede9841e248c78dcc4467b9d31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "phpmentors/domain-kata": "~1.4",
+                "piece/stagehand-fsm": "~2.4",
+                "symfony/expression-language": "~2.7"
+            },
+            "require-dev": {
+                "phake/phake": "~2.0",
+                "phpunit/phpunit": "~4.0",
+                "piece/stagehand-testrunner": "~4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPMentors\\Workflower\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "KUBO Atsuhiro",
+                    "email": "kubo@iteman.jp"
+                }
+            ],
+            "description": "A BPMN 2.0 compliant workflow engine for PHP",
+            "keywords": [
+                "bpm",
+                "bpmn",
+                "flow",
+                "process",
+                "workflow"
+            ],
+            "time": "2016-07-05 05:20:20"
+        },
+        {
+            "name": "phpmentors/workflower-bundle",
+            "version": "1.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmentors-jp/workflower-bundle.git",
+                "reference": "678f5f08b6844f1ee0382abe6ad913e5628c500d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmentors-jp/workflower-bundle/zipball/678f5f08b6844f1ee0382abe6ad913e5628c500d",
+                "reference": "678f5f08b6844f1ee0382abe6ad913e5628c500d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "phpmentors/workflower": "~1.1",
+                "symfony/config": "~2.7",
+                "symfony/dependency-injection": "~2.7",
+                "symfony/finder": "~2.7",
+                "symfony/http-kernel": "~2.7",
+                "symfony/security-bundle": "~2.7",
+                "symfony/security-core": "~2.7"
+            },
+            "suggest": {
+                "doctrine/orm": "provides transparent serialization/deserialization support for entities with Doctrine ORM",
+                "symfony/doctrine-bridge": ">=2.7.0 provides transparent serialization/deserialization support for entities with Doctrine ORM"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPMentors\\WorkflowerBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "KUBO Atsuhiro",
+                    "email": "kubo@iteman.jp"
+                }
+            ],
+            "description": "A Symfony bundle for Workflower",
+            "keywords": [
+                "bpm",
+                "bpmn",
+                "flow",
+                "process",
+                "symfony",
+                "workflow"
+            ],
+            "time": "2016-04-27 05:48:53"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.5.0",
             "source": {
@@ -3615,12 +3854,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "17a14eceb25fdce0c4a39fa68c478e5337cd6fc9"
+                "reference": "a21f3e513210dd57a2b4b639a29233226d91b7e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/17a14eceb25fdce0c4a39fa68c478e5337cd6fc9",
-                "reference": "17a14eceb25fdce0c4a39fa68c478e5337cd6fc9",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/a21f3e513210dd57a2b4b639a29233226d91b7e5",
+                "reference": "a21f3e513210dd57a2b4b639a29233226d91b7e5",
                 "shasum": ""
             },
             "require": {
@@ -3699,7 +3938,60 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-06-27 01:34:15"
+            "time": "2016-07-10 18:22:03"
+        },
+        {
+            "name": "piece/stagehand-fsm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piece/stagehand-fsm.git",
+                "reference": "4a2d46e0bb21fbd96cd8ce9c7bbbedaffb88a9b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piece/stagehand-fsm/zipball/4a2d46e0bb21fbd96cd8ce9c7bbbedaffb88a9b6",
+                "reference": "4a2d46e0bb21fbd96cd8ce9c7bbbedaffb88a9b6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpmentors/domain-kata": "~1.4",
+                "symfony/event-dispatcher": "~2.3"
+            },
+            "require-dev": {
+                "phake/phake": "~1.0",
+                "phpunit/phpunit": "~4.0",
+                "piece/stagehand-testrunner": "~4.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stagehand\\FSM\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "KUBO Atsuhiro",
+                    "email": "kubo@iteman.jp"
+                }
+            ],
+            "description": "A finite state machine",
+            "homepage": "https://github.com/piece/stagehand-fsm/wiki",
+            "keywords": [
+                "fsm",
+                "state machine"
+            ],
+            "time": "2015-07-12 03:46:10"
         },
         {
             "name": "predis/predis",
@@ -6020,12 +6312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "459b22b019693c685dd15b795bd9cc1e0f2cc1e7"
+                "reference": "7c511edf020c975b937adee5839211b3186339ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/459b22b019693c685dd15b795bd9cc1e0f2cc1e7",
-                "reference": "459b22b019693c685dd15b795bd9cc1e0f2cc1e7",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/7c511edf020c975b937adee5839211b3186339ac",
+                "reference": "7c511edf020c975b937adee5839211b3186339ac",
                 "shasum": ""
             },
             "require": {
@@ -6067,7 +6359,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2016-07-02 05:57:11"
+            "time": "2016-07-07 07:08:51"
         },
         {
             "name": "rz/news-page-bundle",
@@ -6383,6 +6675,56 @@
             "time": "2016-02-09 04:00:58"
         },
         {
+            "name": "rz/timeline-bundle",
+            "version": "2.0.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rzproject/TimelineBundle.git",
+                "reference": "70ab435c57126ee30031676e4157ddbba288f031"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rzproject/TimelineBundle/zipball/70ab435c57126ee30031676e4157ddbba288f031",
+                "reference": "70ab435c57126ee30031676e4157ddbba288f031",
+                "shasum": ""
+            },
+            "require": {
+                "rmzamora/timeline-bundle": "2.5.0.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.0": "2.0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rz\\TimelineBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mell zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://www.rzproject.org"
+                }
+            ],
+            "description": "Symfony2 Bundle SonataTimelineBundle Extension",
+            "homepage": "http://sonata-project.org/bundles/timeline",
+            "keywords": [
+                "RZProject",
+                "date",
+                "sonata",
+                "time",
+                "wall"
+            ],
+            "time": "2016-07-27 05:22:54"
+        },
+        {
             "name": "rz/user-bundle",
             "version": "2.0.0.x-dev",
             "source": {
@@ -6431,6 +6773,60 @@
                 "Symfony2"
             ],
             "time": "2016-04-26 02:46:24"
+        },
+        {
+            "name": "rz/user-security-bundle",
+            "version": "2.0.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rzproject/UserSecurityBundle.git",
+                "reference": "2539d486f2a797be0aed229ff56e589306de7f93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/2539d486f2a797be0aed229ff56e589306de7f93",
+                "reference": "2539d486f2a797be0aed229ff56e589306de7f93",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "~1.5",
+                "doctrine/orm": "~2.4,<2.5",
+                "php": ">=5.3.3",
+                "symfony/symfony": "~2.8"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.0": "2.0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rz\\UserSecurityBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mell M. Zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://rzproject.github.io"
+                }
+            ],
+            "description": "Fork of CCDN User Security Bundle",
+            "homepage": "http://github.com/rzproject/RzUserSecurityBundle",
+            "keywords": [
+                "Rz Project",
+                "brute force",
+                "dictionary attack",
+                "login",
+                "security",
+                "user"
+            ],
+            "time": "2016-07-13 04:02:53"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -7152,12 +7548,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7c0abd960cc60ff9870863886e6ce626c2e93bad"
+                "reference": "17ba8f8fc03074f90771e52b226698e37bc2c115"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7c0abd960cc60ff9870863886e6ce626c2e93bad",
-                "reference": "7c0abd960cc60ff9870863886e6ce626c2e93bad",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/17ba8f8fc03074f90771e52b226698e37bc2c115",
+                "reference": "17ba8f8fc03074f90771e52b226698e37bc2c115",
                 "shasum": ""
             },
             "require": {
@@ -7197,7 +7593,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-06-30 14:03:38"
+            "time": "2016-07-09 18:06:48"
         },
         {
             "name": "symfony-cmf/routing",
@@ -7276,6 +7672,9 @@
                 "php": "^5.5.9|^7.0",
                 "symfony-cmf/routing": "^1.4.0",
                 "symfony/framework-bundle": "^2.8|^3.0"
+            },
+            "conflict": {
+                "doctrine/phpcr-odm": "<2.0"
             },
             "require-dev": {
                 "doctrine/data-fixtures": "^1.0.0",
@@ -8254,12 +8653,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "cdccdbbdf35f38a70eb6931667a76fc68012a999"
+                "reference": "c535bc0b56aa93ead7a75b6841f28645153b0539"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/cdccdbbdf35f38a70eb6931667a76fc68012a999",
-                "reference": "cdccdbbdf35f38a70eb6931667a76fc68012a999",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c535bc0b56aa93ead7a75b6841f28645153b0539",
+                "reference": "c535bc0b56aa93ead7a75b6841f28645153b0539",
                 "shasum": ""
             },
             "require": {
@@ -8307,7 +8706,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-06-24 05:05:43"
+            "time": "2016-07-10 07:48:21"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -10523,6 +10922,7 @@
         "sonata-project/doctrine-extensions": 20,
         "sonata-project/intl-bundle": 20,
         "sonata-project/sonata-composer": 20,
+        "gedmo/doctrine-extensions": 20,
         "symfony/phpunit-bridge": 20,
         "behat/common-contexts": 20
     },

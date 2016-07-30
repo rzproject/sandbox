@@ -9,7 +9,7 @@ sonata_block:
         listener: true
 
     menus:
-        "SonataDemoBundle:Builder:mainMenu": "Main Menu"
+        "AppBundle:Builder:mainMenu": "Main Menu"
 
     blocks:
         #=====================================================================
@@ -89,6 +89,14 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
+        rz.user.block.user_authentication_logs:
+            contexts: [admin]
+        rz.user.block.user_authentication_logs_stats:
+            contexts: [admin]
+        rz.user.block.profile_gender:
+            contexts: [admin]
+        rz.user.block.profile_age_demographics:
+            contexts: [admin]
 
         #=====================================================================
         # SeoBundle's Blocks
