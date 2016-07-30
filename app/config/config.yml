@@ -16,6 +16,9 @@ imports:
     - { resource: fos/fos_oauth_server.yml }
     #- { resource: fos/fos_elastica.yml }
 
+    # mysql func extension
+    - { resource: beberlei/mysql.yml }
+
     #- { resource: bazinga/bazinga_hateos.yml }
 
     # SimpleThings Enity Audit
@@ -112,7 +115,13 @@ doctrine:
                 host:     "%audit.database.host%"
                 password: "%audit.database.password%"
                 charset:  UTF8
-
+            timeline:
+                driver:   "%timeline.database.driver%"
+                dbname:   "%timeline.database.name%"
+                user:     "%timeline.database.user%"
+                host:     "%timeline.database.host%"
+                password: "%timeline.database.password%"
+                charset:  UTF8
         types:
             json:     Sonata\Doctrine\Types\JsonType
 
@@ -133,6 +142,10 @@ doctrine:
                 mappings:
                   SimpleThingsEntityAuditBundle: ~
 
+            timeline:
+                connection: timeline
+                mappings: ~
+
 #doctrine_mongodb:
 #    connections:
 #        default:
@@ -146,7 +159,7 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
-    host:      "%mailer_host%"
+    #host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
 

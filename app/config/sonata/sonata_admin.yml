@@ -30,20 +30,8 @@ sonata_admin:
 
     dashboard:
         blocks:
-            #- { position: left, type: sonata.admin.block.admin_list }
-            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
-#            -
-#                class:    col-lg-6 col-xs-6
-#                position: top
-#                type:     sonata.admin.block.stats
-#                settings:
-#                    code: sonata.news.admin.comment
-#                    icon: fa-comments
-#                    text: Open Comment
-#                    filters:
-#                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
             -
-                class:    col-lg-6 col-xs-6
+                class:    col-lg-3 col-xs-3
                 position: top
                 type:     sonata.admin.block.stats
                 settings:
@@ -54,12 +42,40 @@ sonata_admin:
                     filters:
                         edited: { value: 1 }
 
-            - { class:    col-lg-12 col-xs-12 , roles: [ROLE_SUPER_ADMIN], position: top, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Montage</h3></div><div class='panel-body'>Welcome to Montage Admin! Montage is an open source content management platform based on Sonata Project!</div></div>"} }
-            - { position: left, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 25 }}
-            - { position: left, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 7, mode: admin }}
-            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: https://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
-
-
+            -
+                class:    col-lg-3 col-xs-3
+                position: top
+                type:     rz.user.block.user_authentication_logs_stats
+                settings:
+                    icon:  fa-users
+                    text:  block_user_authentication_logs_stats_title
+                    color: bg-aqua
+            -
+                class:    col-lg-12 col-xs-12
+                position: top
+                type:     sonata.block.service.text
+                roles:    [ROLE_SUPER_ADMIN]
+                settings:
+                    template: 'RzBlockBundle:Block:block_dashboard_text.html.twig'
+                    content:  'Welcome to Montage Admin! Montage is an open source content management platform based on Sonata Project!'
+#            -
+#                class:    col-lg-6 col-xs-6
+#                position: top
+#                type:     sonata.admin.block.stats
+#                settings:
+#                    code: sonata.news.admin.comment
+#                    icon: fa-comments
+#                    text: Open Comment
+#                    filters:
+#                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
+            - { position: left,   type: rz.user.block.user_authentication_logs, settings: { title: block_title_user_authentication_logs }}
+            - { position: center,   type: rz.user.block.profile_gender, settings: { title: block_title_profile_gender }}
+            - { position: center, type: sonata.news.block.recent_posts, settings: { template: 'RzNewsBundle:Block:recent_posts.html.twig', title: Recent Posts, number: 5, mode: admin }}
+            - { position: right, type: rz.user.block.profile_age_demographics, settings: { title: block_title_user_age_demographics }}
+            - { position: right, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 10, paginate: true, template: 'RzTimelineBundle:Block:timeline.html.twig' }}
+            #- { position: left, type: sonata.admin.block.admin_list }
+            #- { position: right, type: sonata.admin_doctrine_orm.block.audit}
+            #- { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: https://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
 
         groups:
             sonata.admin.group.content:
@@ -113,6 +129,13 @@ sonata_admin:
                 items:
                     - rz.oauth_server.admin.access_token
                     - rz.oauth_server.admin.client
+
+            sonata.admin.group.timeline:
+                label: main_menu_timeline
+                label_catalogue: SonataTimelineBundle
+                icon:  '<i class="fa fa-fw fa-clock-o"></i>'
+                items:
+                    - rz.timeline.admin.timeline
 
     templates:
         user_block:                   'SonataUserBundle:Admin\Core:user_block.html.twig'
@@ -399,6 +422,15 @@ sonata_admin:
                   - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
                 view:
                     outer_list_rows_mosaic:   'RzOAuthServerBundle:ClientAdmin:list_outer_rows_mosaic.html.twig'
+
+        rz.timeline.admin.timeline:
+            pager_type:  simple
+            templates:
+                # required form override of RzDoctrineORMAdminBundle
+                form:
+                  - 'RzDoctrineORMAdminBundle:Form:form_admin_fields.html.twig'
+                view:
+                    outer_list_rows_mosaic:   'RzTimelineBundle:TimelineAdmin:list_outer_rows_mosaic.html.twig'
 
 
 ##############################################################################

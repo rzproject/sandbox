@@ -82,6 +82,8 @@
         "rz/google-api-client-bundle": "2.0.0.*",
         "rz/oauth-server-bundle": "2.0.0.*",
         "rz/entity-audit-bundle": "2.0.0.*",
+        "rz/user-security-bundle": "2.0.0.*",
+        "rz/timeline-bundle": "2.0.0.*",
 
         "michelf/php-markdown": "~1.4",
         "willdurand/faker-bundle": "~1.0",
@@ -93,14 +95,17 @@
         "andres-montanez/magallanes": "~1.0.1",
         "predis/predis": "~0.8",
         "nelmio/api-doc-bundle": "~2.11",
-        "egeloen/ckeditor-bundle": "3.0.1"
+        "egeloen/ckeditor-bundle": "3.0.1",
+        "phpmentors/workflower-bundle": "1.1.*",
+        "beberlei/DoctrineExtensions": "~1.0",
+        "gedmo/doctrine-extensions": "dev-master"
     },
 
     "require-dev": {
         "sensio/generator-bundle": "~2.4",
         "phpunit/phpunit": "~4.2",
         "symfony/phpunit-bridge": "2.7.*@dev",
-        "guzzle/guzzle": "~3.0",
+        "guzzlehttp/guzzle": "~5.2|~6.0",
         "behat/behat": "~2.4",
         "behat/common-contexts": "1.2.*@dev",
         "behat/mink-extension": "~1.2",

@@ -10,6 +10,12 @@ parameters:
     audit.database.name: sonata_sandbox_audit
     audit.database.user: dbuser
     audit.database.password: same2you
+    timeline.database.password: same2you
+    timeline.database.driver: pdo_mysql
+    timeline.database.host: localhost
+    timeline.database.name: sonata_sandbox_timeline
+    timeline.database.user: dbuser
+    timeline.database.password: same2you
 
     mailer_transport:   smtp
     mailer_host:        localhost

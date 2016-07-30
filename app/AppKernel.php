@@ -82,20 +82,12 @@ class AppKernel extends Kernel
             // CMF Integration
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
-            // DEMO and QA - Can be deleted
-            #new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
-            new Sonata\Bundle\QABundle\SonataQABundle(),
-
-            // Disable this if you don't want the timeline in the admin
-            new Spy\TimelineBundle\SpyTimelineBundle(),
-            new Sonata\TimelineBundle\SonataTimelineBundle(),
-
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\CoreBundle\RzCoreBundle(),
             new Rz\UserBundle\RzUserBundle(),
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
-            new Rz\DemoBundle\RzDemoBundle(),
+            #new Rz\DemoBundle\RzDemoBundle(),
             new Rz\ClassificationBundle\RzClassificationBundle(),
             new Rz\NewsBundle\RzNewsBundle(),
             new Rz\MediaBundle\RzMediaBundle(),
@@ -110,8 +102,15 @@ class AppKernel extends Kernel
             new Rz\AdvancePageBundle\RzAdvancePageBundle(),
             new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+            new Rz\UserSecurityBundle\RzUserSecurityBundle(),
+
+            // Disable this if you don't want the timeline in the admin
+            new Spy\TimelineBundle\SpyTimelineBundle(),
+            new Sonata\TimelineBundle\SonataTimelineBundle(),
+            new Rz\TimelineBundle\RzTimelineBundle(),
 
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            //new PHPMentors\WorkflowerBundle\PHPMentorsWorkflowerBundle(),
 
             //SSO Server for API
             //new Mosaic\SsoBundle\MosaicSsoBundle(),
@@ -119,6 +118,7 @@ class AppKernel extends Kernel
             new Rz\OAuthServerBundle\RzOAuthServerBundle(),
 
             new AppBundle\AppBundle(),
+            new App\TimelineBundle\AppTimelineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

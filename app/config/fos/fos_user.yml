@@ -3,11 +3,27 @@ fos_user:
     firewall_name:  main
 
     # if you change the class configuration, please also alter the sonata_user.yml file
-    user_class:        AppBundle\Entity\User\User
+    user_class:         'AppBundle\Entity\User\User'
 
     group:
-        group_class:   AppBundle\Entity\User\Group
-        group_manager: rz.user.orm.group_manager
+        group_class:    'AppBundle\Entity\User\Group'
+        group_manager:  'rz.user.orm.group_manager'
 
     service:
-        user_manager: rz.user.orm.user_manager
+        user_manager:   'rz.user.orm.user_manager'
+        mailer:         'rz_user.mailer.default'
+
+    registration:
+      confirmation:
+        enabled:         true
+        template:       'RzUserBundle:Registration:email.html.twig'
+        from_email:
+          address:      'noreply@sample.com'
+          sender_name:  'Sandbox Admin'
+
+    resetting:
+      email:
+        template:       'RzUserBundle:Resetting:email.html.twig'
+        from_email:
+          address:      'noreply@sample.com'
+          sender_name:  'Sandbox Admin'

@@ -1,0 +1,5 @@
+phpmentors_workflower:
+    serializer_service: phpmentors_workflower.base64_php_workflow_serializer # Defaults to `phpmentors_workflower.php_workflow_serializer`
+    workflow_contexts:
+        app:
+            definition_dir: "%kernel.root_dir%/../src/AppBundle/Resources/config/workflower" # A directory where BPMN files for the `app` context are stored
