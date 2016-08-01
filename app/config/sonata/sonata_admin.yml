@@ -69,6 +69,7 @@ sonata_admin:
 #                    filters:
 #                        status: { type: 3, value: 0 } # 3 => NumberType::TYPE_EQUAL
             - { position: left,   type: rz.user.block.user_authentication_logs, settings: { title: block_title_user_authentication_logs }}
+            - { position: left, type: rz.block.service.github_rss, settings: { title: block_title_github_rss, url: https://github.com/organizations/rzproject/rmzamora.private.atom?token=AAVXu0IQNmkaG91564ZaqmBTFL8Wii2tks61qryhwA== , template: RzBlockBundle:Block:block_github_rss_dashboard.html.twig, number: 5 }}
             - { position: center,   type: rz.user.block.profile_gender, settings: { title: block_title_profile_gender }}
             - { position: center, type: sonata.news.block.recent_posts, settings: { template: 'RzNewsBundle:Block:recent_posts.html.twig', title: Recent Posts, number: 5, mode: admin }}
             - { position: right, type: rz.user.block.profile_age_demographics, settings: { title: block_title_user_age_demographics }}
@@ -135,7 +136,7 @@ sonata_admin:
                 label_catalogue: SonataTimelineBundle
                 icon:  '<i class="fa fa-fw fa-clock-o"></i>'
                 items:
-                    - rz.timeline.admin.timeline
+                    - { label: 'Timeline', route: 'admin_app_timeline_timeline_timeline', admin: 'rz.timeline.admin.timeline'}
 
     templates:
         user_block:                   'SonataUserBundle:Admin\Core:user_block.html.twig'
