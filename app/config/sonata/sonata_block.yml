@@ -34,6 +34,8 @@ sonata_block:
         sonata.block.service.rss:
         sonata.block.service.menu:
         sonata.block.service.template:
+        rz.block.service.github_rss:
+            contexts:   [admin]
 
         #=====================================================================
         # PageBundle's Blocks

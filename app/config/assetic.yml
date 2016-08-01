@@ -126,6 +126,12 @@ assetic:
                 - cssrewrite
                 - yui_css
 
+        admin_dashboard_block_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzblock/css/block-grihub-rss.css
+            filters:
+                - cssrewrite
+                - yui_css
 
         sonata_front_js:
             inputs:
@@ -172,6 +178,8 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzuser/js/block/user-authentication-logs.js
                 - %kernel.root_dir%/../web/bundles/rzuser/js/block/user-gender.js
                 - %kernel.root_dir%/../web/bundles/rzuser/js/block/user-age-demographics.js
+                - %kernel.root_dir%/../web/bundles/rzblock/js/github-rss.js
+
             filters:
                 - yui_js
 
